@@ -265,3 +265,7 @@ E:\reza\projects\viralme\source\CMS\bin\Stimulsoft.Base.xml
 E:\reza\projects\viralme\source\CMS\obj\Debug\CMS.csprojResolveAssemblyReference.cache
 E:\reza\projects\viralme\source\CMS\bin\Viralme.dll
 E:\reza\projects\viralme\source\CMS\bin\Viralme.pdb
+E:\git\viral\source\CMS\obj\Debug\CMS.csprojResolveAssemblyReference.cache
+E:\git\viral\source\CMS\obj\Debug\CMS.csproj.ResolveComReference.cache
+E:\git\viral\source\CMS\obj\Debug\CMS.dll
+E:\git\viral\source\CMS\obj\Debug\CMS.pdb
