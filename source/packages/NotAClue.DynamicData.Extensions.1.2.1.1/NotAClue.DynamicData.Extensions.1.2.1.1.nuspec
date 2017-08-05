@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>NotAClue.DynamicData.Extensions</id>
+    <version>1.2.1.1</version>
+    <title>NotAClue Dynamic Data Extensions</title>
+    <authors>Stephen J Naughton</authors>
+    <owners>Stephen J Naughton</owners>
+    <licenseUrl>http://creativecommons.org/licenses/by/2.0/uk/</licenseUrl>
+    <iconUrl>https://nugetgallery.blob.core.windows.net/icons/NotAClue.DynamicData.Extensions.1.2.1.1.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>NotAClue Dynamic Data Extensions, Includes: HideColumnIn, ShowOnlyIn and Filter Order attributes with extended MetaModel.</description>
+    <summary>DynamicData</summary>
+    <copyright>© NotAClue? Studios 2011</copyright>
+    <tags>DynamicData DynamicDataExtensions HideColumnIn ShowColumnIn FilterOrder</tags>
+  </metadata>
+</package>

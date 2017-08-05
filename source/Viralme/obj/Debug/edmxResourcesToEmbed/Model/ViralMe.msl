@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="viralmeModelStoreContainer" CdmEntityContainer="viralmeEntities">
+    <EntitySetMapping Name="TGroups">
+      <EntityTypeMapping TypeName="viralmeModel.TGroup">
+        <MappingFragment StoreEntitySet="TGroups">
+          <ScalarProperty Name="Removeable" ColumnName="Removeable" />
+          <ScalarProperty Name="fatherID" ColumnName="fatherID" />
+          <ScalarProperty Name="root" ColumnName="root" />
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="StatID" ColumnName="StatID" />
+          <ScalarProperty Name="GrpName" ColumnName="GrpName" />
+          <ScalarProperty Name="PartID" ColumnName="PartID" />
+          <ScalarProperty Name="GrpID" ColumnName="GrpID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

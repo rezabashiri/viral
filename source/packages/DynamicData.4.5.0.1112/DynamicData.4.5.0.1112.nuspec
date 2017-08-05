@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>DynamicData</id>
+    <version>4.5.0.1112</version>
+    <title>Dynamic Data</title>
+    <authors>Roland Pheasant</authors>
+    <owners>Roland Pheasant</owners>
+    <licenseUrl>http://opensource.org/licenses/MS-PL</licenseUrl>
+    <projectUrl>http://dynamic-data.org/</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Bring the power of Rx to collections using Dynamic Data.
+      Dynamic Data is a comprehensive caching and data manipulation solution which introduces domain centric observable collections.
+      Linq extensions enable dynamic filtering, sorting, grouping, transforms, binding, pagination, data virtualisation, expiration, disposal management plus more.</description>
+    <summary />
+    <copyright>Roland Pheasant</copyright>
+    <tags>DynamicData Dynamic Data Rx Reactive Observable Cache Binding ObservableCache ObservableList ObservableCollection Collection Linq</tags>
+    <dependencies>
+      <dependency id="Rx-Linq" version="2.2.5" />
+    </dependencies>
+  </metadata>
+</package>

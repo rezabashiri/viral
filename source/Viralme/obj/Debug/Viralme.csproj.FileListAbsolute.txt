@@ -1,0 +1,9 @@
+E:\reza\projects\viralme\source\Viralme\bin\Viralme.dll
+E:\reza\projects\viralme\source\Viralme\bin\Viralme.pdb
+E:\reza\projects\viralme\source\Viralme\bin\EntityFramework.dll
+E:\reza\projects\viralme\source\Viralme\bin\EntityFramework.SqlServer.dll
+E:\reza\projects\viralme\source\Viralme\bin\EntityFramework.xml
+E:\reza\projects\viralme\source\Viralme\bin\EntityFramework.SqlServer.xml
+E:\reza\projects\viralme\source\Viralme\obj\Debug\Viralme.dll
+E:\reza\projects\viralme\source\Viralme\obj\Debug\Viralme.pdb
+E:\reza\projects\viralme\source\Viralme\obj\Debug\Viralme.csprojResolveAssemblyReference.cache
