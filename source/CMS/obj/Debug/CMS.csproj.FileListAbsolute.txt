@@ -209,7 +209,6 @@ E:\reza\projects\viralme\source\CMS\bin\DynamicData.dll
 E:\reza\projects\viralme\source\CMS\bin\EntityFramework.dll
 E:\reza\projects\viralme\source\CMS\bin\EntityFramework.SqlServer.dll
 E:\reza\projects\viralme\source\CMS\bin\ImageResizer.dll
-E:\reza\projects\viralme\source\CMS\bin\JQControls.dll
 E:\reza\projects\viralme\source\CMS\bin\MessagingToolkit.QRCode.dll
 E:\reza\projects\viralme\source\CMS\bin\Microsoft.AspNet.DynamicData.EFProvider.dll
 E:\reza\projects\viralme\source\CMS\bin\Microsoft.AspNet.EntityDataSource.dll
@@ -237,7 +236,6 @@ E:\reza\projects\viralme\source\CMS\bin\Microsoft.AspNet.FriendlyUrls.dll
 E:\reza\projects\viralme\source\CMS\bin\System.Data.SQLite.dll
 E:\reza\projects\viralme\source\CMS\bin\log4net.dll
 E:\reza\projects\viralme\source\CMS\bin\Stimulsoft.Base.dll
-E:\reza\projects\viralme\source\CMS\bin\JQControls.pdb
 E:\reza\projects\viralme\source\CMS\bin\Antlr3.Runtime.pdb
 E:\reza\projects\viralme\source\CMS\bin\DynamicData.pdb
 E:\reza\projects\viralme\source\CMS\bin\DynamicData.xml
@@ -262,6 +260,5 @@ E:\reza\projects\viralme\source\CMS\bin\Microsoft.AspNet.FriendlyUrls.xml
 E:\reza\projects\viralme\source\CMS\bin\System.Data.SQLite.xml
 E:\reza\projects\viralme\source\CMS\bin\Stimulsoft.Base.pdb
 E:\reza\projects\viralme\source\CMS\bin\Stimulsoft.Base.xml
-E:\reza\projects\viralme\source\CMS\obj\Debug\CMS.csprojResolveAssemblyReference.cache
 E:\reza\projects\viralme\source\CMS\bin\Viralme.dll
 E:\reza\projects\viralme\source\CMS\bin\Viralme.pdb

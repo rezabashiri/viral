@@ -98,6 +98,10 @@
     <Reference Include="ImageResizer">
       <HintPath>..\packages\ImageResizer.4.0.5\lib\net45\ImageResizer.dll</HintPath>
     </Reference>
+    <Reference Include="JQControls, Version=1.1.0.35527, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\JQControls.dll</HintPath>
+    </Reference>
     <Reference Include="MessagingToolkit.QRCode">
       <HintPath>..\packages\MessagingToolkit.QRCode.1.3.0\lib\MessagingToolkit.QRCode.dll</HintPath>
     </Reference>
@@ -1800,10 +1804,6 @@
     </COMReference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\component\JQControls_custom\JQControls_WithMs\JQControls_WithMs.csproj">
-      <Project>{a32f03f9-5ef2-44ce-a04e-48906c8291aa}</Project>
-      <Name>JQControls_WithMs</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Viralme\Viralme.csproj">
       <Project>{d288483c-b256-428f-bf0a-e75b16823d7c}</Project>
       <Name>Viralme</Name>
