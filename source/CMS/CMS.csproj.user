@@ -3,13 +3,14 @@
   <PropertyGroup>
     <ProjectView>ProjectFiles</ProjectView>
     <NameOfLastUsedPublishProfile>GolestanShohada</NameOfLastUsedPublishProfile>
+    <UseIISExpress>true</UseIISExpress>
   </PropertyGroup>
   <ProjectExtensions>
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <StartPageUrl>MapTest.aspx</StartPageUrl>
-          <StartAction>CurrentPage</StartAction>
+          <StartPageUrl>LoginUser.aspx</StartPageUrl>
+          <StartAction>SpecificPage</StartAction>
           <AspNetDebugging>True</AspNetDebugging>
           <SilverlightDebugging>False</SilverlightDebugging>
           <NativeDebugging>False</NativeDebugging>

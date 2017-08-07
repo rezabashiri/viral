@@ -1,5 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" Inherits="aspx_ChangePassword"
-    MasterPageFile="~/masterpages/MgrMaster.Master" Codebehind="ChangePassword.aspx.cs" %>
+    MasterPageFile="~/Design/MasterPages/Administrator.Master" CodeBehind="ChangePassword.aspx.cs" %>
 
 <asp:Content ID="Content1" runat="server" ContentPlaceHolderID="TitleContentPH">
     <div id="roadmap">
@@ -7,17 +7,19 @@
     <div class="clear">
     </div>
     <div class="confirmMSG" id="confirmDiv" visible="false" runat="server">
-        <asp:Label ID="lblOk" runat="server"></asp:Label></div>
+        <asp:Label ID="lblOk" runat="server"></asp:Label>
+    </div>
     <div class="clearFloat">
     </div>
     <div class="errorMSG" id="errorDiv" runat="server" visible="false">
-        <asp:Label ID="lblError" runat="server"></asp:Label></div>
+        <asp:Label ID="lblError" runat="server"></asp:Label>
+    </div>
     <div class="clear">
     </div>
     <div id="title_bar">
         <h1>
-        تغییر کلمه عبور
-        </h1>
+            <span class="label label-warning">تغییر کلمه عبور
+            </span></h1>
         <span></span>
     </div>
     <div class="clear">
@@ -55,7 +57,7 @@
             </div>
         </div>
         <div class="last_row">
-            <asp:Button ID="btnChange" runat="server" Text="ثبت" CssClass="Mybtn" OnClick="btnChange_Click" />
+            <asp:Button ID="btnChange" runat="server" Text="ثبت" CssClass="btn btn-primary" OnClick="btnChange_Click" />
         </div>
     </div>
 </asp:Content>

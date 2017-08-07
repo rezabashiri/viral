@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" Inherits="Control_Panel_aspx_MgrPanel"  MasterPageFile="~/masterpages/MgrMaster.Master" Codebehind="MgrPanel.aspx.cs" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" Inherits="Control_Panel_aspx_MgrPanel"  MasterPageFile="~/Design/MasterPages/Administrator.Master" Codebehind="MgrPanel.aspx.cs" %>
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
 <asp:Content ID="Content2" runat="server" ContentPlaceHolderID="head">
     
@@ -46,7 +46,7 @@
                     <div class="row">
                            <div class="col-sm-12 text-center">
                     <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="یادداشت کن"
-                        CssClass="btn btn-warning"   />
+                        CssClass="btn btn-primary"   />
                                </div>
                 </div>
          </div>

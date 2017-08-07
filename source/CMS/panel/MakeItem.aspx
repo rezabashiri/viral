@@ -1,5 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" Inherits="panel_MakeItem" 
-    MasterPageFile="~/masterpages/MgrMaster.Master" EnableEventValidation="false" ValidateRequest="false" Codebehind="MakeItem.aspx.cs" %>
+    MasterPageFile="~/Design/MasterPages/Administrator.Master" EnableEventValidation="false" ValidateRequest="false" Codebehind="MakeItem.aspx.cs" %>
 
 <%@ Register Assembly="Telerik.Web.UI" Namespace="Telerik.Web.UI" TagPrefix="telerik" %>
 
@@ -256,7 +256,7 @@
     
         <!-- end of row -->
         <div class="row col-sm-12 text-left" >
-            <asp:Button ID="btnSubmit" runat="server" Text="درج مطلب" CssClass="btn btn-theme03" Style="float: left; margin-left: 10px;" OnClick="btnSubmit_Click1"/>
+            <asp:Button ID="btnSubmit" runat="server" Text="درج مطلب" CssClass="btn btn-primary" Style="float: left; margin-left: 10px;" OnClick="btnSubmit_Click1"/>
          
     </div>
 </asp:Content>

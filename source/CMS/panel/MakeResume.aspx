@@ -1,5 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" Inherits="aspx_MakeResume"
-    MasterPageFile="~/masterpages/MgrMaster.Master" Codebehind="MakeResume.aspx.cs" %>
+    MasterPageFile="~/Design/MasterPages/Administrator.Master" Codebehind="MakeResume.aspx.cs" %>
 
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
 <asp:Content ID="Content1" runat="server" ContentPlaceHolderID="TitleContentPH">
@@ -17,8 +17,9 @@
     </div>
     <div id="title_bar">
         <h1>
+            <span class="label label-warning">
             درباره ما
-        </h1>
+       </span> </h1>
         <span>معرفی سوابق، فعالیت ها، محصولات و خدمات</span>
     </div>
     <div class="clear">
@@ -85,7 +86,7 @@
         </div>
         <!-- end of row -->
         <div class="last_row color3">
-            <asp:Button ID="btnSubmit" runat="server" Text="ثبت رزومه" CssClass="Mybtn" OnClick="btnSubmit_Click" />
+            <asp:Button ID="btnSubmit" runat="server" Text="ثبت رزومه" CssClass="btn btn-primary" OnClick="btnSubmit_Click" />
         </div>
     </div>
 </asp:Content>

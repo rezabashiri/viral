@@ -1,5 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" Inherits="aspx_ChangeEmail"
-    MasterPageFile="~/masterpages/MgrMaster.Master" Codebehind="ChangeEmail.aspx.cs" %>
+    MasterPageFile="~/Design/MasterPages/Administrator.Master" CodeBehind="ChangeEmail.aspx.cs" %>
 
 <asp:Content ID="Content1" runat="server" ContentPlaceHolderID="TitleContentPH">
     <div id="roadmap">
@@ -7,18 +7,21 @@
     <div class="clear">
     </div>
     <div class="confirmMSG" id="confirmDiv" visible="false" runat="server">
-        <asp:Label ID="lblOk" runat="server"></asp:Label></div>
+        <asp:Label ID="lblOk" runat="server"></asp:Label>
+    </div>
     <div class="clearFloat">
     </div>
     <div class="errorMSG" id="errorDiv" runat="server" visible="false">
-        <asp:Label ID="lblError" runat="server"></asp:Label></div>
+        <asp:Label ID="lblError" runat="server"></asp:Label>
+    </div>
     <div class="clear">
     </div>
     <div id="title_bar">
         <h1>
-        تغییر پست الکترونیک
+            <span class="label label-warning">تغییر پست الکترونیک
+            </span>
         </h1>
-        <span> ایمیل در بخش ارتباط با ما بیشترین کاربرد را دارد </span>
+        <span>ایمیل در بخش ارتباط با ما بیشترین کاربرد را دارد </span>
     </div>
     <div class="clear">
     </div>
@@ -37,15 +40,15 @@
             </div>
             <div class="Lcolumn">
                 <asp:TextBox ID="txtNewEmail" runat="server" CssClass="Mytxt"></asp:TextBox>
-                <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" 
-                    ErrorMessage="ایمیل صحیح نمی باشد" ControlToValidate="txtNewEmail" 
-                    Font-Italic="False" 
+                <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server"
+                    ErrorMessage="ایمیل صحیح نمی باشد" ControlToValidate="txtNewEmail"
+                    Font-Italic="False"
                     ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
             </div>
         </div>
         <div class="last_row">
-            <asp:Button ID="btnChange" runat="server" Text="ثبت" CssClass="Mybtn" 
-                onclick="btnChange_Click" />
+            <asp:Button ID="btnChange" runat="server" Text="ثبت" CssClass="btn btn-primary"
+                OnClick="btnChange_Click" />
         </div>
     </div>
 </asp:Content>

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" Inherits="CMS_panel_AddVideo" MasterPageFile="~/masterpages/MgrMaster.Master" Codebehind="AddVideo.aspx.cs" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" Inherits="CMS_panel_AddVideo" MasterPageFile="~/Design/MasterPages/Administrator.Master" Codebehind="AddVideo.aspx.cs" %>
 <%@ Register Assembly="TimePicker" Namespace="MKB.TimePicker" TagPrefix="MKB" %>
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
 <asp:Content ID="Content2" runat="server" ContentPlaceHolderID="head">
