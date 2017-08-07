@@ -1,5 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" Inherits="aspx_ChangeUsername"
-    MasterPageFile="~/masterpages/MgrMaster.Master" Codebehind="ChangeUsername.aspx.cs" %>
+    MasterPageFile="~/Design/MasterPages/Administrator.Master" Codebehind="ChangeUsername.aspx.cs" %>
 
 <asp:Content ID="Content1" runat="server" ContentPlaceHolderID="TitleContentPH">
     <div id="roadmap">
@@ -16,8 +16,9 @@
     </div>
     <div id="title_bar">
         <h1>
+            <span class="label label-warning">
             تغییر شناسه کاربری
-        </h1>
+      <//span>  </h1>
         <span></span>
     </div>
     <div class="clear">
@@ -44,7 +45,7 @@
             </div>
         </div>
         <div class="last_row">
-            <asp:Button ID="btnChange" runat="server" Text="ثبت" CssClass="Mybtn" 
+            <asp:Button ID="btnChange" runat="server" Text="ثبت" CssClass="btn btn-primary" 
                 onclick="btnChange_Click" />
         </div>
     </div>

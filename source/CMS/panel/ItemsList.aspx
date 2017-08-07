@@ -1,5 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" Inherits="panel_ItemsList"
-    MasterPageFile="~/masterpages/MgrMaster.Master" Codebehind="ItemsList.aspx.cs" %>
+    MasterPageFile="~/Design/MasterPages/Administrator.Master" Codebehind="ItemsList.aspx.cs" %>
 
 <asp:Content ID="Content1" runat="server" ContentPlaceHolderID="TitleContentPH">
     
@@ -59,7 +59,7 @@
                 </div>
             </div>
             <div class="last_row">
-                <asp:Button ID="btnOk" runat="server" Text="جستجو" CssClass="btn btn-success" OnClick="btnOk_Click" />
+                <asp:Button ID="btnOk" runat="server" Text="جستجو" CssClass="btn btn-primary" OnClick="btnOk_Click" />
             </div>
             <div class="clear_1">
             </div>

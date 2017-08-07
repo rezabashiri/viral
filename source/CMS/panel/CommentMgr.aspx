@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CommentMgr.aspx.cs" Inherits="CMS.panel.CommentMgr" MasterPageFile="~/MasterPages/MgrMaster.Master" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CommentMgr.aspx.cs" Inherits="CMS.panel.CommentMgr" MasterPageFile="~/Design/MasterPages/Administrator.Master" %>
 <asp:Content ID="Content1" runat="server" contentplaceholderid="TitleContentPH">
                     <div id="roadmap">
                 </div>

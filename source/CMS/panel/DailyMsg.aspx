@@ -1,5 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" Inherits="aspx_DailyMsg"
-    MasterPageFile="~/masterpages/MgrMaster.Master" Codebehind="DailyMsg.aspx.cs" %>
+    MasterPageFile="~/Design/MasterPages/Administrator.Master" CodeBehind="DailyMsg.aspx.cs" %>
 
 <asp:Content ID="Content1" runat="server" ContentPlaceHolderID="TitleContentPH">
     <div id="roadmap">
@@ -7,16 +7,20 @@
     <div class="clear">
     </div>
     <div class="confirmMSG" id="confirmDiv" visible="false" runat="server">
-        <asp:Label ID="lblOk" runat="server"></asp:Label></div>
+        <asp:Label ID="lblOk" runat="server"></asp:Label>
+    </div>
     <div class="clearFloat">
     </div>
     <div class="errorMSG" id="errorDiv" runat="server" visible="false">
-        <asp:Label ID="lblError" runat="server"></asp:Label></div>
+        <asp:Label ID="lblError" runat="server"></asp:Label>
+    </div>
     <div class="clear">
     </div>
     <div id="title_bar">
         <h1>
-            روزنوشت
+            <span class="label label-warning">
+                روزنوشت
+            </span>
         </h1>
         <span>نمایش پیام های روزانه به صورت تک جمله ای در صفحه اول پرتال</span><br />
         <span>جهت بهبود نمایش پیام ها و جلوگیری از سردرگمی مخاطبان حداکثر تعداد پیام ها 5 عدد
@@ -27,10 +31,11 @@
     <div id="main_content">
         <div class="row height_auto">
             <div class="Rcolumn">
-                متن پیام:</div>
+                متن پیام:
+            </div>
             <div class="Lcolumn">
                 &nbsp;<asp:TextBox ID="txtTopic" runat="server" CssClass="Mytxt persian" Width="75%"></asp:TextBox>
-                &nbsp;<asp:Button ID="Button1" runat="server" Text="ثبت" CssClass="Mybtn" Width="50px"
+                &nbsp;<asp:Button ID="Button1" runat="server" Text="ثبت" CssClass="btn btn-primary" Width="50px"
                     OnClick="Button1_Click" />
                 <br />
                 &nbsp; &nbsp;<asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server"

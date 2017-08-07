@@ -1,5 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" Inherits="aspx_PictureBoard"
-    MasterPageFile="~/masterpages/MgrMaster.Master" Codebehind="PictureBoard.aspx.cs" %>
+    MasterPageFile="~/Design/MasterPages/Administrator.Master" Codebehind="PictureBoard.aspx.cs" %>
 
 <%@ Register Assembly="TimePicker" Namespace="MKB.TimePicker" TagPrefix="MKB" %>
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/masterpages/MgrMaster.Master" AutoEventWireup="true" Inherits="aspx_AlbumPictureList" Codebehind="AlbumPictureList.aspx.cs" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Design/MasterPages/Administrator.Master" AutoEventWireup="true" Inherits="aspx_AlbumPictureList" Codebehind="AlbumPictureList.aspx.cs" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
     <!--script type="text/javascript" src="../js/jquery-1.6.3.min.js"></script>

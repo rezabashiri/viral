@@ -1,4 +1,4 @@
-﻿<%@ Page Title="بخشهای سیستم" Language="C#" MasterPageFile="~/MasterPages/MgrMaster.Master" AutoEventWireup="true" CodeBehind="ItemsPart.aspx.cs" Inherits="CMS.panel.ItemsPart" %>
+﻿<%@ Page Title="بخشهای سیستم" Language="C#" MasterPageFile="~/Design/MasterPages/Administrator.Master" AutoEventWireup="true" CodeBehind="ItemsPart.aspx.cs" Inherits="CMS.panel.ItemsPart" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="TitleContentPH" runat="server">
@@ -20,7 +20,7 @@
         <!-- end of row -->
         <div class="row text-center">
           
-            <asp:Button ID="btnOk" runat="server" Text="ثبت" ValidationGroup="a" CssClass="Mybtn" OnClick="btnOk_Click" />
+            <asp:Button ID="btnOk" runat="server" Text="ثبت" ValidationGroup="a" CssClass="btn btn-primary" OnClick="btnOk_Click" />
               <asp:ValidationSummary runat="server" ID="valSummary"  />
         </div>
         <div class="row">
@@ -28,15 +28,15 @@
                 OnRowCommand="GridView1_RowCommand" OnRowDataBound="GridView1_RowDataBound">
                 
                 <Columns>
-                          <asp:TemplateField HeaderText="حذف">
+                          <asp:TemplateField HeaderText="حذف" >
                         <ItemTemplate>
-                            <asp:ImageButton ID="imgbtnDel" runat="server" CommandArgument='<%# Eval("PartID").ToString() %>'
+                            <asp:ImageButton ID="imgbtnDel" CssClass="btn btn-danger" runat="server" CommandArgument='<%# Eval("PartID").ToString() %>'
                                 CommandName="Delete" ImageUrl="../images/delete.png" OnClientClick="return confirm('آیا از حذف اطمینان دارید؟');" CausesValidation="False" />
                         </ItemTemplate>
                     </asp:TemplateField>
                            <asp:TemplateField HeaderText="ویرایش">
                         <ItemTemplate>
-                            <asp:ImageButton ID="ImageButton1" runat="server"  
+                            <asp:ImageButton ID="ImageButton1" CssClass="btn btn-success" runat="server"  
                                 CommandName="Edit" ImageUrl="../images/Edit.png" CausesValidation="False" />
                         </ItemTemplate>
                         <EditItemTemplate>

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" Inherits="CMS_panel_AddPicture" MasterPageFile="~/masterpages/MgrMaster.Master" Codebehind="AddPicture.aspx.cs" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" Inherits="CMS_panel_AddPicture" MasterPageFile="~/Design/MasterPages/Administrator.Master" Codebehind="AddPicture.aspx.cs" %>
 
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
 

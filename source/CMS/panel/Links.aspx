@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/masterpages/MgrMaster.Master" AutoEventWireup="true" Inherits="aspx_Links" Codebehind="Links.aspx.cs" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Design/MasterPages/Administrator.Master" AutoEventWireup="true" Inherits="aspx_Links" Codebehind="Links.aspx.cs" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
 </asp:Content>
@@ -51,7 +51,7 @@
     <div class="clear">
     </div>
     <div class="last_row">
-        <asp:Button ID="Button1" runat="server" Text="ثبت" CssClass="Mybtn" Width="50px"
+        <asp:Button ID="Button1" runat="server" Text="ثبت" CssClass="btn btn-primary" Width="50px"
             OnClick="Button1_Click" />
     </div>
     <div class="clear">

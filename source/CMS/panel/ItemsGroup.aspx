@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" Title="مدیریت گروه ها" Inherits="panel_ItemsGroup" MasterPageFile="~/masterpages/MgrMaster.Master" Codebehind="ItemsGroup.aspx.cs" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" Title="مدیریت گروه ها" Inherits="panel_ItemsGroup" MasterPageFile="~/Design/MasterPages/Administrator.Master" Codebehind="ItemsGroup.aspx.cs" %>
 
 <script runat="server">
 
@@ -75,7 +75,7 @@
         </div>
         <!-- end of row -->
         <div class="row text-center">
-            <asp:Button ID="btnOk" runat="server" Text="ثبت" CssClass="Mybtn" OnClick="btnOk_Click" />
+            <asp:Button ID="btnOk" runat="server" Text="ثبت" CssClass="btn btn-primary" OnClick="btnOk_Click" />
         </div>
         <div class="clear_1">
         </div>

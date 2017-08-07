@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="menuitem.aspx.cs" Inherits="CMS.panel.menuitem" MasterPageFile="~/masterpages/MgrMaster.Master" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="menuitem.aspx.cs" Inherits="CMS.panel.menuitem" MasterPageFile="~/Design/MasterPages/Administrator.Master" %>
 <asp:Content ID="Content1" runat="server" ContentPlaceHolderID="TitleContentPH">
     <div class="confirmMSG" id="confirmDiv" visible="false" runat="server">
         <asp:Label ID="lblOk" runat="server"></asp:Label></div>
@@ -10,7 +10,11 @@
      <div class="row ">
          <div class="col-sm-10">
                   <div class="form-panel">
-                  	  <h4 class="mb"><i class="fa fa-angle-left"></i> اطلاعات منو</h4>
+                  	  <h4 class="mb"><i class="fa fa-angle-left"></i>
+                            <span class="label label-warning">
+                             اطلاعات منو
+                                </span>
+                                </h4>
                       <div class="form-horizontal style-form" >
                            <div class="form-group">
                               <label class="col-sm-2 col-sm-2 control-label">شاخه</label>
@@ -57,19 +61,19 @@
                                
                                       <asp:TemplateField HeaderText="حذف">
                         <ItemTemplate>
-                            <asp:ImageButton ID="imgbtnDel" runat="server" CommandArgument='<%# Eval("MenuItemID").ToString() %>'
+                            <asp:ImageButton ID="imgbtnDel" CssClass="btn btn-danger" runat="server" CommandArgument='<%# Eval("MenuItemID").ToString() %>'
                                 CommandName="DelC" ImageUrl="../images/delete.png" CausesValidation="False" />
                         </ItemTemplate>
                     </asp:TemplateField>
                                   <asp:TemplateField HeaderText="ویرایش">
                         <ItemTemplate>
-                            <asp:ImageButton ID="ImageButton1" runat="server" CommandArgument='<%# Eval("MenuItemID").ToString() %>'
+                            <asp:ImageButton ID="ImageButton1" runat="server" CssClass="btn btn-success" CommandArgument='<%# Eval("MenuItemID").ToString() %>'
                                 CommandName="EditC" ImageUrl="../images/Edit.png" CausesValidation="False" />
                         </ItemTemplate>
                     </asp:TemplateField>
                   <asp:TemplateField HeaderText="ایجاد زیر شاخه">
                         <ItemTemplate>
-                           <asp:ImageButton ID="ImageButton5" runat="server" CommandArgument='<%# Eval("MenuItemID").ToString() %>'
+                           <asp:ImageButton ID="ImageButton5" CssClass="btn btn-success" runat="server" CommandArgument='<%# Eval("MenuItemID").ToString() %>'
                                 CommandName="AddSubC" ImageUrl="../images/previous.png" CausesValidation="False" />
                         </ItemTemplate>
                     </asp:TemplateField>
