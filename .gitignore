@@ -13,6 +13,9 @@ source/CMS/CMS.csproj.user
 !source/CMS/bin/WebUtilityv2.dll
 !source/CMS/bin/App_Web_*
 !source/CMS/bin/DropDownCheckBoxes.dll
+!source/CMS/bin/AccessManagementService.dll
+source/Viralme/obj/
+
 
  
 
