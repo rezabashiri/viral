@@ -6,7 +6,6 @@ source/CMS.sln
 source/CMS.v11.suo
 source/.vs/
 source/CMS/CMS.csproj.user
-!source/CMS/bin/CMS.dll
 !source/CMS/bin/AjaxControlToolkit.dll
 !source/CMS/bin/JQControls.dll
 !source/CMS/bin/tkvUtility.dll
