@@ -11,5 +11,8 @@ source/CMS/CMS.csproj.user
 !source/CMS/bin/JQControls.dll
 !source/CMS/bin/tkvUtility.dll
 !source/CMS/bin/WebUtilityv2.dll
+!source/CMS/bin/App_Web_*
+!source/CMS/bin/DropDownCheckBoxes.dll
+
  
 

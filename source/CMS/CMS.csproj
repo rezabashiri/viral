@@ -1784,26 +1784,6 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <COMReference Include="CorelDRAW">
-      <Guid>{FBF4300F-D921-11D1-B806-00A0C90646A9}</Guid>
-      <VersionMajor>16</VersionMajor>
-      <VersionMinor>1</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>tlbimp</WrapperTool>
-      <Isolated>False</Isolated>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </COMReference>
-    <COMReference Include="VGCore">
-      <Guid>{95E23C91-BC5A-49F3-8CD1-1FC515597048}</Guid>
-      <VersionMajor>16</VersionMajor>
-      <VersionMinor>1</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>tlbimp</WrapperTool>
-      <Isolated>False</Isolated>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </COMReference>
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\Viralme\Viralme.csproj">
       <Project>{d288483c-b256-428f-bf0a-e75b16823d7c}</Project>
       <Name>Viralme</Name>
