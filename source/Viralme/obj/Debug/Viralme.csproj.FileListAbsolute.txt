@@ -14,6 +14,5 @@ E:\git\viral\source\Viralme\bin\EntityFramework.dll
 E:\git\viral\source\Viralme\bin\EntityFramework.SqlServer.dll
 E:\git\viral\source\Viralme\bin\EntityFramework.xml
 E:\git\viral\source\Viralme\bin\EntityFramework.SqlServer.xml
-E:\git\viral\source\Viralme\obj\Debug\Viralme.csprojResolveAssemblyReference.cache
 E:\git\viral\source\Viralme\obj\Debug\Viralme.dll
 E:\git\viral\source\Viralme\obj\Debug\Viralme.pdb
