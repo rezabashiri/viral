@@ -1,11 +1,15 @@
-source/CMS.csproj.*
 source/CMS/App_Data/
-source/CMS/bin/
+source/CMS/bin/*
 source/UpgradeLog* 
-source/CMS/CMS.csproj
 source/CMS/obj/
 source/CMS.sln
 source/CMS.v11.suo
 source/.vs/
 source/CMS/CMS.csproj.user
+!source/CMS/bin/CMS.dll
+!source/CMS/bin/AjaxControlToolkit.dll
+!source/CMS/bin/JQControls.dll
+!source/CMS/bin/tkvUtility.dll
+!source/CMS/bin/WebUtilityv2.dll
+ 
 
