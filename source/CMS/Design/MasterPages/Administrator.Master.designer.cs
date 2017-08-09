@@ -22,6 +22,15 @@ namespace CMS.Design.MasterPages {
         protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
         
         /// <summary>
+        /// AccessCheckedHyperLink1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AccessManagementService.Controls.AccessCheckedHyperLink AccessCheckedHyperLink1;
+        
+        /// <summary>
         /// minform control.
         /// </summary>
         /// <remarks>

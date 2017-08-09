@@ -367,6 +367,8 @@
 
                     <ul>
                         <li>
+                                <uc1:AccessCheckedHyperLink ID="AccessCheckedHyperLink1" runat="server" EntityName="partmanagment" LinkText="مدیریت بخش ها" LinkHref="/panel/ItemsPart.aspx" ></uc1:AccessCheckedHyperLink>
+
                             <a href="../../panel/ItemsPart.aspx"><i class="fa fa-inbox"></i> مدیریت بخش ها</a>
                         </li>
                         <li>
