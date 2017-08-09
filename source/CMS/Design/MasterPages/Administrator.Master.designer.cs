@@ -22,6 +22,33 @@ namespace CMS.Design.MasterPages {
         protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
         
         /// <summary>
+        /// minform control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlForm minform;
+        
+        /// <summary>
+        /// LinkButton1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton LinkButton1;
+        
+        /// <summary>
+        /// AccessCheckedHyperLink6 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AccessManagementService.Controls.AccessCheckedHyperLink AccessCheckedHyperLink6;
+        
+        /// <summary>
         /// AccessCheckedHyperLink1 control.
         /// </summary>
         /// <remarks>
@@ -31,13 +58,58 @@ namespace CMS.Design.MasterPages {
         protected global::AccessManagementService.Controls.AccessCheckedHyperLink AccessCheckedHyperLink1;
         
         /// <summary>
-        /// minform control.
+        /// AccessCheckedHyperLink2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm minform;
+        protected global::AccessManagementService.Controls.AccessCheckedHyperLink AccessCheckedHyperLink2;
+        
+        /// <summary>
+        /// AccessCheckedHyperLink3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AccessManagementService.Controls.AccessCheckedHyperLink AccessCheckedHyperLink3;
+        
+        /// <summary>
+        /// AccessCheckedHyperLink4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AccessManagementService.Controls.AccessCheckedHyperLink AccessCheckedHyperLink4;
+        
+        /// <summary>
+        /// AccessCheckedHyperLink5 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AccessManagementService.Controls.AccessCheckedHyperLink AccessCheckedHyperLink5;
+        
+        /// <summary>
+        /// UserRepeater control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater UserRepeater;
+        
+        /// <summary>
+        /// AccessCheckedHyperLink7 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AccessManagementService.Controls.AccessCheckedHyperLink AccessCheckedHyperLink7;
         
         /// <summary>
         /// RadScriptManager1 control.
