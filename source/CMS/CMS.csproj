@@ -720,6 +720,8 @@
     <Content Include="DynamicData\FieldTemplates\PersianDate_Edit.ascx" />
     <Content Include="DynamicData\FieldTemplates\QRCode.ascx" />
     <Content Include="DynamicData\FieldTemplates\QRCode_Edit.ascx" />
+    <Content Include="DynamicData\FieldTemplates\RightServiceName.ascx" />
+    <Content Include="DynamicData\FieldTemplates\RightServiceName_Edit.ascx" />
     <Content Include="DynamicData\FieldTemplates\Text.ascx" />
     <Content Include="DynamicData\FieldTemplates\Text_Edit.ascx" />
     <Content Include="DynamicData\FieldTemplates\Url.ascx" />
@@ -1402,6 +1404,20 @@
     </Compile>
     <Compile Include="DynamicData\FieldTemplates\QRCode_Edit.ascx.designer.cs">
       <DependentUpon>QRCode_Edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\RightServiceName.ascx.cs">
+      <DependentUpon>RightServiceName.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\RightServiceName.ascx.designer.cs">
+      <DependentUpon>RightServiceName.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\RightServiceName_Edit.ascx.cs">
+      <DependentUpon>RightServiceName_Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\RightServiceName_Edit.ascx.designer.cs">
+      <DependentUpon>RightServiceName_Edit.ascx</DependentUpon>
     </Compile>
     <Compile Include="DynamicData\FieldTemplates\Text.ascx.cs">
       <DependentUpon>Text.ascx</DependentUpon>

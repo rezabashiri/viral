@@ -558,7 +558,7 @@ public class MyClass
     {
         get
         {
-            var user = global::AccessManagementService.Access.AccessControl.LoggenInUser;
+            var user = global::AccessManagementService.Access.AccessControl.LoggedInUser;
             if (user == null)
                 new AccessManagementService.Access.Login().RemoveSessions();
             return user.ID;
