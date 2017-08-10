@@ -362,25 +362,26 @@
                         <a href="../../panel/MgrPanel.aspx" title="داشبورد"><i class="fa fa-lg fa-fw fa-home"></i><span class="menu-item-parent">داشبورد</span></a>
                     </li>
                     <li>
-                       <span class="menu-item-parent"> <uc1:AccessCheckedHyperLink ID="AccessCheckedHyperLink6" Css="fa fa-lg fa-fw fa-cube txt-color-blue" runat="server" EntityName="menumanagment" LinkText="مدیریت منو" LinkHref="~/panel/menuitem.aspx"></uc1:AccessCheckedHyperLink></span>
 
-                        <!--<a href="../../panel/menuitem.aspx"><i class="fa fa-lg fa-fw fa-cube txt-color-blue"></i><span class="menu-item-parent">مدیریت منو</span></a>-->
+                        <uc1:AccessCheckedHyperLink ID="AccessCheckedHyperLink6" runat="server" EntityName="menumanagment" LinkText="<i class='fa fa-lg fa-fw fa-cube txt-color-blue'></i><span class='menu-item-parent'></span>مدیریت منو" LinkHref="~/panel/menuitem.aspx"></uc1:AccessCheckedHyperLink>
+
+                       <!-- <a href="../../panel/menuitem.aspx"><i class="fa fa-lg fa-fw fa-cube txt-color-blue"></i><span class="menu-item-parent"></span>ddd</a>-->
                     </li>
                     <li>
                         <a href="#" title="مدیریت مطالب"><i class="fa fa-lg fa-fw fa-book"></i><span class="menu-item-parent">مدیریت مطالب</span><!-- <span class="badge pull-right inbox-badge margin-right-13">14</span>--></a>
 
                         <ul>
                             <li>
-                                <uc1:AccessCheckedHyperLink ID="AccessCheckedHyperLink1" Css="fa fa-inbox" runat="server" EntityName="partmanagmentArticle" LinkText="مدیریت بخش ها" LinkHref="~/panel/ItemsPart.aspx"></uc1:AccessCheckedHyperLink>
+                                <uc1:AccessCheckedHyperLink ID="AccessCheckedHyperLink1" runat="server" EntityName="partmanagmentArticle" LinkText="<i class='fa fa-inbox'></i>مدیریت بخش ها" LinkHref="~/panel/ItemsPart.aspx"></uc1:AccessCheckedHyperLink>
                             </li>
                             <li>
-                                <uc1:AccessCheckedHyperLink ID="AccessCheckedHyperLink2" Css="fa fa-group" runat="server" EntityName="GroupmanagmentArticle" LinkText="مدیریت گروه ها" LinkHref="~/panel/ItemsGroup.aspx"></uc1:AccessCheckedHyperLink>
+                                <uc1:AccessCheckedHyperLink ID="AccessCheckedHyperLink2" runat="server" EntityName="GroupmanagmentArticle" LinkText="<i class='fa fa-group'></i>مدیریت گروه ها" LinkHref="~/panel/ItemsGroup.aspx"></uc1:AccessCheckedHyperLink>
                             </li>
                             <li>
-                                <uc1:AccessCheckedHyperLink ID="AccessCheckedHyperLink3" Css="fa fa-file-text-o" runat="server" EntityName="insertArticle" LinkText="درج مطلب جدید" LinkHref="~/panel/MakeItem.aspx"></uc1:AccessCheckedHyperLink>
+                                <uc1:AccessCheckedHyperLink ID="AccessCheckedHyperLink3" runat="server" EntityName="insertArticle" LinkText="<i class='fa fa-file-text-o'></i>درج مطلب جدید" LinkHref="~/panel/MakeItem.aspx"></uc1:AccessCheckedHyperLink>
                             </li>
                             <li>
-                                <uc1:AccessCheckedHyperLink ID="AccessCheckedHyperLink4" Css="fa fa-search" runat="server" EntityName="searchArticle" LinkText=" جست وجو و ویرایش" LinkHref="~/panel/ItemsList.aspx"></uc1:AccessCheckedHyperLink>
+                                <uc1:AccessCheckedHyperLink ID="AccessCheckedHyperLink4" runat="server" EntityName="searchArticle" LinkText="<i class='fa fa-search'></i> جست وجو و ویرایش" LinkHref="~/panel/ItemsList.aspx"></uc1:AccessCheckedHyperLink>
                             </li>
                         </ul>
 
@@ -390,18 +391,14 @@
                         <a href="#" title="مدیریت جامعه مجازی"><i class="fa fa-lg fa-fw fa-list-alt"></i><span class="menu-item-parent">مدیریت جامعه مجازی</span></a>
                         <ul>
                             <li>
-                                <uc1:AccessCheckedHyperLink ID="AccessCheckedHyperLink5" Css="fa fa-comments" runat="server" EntityName="commentmanagment" LinkText="مدیریت دیدگاه ها" LinkHref="~/panel/CommentMgr.aspx"></uc1:AccessCheckedHyperLink>
+                                <uc1:AccessCheckedHyperLink ID="AccessCheckedHyperLink5" runat="server" EntityName="commentmanagment" LinkText="<i class='fa fa-comments'></i> مدیریت دیدگاه ها" LinkHref="~/panel/CommentMgr.aspx"></uc1:AccessCheckedHyperLink>
                             </li>
 
                         </ul>
                     </li>
 
-                     <!-- <% // if (Modiriat_Gharardadha.AccessManagementService.AccessControl.IsValidAccessToRight("مجوز جستجو زیر پروژه توسط گردشکار")) {%>
-                        <li>
-                     <a href="../../Search/ZirprojeSearch.aspx"  ><i class=" fa fa-search " ></i>جستجو طرح های عمرانی  <i class=" "></i></a>
-                            </li>
-                            <%//} %>
-                    -->
+                    <%  if (AccessManagementService.Access.AccessControl.IsValidAccessToRight("مجوز مدیریت کاربر"))
+                        {%>
                     <li>
                         <a href="#" title="مدیریت کاربران"><i class="fa fa-lg fa-fw fa-user"></i><span class="menu-item-parent">مدیریت کاربران</span></a>
                         <ul class="sub">
@@ -414,10 +411,12 @@
                             </asp:Repeater>
                         </ul>
                     </li>
-                    <li>
-                        <uc1:AccessCheckedHyperLink ID="AccessCheckedHyperLink7" Css="fa fa-lg fa-fw fa-refresh fa-spin" runat="server" EntityName="updateAndroidDB" LinkText="بروز رسانی دیتابیس اندروید" LinkHref="~/panel/menuitem.aspx"></uc1:AccessCheckedHyperLink>
+                    <%} %>
 
-                       <!-- <a href="#" title="بروز رسانی دیتابیس اندروید"><i class="fa fa-lg fa-fw fa-refresh fa-spin"></i><span class="menu-item-parent">بروز رسانی دیتابیس اندروید</span></a>-->
+                    <li>
+                        <uc1:AccessCheckedHyperLink ID="AccessCheckedHyperLink7" runat="server" EntityName="updateAndroidDB" LinkText="<i class='fa fa-lg fa-fw fa-refresh fa-spin'></i><span class='menu-item-parent'>بروز رسانی دیتابیس اندروید</span>" LinkHref="~/panel/menuitem.aspx"></uc1:AccessCheckedHyperLink>
+
+                        <!-- <a href="#" title="بروز رسانی دیتابیس اندروید"><i class="fa fa-lg fa-fw fa-refresh fa-spin"></i><span class="menu-item-parent">بروز رسانی دیتابیس اندروید</span></a>-->
 
                     </li>
 

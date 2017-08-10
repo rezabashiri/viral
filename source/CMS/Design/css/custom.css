@@ -1,33 +1,62 @@
-﻿
+﻿@font-face {
+    font-family: BYekan;
+    src: url('../fonts/BYekan.eot?') format('embedded-opentype');
+    src: url('../fonts/BYekan.woff') format('woff'),url('../fonts/BYekan.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: iransw;
+    src: url('../fonts/iransw.eot?') format('embedded-opentype');
+    src: url('../fonts/iransw.woff') format('woff'),url('../fonts/iransw.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+nav ul li a
+{
+    font-size: 8pt !important;
+}
+body {
+    font-family: iransw !important;
+}
 
 #left-panel {
-right:0 !important;
-left:initial !important;
-overflow-x:hidden;
+    right: 0 !important;
+    left: initial !important;
+    overflow-x: hidden;
 }
+
 #main {
-margin-right:220PX ;
-margin-left:auto !important;
+    margin-right: 220PX;
+    margin-left: auto !important;
 }
+
 .minified #main {
-    margin-right:45px ;
-margin-left:auto !important;
+    margin-right: 45px;
+    margin-left: auto !important;
 }
+
 .minified nav > ul > li > ul {
-margin-left:auto !important;
-right:42px ;
+    margin-left: auto !important;
+    right: 42px;
 }
+
 .minified nav > ul > li > a > .menu-item-parent {
-    margin-left:auto !important;
-right:42px ;
+    margin-left: auto !important;
+    right: 42px;
 }
+
 nav ul {
-direction :rtl !important;
+    direction: rtl !important;
 }
+
 nav > ul > li > a b {
-right :4px !important;
+    right: 4px !important;
 }
+
 .page-footer {
-padding-right:233px;
-padding-left:initial !important;
+    padding-right: 233px;
+    padding-left: initial !important;
 }

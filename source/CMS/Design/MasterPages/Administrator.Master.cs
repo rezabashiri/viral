@@ -23,10 +23,11 @@ namespace CMS.Design.MasterPages
                 //lblDate.Text = farsicalender();
                 //TablesReapeter.DataSource = global::TakhteFoolad.AppStart.DynamicDataConfig.TakhteFooldModel.VisibleTables.Where(x => x.Scaffold == true).ToList();
                 //TablesReapeter.DataBind();
-
-                UserRepeater.DataSource = global::AccessManagementService.AppStart.DynamicDataConfig.AccessManagementModel.VisibleTables.Where(x => x.Scaffold == true);
-                UserRepeater.DataBind();
-
+                if (AccessManagementService.Access.AccessControl.IsValidAccessToRight("مجوز مدیریت کاربر"))
+                {
+                    UserRepeater.DataSource = global::AccessManagementService.AppStart.DynamicDataConfig.AccessManagementModel.VisibleTables.Where(x => x.Scaffold == true);
+                    UserRepeater.DataBind();
+                }
 
             }
         }
