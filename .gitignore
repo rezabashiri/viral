@@ -14,7 +14,8 @@ source/CMS/CMS.csproj.user
 !source/CMS/bin/DropDownCheckBoxes.dll
 !source/CMS/bin/AccessManagementService.dll
 source/Viralme/obj/
-
+source/Viralme/bin/*
+source/CMS/Properties/
 
  
 

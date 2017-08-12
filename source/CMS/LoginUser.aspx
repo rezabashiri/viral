@@ -102,7 +102,7 @@
 								</p>
 							</div>
 						</div>
-
+                         
 					</div>
 					<div class="col-xs-12 col-sm-12 col-md-5 col-lg-4">
 						<div class="well no-padding">
@@ -110,7 +110,7 @@
                                     <form id="Form1" name="login-form"    runat="server">
                       <telerik:RadScriptManager  ID="RadScriptManager1"  runat="server"></telerik:RadScriptManager>
 
-   
+  
           <uc1:Login runat="server" ID="LoginControl"></uc1:Login>
  
         </form>

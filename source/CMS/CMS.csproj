@@ -672,11 +672,6 @@
     <Content Include="Design\js\smart-chat-ui\smart.chat.ui.min.js" />
     <Content Include="Design\js\smartwidgets\jarvis.widget.min.js" />
     <Content Include="Design\js\speech\voicecommand.min.js" />
-    <Content Include="Design\MasterPages\forgotpassword.html" />
-    <Content Include="Design\MasterPages\index.html" />
-    <Content Include="Design\MasterPages\lock.html" />
-    <Content Include="Design\MasterPages\login.html" />
-    <Content Include="Design\MasterPages\register.html" />
     <Content Include="DynamicData\Content\GridViewPager.ascx" />
     <Content Include="DynamicData\Content\Images\Back.gif" />
     <Content Include="DynamicData\Content\Images\header_back.gif" />
