@@ -23,7 +23,7 @@
             <asp:Button ID="btnOk" runat="server" Text="ثبت" ValidationGroup="a" CssClass="btn btn-primary" OnClick="btnOk_Click" />
               <asp:ValidationSummary runat="server" ID="valSummary"  />
         </div>
-        <div class="row">
+        <div class="row" >
             <asp:GridView ID="GridView1" DataKeyNames="PartID"   runat="server" DataSourceID="partSource" AutoGenerateColumns="False" CssClass="MyGrid"
                 OnRowCommand="GridView1_RowCommand" OnRowDataBound="GridView1_RowDataBound">
                 

@@ -21,7 +21,7 @@ namespace CMS.panel
         }
         protected void GridView1_RowCommand(object sender, GridViewCommandEventArgs e)
         {
-
+            
         }
 
         protected void btnOk_Click(object sender, EventArgs e)
@@ -30,7 +30,7 @@ namespace CMS.panel
             var res =  _tpart.Insert(new TPart() { PartName = txtName.Text });
             if (res > 0)
             {
-                lblOK.Text = "اطلاعات با موفقی ثبت شد";
+                lblOK.Text = "اطلاعات با موفقیت ثبت شد";
                 Rebind();
             }
             else

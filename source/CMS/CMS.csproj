@@ -20,6 +20,7 @@
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
     <WebGreaseLibPath>..\packages\WebGrease.1.5.2\lib</WebGreaseLibPath>
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -47,9 +48,6 @@
     <Reference Include="AjaxControlToolkit, Version=4.1.7.1213, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\AjaxControlToolkit.dll</HintPath>
-    </Reference>
-    <Reference Include="AjaxMin">
-      <HintPath>..\packages\AjaxMin.dll</HintPath>
     </Reference>
     <Reference Include="Antlr3.Runtime">
       <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
@@ -614,6 +612,7 @@
     <Content Include="Design\fonts\glyphicons-halflings-regular-4.html" />
     <Content Include="Design\fonts\glyphicons-halflings-regular.html" />
     <Content Include="Design\fonts\glyphicons-halflings-regulard41d.html" />
+    <Content Include="Design\forgotpassword.html" />
     <Content Include="Design\img\ajax-loader.gif" />
     <Content Include="Design\img\alpha.png" />
     <Content Include="Design\img\avatars\1.png" />
@@ -650,6 +649,7 @@
     <Content Include="Design\img\splash\touch-icon-ipad.png" />
     <Content Include="Design\img\splash\touch-icon-iphone-retina.png" />
     <Content Include="Design\img\voicecommand\active-btn.gif" />
+    <Content Include="Design\index.html" />
     <Content Include="Design\js\app.config.js" />
     <Content Include="Design\js\app.min.js" />
     <Content Include="Design\js\bootstrap\bootstrap.min.js" />
@@ -1766,13 +1766,27 @@
     <Content Include="Design\fonts\fontawesome-webfont78ce.svg" />
     <Content Include="Design\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Design\MasterPages\Administrator.Master" />
+    <Content Include="Design\fonts\BYekan.eot" />
+    <Content Include="Design\fonts\BYekan.ttf" />
+    <Content Include="Design\fonts\BYekan.woff" />
+    <Content Include="Design\fonts\IRANSans-Light.eot" />
+    <Content Include="Design\fonts\IRANSans-Light.woff" />
+    <Content Include="Design\fonts\IRANSans-Light.woff2" />
+    <Content Include="Design\fonts\IRANSANS.eot" />
+    <Content Include="Design\fonts\IRANSANS.woff" />
+    <Content Include="Design\fonts\IRANSANS.woff2" />
+    <Content Include="Design\fonts\iransw.eot" />
+    <Content Include="Design\fonts\iransw.ttf" />
+    <Content Include="Design\fonts\iransw.woff" />
+    <Content Include="Design\fonts\iransw.woff2" />
     <None Include="Properties\PublishProfiles\GolestanShohada.pubxml" />
     <Content Include="Viralme\Design\fonts\fontawesome-webfontba72.eot" />
     <Content Include="Viralme\Design\fonts\fontawesome-webfontba72.svg" />
     <Content Include="Viralme\Design\fonts\fontawesome-webfontba72.ttf" />
     <Content Include="Viralme\Design\fonts\fontawesome-webfontba72.woff" />
     <Content Include="Viralme\Design\fonts\fontawesome-webfontd41d.eot" />
-    <Content Include="Viralme\Design\MasterPages\HomeMaster.Master" />
+    <Content Include="Viralme\Design\MasterPages\HomeMaster.
+    ster" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

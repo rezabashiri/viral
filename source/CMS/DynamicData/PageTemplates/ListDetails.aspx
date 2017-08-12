@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPages/MgrMaster.master"  MaintainScrollPositionOnPostback="true" AutoEventWireup="true" EnableViewStateMac="false" ValidateRequest="false" CodeBehind="ListDetails.aspx.cs" Inherits="CMS.ListDetails" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Design/MasterPages/Administrator.Master"  MaintainScrollPositionOnPostback="true" AutoEventWireup="true" EnableViewStateMac="false" ValidateRequest="false" CodeBehind="ListDetails.aspx.cs" Inherits="CMS.ListDetails" %>
 
 <%@ Register Src="~/DynamicData/Content/GridViewPager.ascx" TagName="GridViewPager" TagPrefix="asp" %>
 <%--<%@ Register src="~/DynamicData/Content/FilterUserControl.ascx" tagname="DynamicFilter" tagprefix="asp" %>--%>
