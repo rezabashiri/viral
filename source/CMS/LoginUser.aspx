@@ -64,8 +64,7 @@
 			<div id="logo-group">
 				<span id="logo"> <img src="/Design/img/logo.png" alt="مرورگران"> </span>
 			</div>
-
-			<span id="extr-page-header-space"> <a href="register.html" class="btn btn-danger">اکانت نیاز دارید؟</a>  </span>
+			<span id="extr-page-header-space"> <a href="signup.aspx" class="btn btn-danger">اکانت نیاز دارید؟</a>  </span>
 
 		</header>
 
@@ -108,14 +107,11 @@
 						<div class="well no-padding">
 			 
                                     <form id="Form1" name="login-form"    runat="server">
+
                       <telerik:RadScriptManager  ID="RadScriptManager1"  runat="server"></telerik:RadScriptManager>
 
   
-          <uc1:Login runat="server" ID="LoginControl"></uc1:Login>
- 
-        </form>
-						</div>
-						
+
 				
 						
 					</div>

@@ -74,6 +74,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\App_Web_uscfileupload.ascx.cc671b29.dll</HintPath>
     </Reference>
+    <Reference Include="App_Web_uscsignup.ascx.cc671b29, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\App_Web_uscsignup.ascx.cc671b29.dll</HintPath>
+    </Reference>
     <Reference Include="DropDownCheckBoxes, Version=1.1.0.27408, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\DropDownCheckBoxes.dll</HintPath>
@@ -935,6 +939,7 @@
     <Content Include="panel\MgrLogin.aspx" />
     <Content Include="panel\MgrPanel.aspx" />
     <Content Include="panel\PictureBoard.aspx" />
+    <Content Include="signup.aspx" />
     <Content Include="TransformXSLT.xslt">
       <SubType>Designer</SubType>
     </Content>
@@ -1653,6 +1658,13 @@
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="signup.aspx.cs">
+      <DependentUpon>signup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="signup.aspx.designer.cs">
+      <DependentUpon>signup.aspx</DependentUpon>
     </Compile>
     <Compile Include="Viralme\Design\MasterPages\HomeMaster.Master.cs">
       <DependentUpon>HomeMaster.Master</DependentUpon>

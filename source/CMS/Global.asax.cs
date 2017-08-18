@@ -28,8 +28,8 @@ namespace CMS
 
         private void RegisterRoute(RouteCollection rc)
         {
-            rc.MapPageRoute("Home", "", "~/TakhteFoolad/Pages/Home.aspx");
-            rc.MapPageRoute("locale", "fa/SearchMashahir", "~/TakhteFoolad/Pages/Mashahir.aspx");
+            rc.MapPageRoute("Home", "", "~/Pages/Default.aspx");
+            //rc.MapPageRoute("locale", "fa/SearchMashahir", "~/TakhteFoolad/Pages/Mashahir.aspx");
             rc.MapPageRoute("admin", "admin", "~/LoginUser.aspx");
         }
 
