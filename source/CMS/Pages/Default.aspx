@@ -151,8 +151,8 @@
 										<i class="fa fa-trophy fa-2x"></i>
 									</div>--%>
                                         <h3><span></span><%# Eval("ItemTopic") %><span></span></h3>
-                                        <h4><%# Eval("SummaryTxt") %></h4>
-                                        <%# Eval("BodyTxt") %>
+                                        <p> <%# Eval("SummaryTxt") %> </p>
+                                       <p><%# Eval("BodyTxt") %></p> 
                                             </li>
                                     </ItemTemplate>
 								</asp:ListView>
@@ -179,18 +179,25 @@
 			<div class="rester"></div>
 			<div class="rester black"></div>
 			<div class="container">
+                <div class="clear"></div>
+                <h2 class="white">وایرال می" برای تبلیغ دهنده ها"</h2>
+                <div class="small-separator ws"></div>
 				<div class="clear"></div>
 					<div id="clientsay" class="owl-carousel">
                         <asp:ListView ID="Brandlvw" runat="server" >
+                           
                             <ItemTemplate>
                                 	<div class="item">
                         <div class="grid-2">
                                         <uc2:UscBoundedImageShow CssClass="img-thumbnail" Float="none" runat="server" ID="UscBoundedImageShow" />
                             </div>					    
-                        <div class="grid-4">
-                            <%# Eval("BodyTxt") %>
+                        <div class="grid-4  ">
+                            <h2 class="white"><%# Eval("ItemTopic") %></h2>
+                           <span>   <%# Eval("BodyTxt") %>	</span>
                         </div>
-							<span><%# Eval("ItemTopic") %></span>
+                      
+                                        
+					
 						</div>
                             </ItemTemplate>
                         </asp:ListView>
@@ -247,7 +254,7 @@
 								<div class="folio-overlay">
 									<span class="overlay red"></span>
 									<h4><%# Eval("ItemTopic") %></h4>							
-									<h6><%# Eval("SummaryTxt") %></h6>
+									 <P><%# Eval("SummaryTxt") %> </P>
                                    
 								</div>
 							</div>
@@ -292,6 +299,9 @@
 			<div class="rester"></div>
 			<div class="rester red"></div>
 			<div class="container">
+				 <div class="clear"></div>
+                <h2 class="white">وایرال می " برای راننده"</h2>
+                <div class="small-separator ws"></div>
 				<div class="clear"></div>
 					<div id="client-carusel" class="owl-carousel clientsay">
                         <asp:ListView ID="Driverlvw" runat="server" >
@@ -300,10 +310,10 @@
                         <div class="grid-2">
                                         <uc2:UscBoundedImageShow CssClass="img-thumbnail" Float="none" runat="server" ID="UscBoundedImageShow" />
                             </div>					    
-                        <div class="grid-4  ">
-                            <%# Eval("BodyTxt") %>
+                           <div class="grid-4  ">
+                            <h2 class="white"><%# Eval("ItemTopic") %></h2>
+                           <span>   <%# Eval("BodyTxt") %>	</span>
                         </div>
-							<span><%# Eval("ItemTopic") %></span>
 						</div>
                             </ItemTemplate>
                         </asp:ListView>

@@ -1,7 +1,41 @@
 ﻿
-
+@font-face {
+    font-family: iransans;
+    src: url('fonts/IRANSANS.eot?') format('embedded-opentype');
+    src: url('fonts/IRANSANS.woff') format('woff'),url('fonts/iransw.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+body {
+    font-family:iransans !important;
+    font-size:12px !important;
+}
+#clientsay p, .clientsay p ,.bigtext  {
+    font-family:iransans !important;
+    font-size:1.2em !important;
+}
+#driver .content, #brand .content {
+padding :100px 0 0 0;
+}
+.animbox,.bigtext, .sections-head , #options li ,.inner a{
+font-family:inherit !important;
+font-size:inherit !important;
+}
+#service_boxes  {
+direction:rtl ;
+}
+ 
+p {
+    font-size:1.3em !important;
+}
 .customNavigation {
 position:relative;
 top:-20%;
 left:-40%;
+}
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    font-family:iransans !important;
+font-size:2em !important;
+line-height:2.2em !important;
+letter-spacing:normal !important;
 }

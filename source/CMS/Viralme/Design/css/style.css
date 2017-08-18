@@ -1,4 +1,4 @@
-@charset "utf-8";
+﻿@charset "utf-8";
 /* ====================
 --------------------------------------------------------------
 	++++General Styles++++
@@ -204,7 +204,7 @@ Content Styles
 	color:#fff;
 }
 #jpreBar,.patern span,.red,.nav-button span,.inner-overlay,.skillbar-bar,.serviseslider h3 span,.icon-holder,.subscriptionForm input#submitButton,#loadingProgress,.planContainer .price,.planContainer .button a, .sepcolor,.quote-icon,.skillbar-bar,#facts ul li h6,.skillbar-bar-member,.member-social-list li a,#closeProject a,#ajaxpage a.lanch-project,#clientlist,#contact_form textarea:focus,#contact_form input:focus, .owl-theme .owl-controls .owl-page.active span,.owl-theme .owl-controls .clickable .owl-page:hover span,.slides-pagination a.current,.slides-pagination a:hover,.submit_btn:hover, .pagination a.current-page, .pagination a:hover , .project-details a {
-	background:#F54F36;
+	background:#ff7f00;
 }
 .ajl,.bigtext,.sections-head,.slides-container h1 span,.planContainer .options li,.error,#options li:hover,#options li.actcat,.social-list ul li a:hover,.num,.project-description h3,.project-details h3,.subcribe div#error,.subcribe div#success,.smallicon:hover,.footer, .simple-page-head .content h2 span, .post-body a, .widget h4, .search-submit, .tagcloud a:hover, #comments-title , #reply-title , .controls button:hover, .share-options a:hover, .portfolio-nav a{
 	color:#F54F36;
@@ -840,7 +840,7 @@ Team
     margin-top:70px;
 }
 .service_box {
-    margin:0 20px 10px 20px;
+    margin:0 40px 10px 20px;
 	display:inline-block;
 	width: 250px;
 	position:relative;
@@ -849,7 +849,7 @@ Team
 }
 .animbox {
 	padding: 17px 35px;
-    width: 250px;
+    width: 300px;
 	float:left;
 	margin-top:0px;
     margin-bottom: 30px;
@@ -868,7 +868,7 @@ Team
 	z-index:2;
 	background:#fff;
 	color:#292929;
-	padding:100px 0;
+	padding:20px 0;
 }
 .serviseslider h3 {
 	font-size:24px;
@@ -1006,13 +1006,19 @@ Team
 	z-index:-1;
 	opacity:0.7;
 }
-.box  a h4{
+.box  a h4  {
 	width:100%;
 	position:absolute;
-	top:30%;
+	top:10%;
 	text-transform:uppercase;
 	font-size:18px;
 	font-weight:100;
+}
+.box a p{
+	width:100%;
+	position:absolute;
+	top:40%;
+ 
 }
 .box  a h6{
 	letter-spacing:1px;
@@ -1311,8 +1317,8 @@ Testimonials
 	margin:0 auto;
 }
 #clientsay p , .clientsay p {
-	font-size:20px;
-	font-family: "Times New Roman", Times, serif; font-style: italic;
+ 
+ 
 	cursor:move;
 	padding:8px;
 	margin-top:30px;
@@ -2160,7 +2166,7 @@ h1{
 	width:100%;
 	margin:20px 0 10px;
 }
-#clientsay p{
+#clientsay p {
 	font-size:14px;
 }
 .skillbar-title-member {
@@ -2227,7 +2233,7 @@ Tablet
 .contact-details span, .contact-details a {
 	margin:20px 0;
 }	
-#clientsay .owl-next, #clientsay .owl-prev{
+#clientsay .owl-next, #clientsay .owl-prev , .clientsay .owl-prev, .clientsay .owl-next{
 	display:none;
 }
 .num {

@@ -162,26 +162,31 @@ function initCashemir() {
 
 // owlCarousel  --------
    
-	$("#clientsay").owlCarousel({		   
+	$("#clientsay").owlCarousel({
+	    rtl: true,
 		navigation : true,
 		pagination:true, 
 		slideSpeed : 300,
 		paginationSpeed : 400,
 		singleItem:true,
-		transitionStyle : "goDown"			  
+		transitionStyle: "goDown"
+		
 	});
 	
 	$("#client-carusel").owlCarousel({		   
-	navigation : true,
+	    rtl: true,
+	    navigation: true,
 		pagination:true, 
 		slideSpeed : 300,
 		paginationSpeed : 400,
 		singleItem:true,
-		transitionStyle : "goDown"				  
+		transitionStyle: "goDown",
+	    nav:false
 	});	
 
     var owl = $("#owl-demo");	
-	owl.owlCarousel({		
+    owl.owlCarousel({
+        rtl: true,
 		navigation : false,
 		pagination:false,
 		singleItem : true,
