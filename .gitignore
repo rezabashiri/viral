@@ -9,6 +9,7 @@ source/CMS/CMS.csproj.user
 source/CMS/CMS*
 source/CMS/.CMS*
 source/_UpgradeReport_Files/
+!source/CMS/CMSLogic/
 !source/CMS/CMS.csproj
 !source/CMS/bin/AjaxControlToolkit.dll
 !source/CMS/bin/JQControls.dll
