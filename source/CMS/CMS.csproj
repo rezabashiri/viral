@@ -1052,7 +1052,6 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\DynamicDataConfig.cs" />
-    <Compile Include="CMSLogic\Config.cs" />
     <Compile Include="CMSLogic\DateBaseHelprs.cs" />
     <Compile Include="CMSLogic\GalleryHelpers.cs" />
     <Compile Include="CMSLogic\Ititem.cs" />
