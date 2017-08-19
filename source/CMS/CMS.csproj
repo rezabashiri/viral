@@ -41,8 +41,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AccessManagementService, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="AccessManagementService">
       <HintPath>..\packages\AccessManagementService.dll</HintPath>
     </Reference>
     <Reference Include="AjaxControlToolkit, Version=4.1.7.1213, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
@@ -77,6 +76,9 @@
     <Reference Include="App_Web_uscsignup.ascx.cc671b29, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\App_Web_uscsignup.ascx.cc671b29.dll</HintPath>
+    </Reference>
+    <Reference Include="App_Web_uscverification.ascx.cc671b29">
+      <HintPath>..\packages\App_Web_uscverification.ascx.cc671b29.dll</HintPath>
     </Reference>
     <Reference Include="DropDownCheckBoxes, Version=1.1.0.27408, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
