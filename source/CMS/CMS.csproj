@@ -594,6 +594,7 @@
     <Content Include="Design\ajax\widgets.html" />
     <Content Include="Design\ajax\wizard.html" />
     <Content Include="Design\ajax\xml\gmap\pins.html" />
+    <Content Include="Design\css\bootstrap-rtl.min.css" />
     <Content Include="Design\css\bootstrap.min.css" />
     <Content Include="Design\css\custom.css" />
     <Content Include="Design\css\demo.min.css" />
@@ -618,7 +619,6 @@
     <Content Include="Design\fonts\glyphicons-halflings-regular-4.html" />
     <Content Include="Design\fonts\glyphicons-halflings-regular.html" />
     <Content Include="Design\fonts\glyphicons-halflings-regulard41d.html" />
-    <Content Include="Design\forgotpassword.html" />
     <Content Include="Design\img\ajax-loader.gif" />
     <Content Include="Design\img\alpha.png" />
     <Content Include="Design\img\avatars\1.png" />
@@ -655,7 +655,6 @@
     <Content Include="Design\img\splash\touch-icon-ipad.png" />
     <Content Include="Design\img\splash\touch-icon-iphone-retina.png" />
     <Content Include="Design\img\voicecommand\active-btn.gif" />
-    <Content Include="Design\index.html" />
     <Content Include="Design\js\app.config.js" />
     <Content Include="Design\js\app.min.js" />
     <Content Include="Design\js\bootstrap\bootstrap.min.js" />
@@ -678,9 +677,6 @@
     <Content Include="Design\js\smart-chat-ui\smart.chat.ui.min.js" />
     <Content Include="Design\js\smartwidgets\jarvis.widget.min.js" />
     <Content Include="Design\js\speech\voicecommand.min.js" />
-    <Content Include="Design\lock.html" />
-    <Content Include="Design\login.html" />
-    <Content Include="Design\register.html" />
     <Content Include="DynamicData\Content\GridViewPager.ascx" />
     <Content Include="DynamicData\Content\Images\Back.gif" />
     <Content Include="DynamicData\Content\Images\header_back.gif" />
@@ -740,51 +736,6 @@
     <Content Include="DynamicData\PageTemplates\Insert.aspx" />
     <Content Include="DynamicData\PageTemplates\List.aspx" />
     <Content Include="DynamicData\PageTemplates\ListDetails.aspx" />
-    <Content Include="files\photoItems\23240564.jpg" />
-    <Content Include="files\photoItems\8-business-it.jpg" />
-    <Content Include="files\photoItems\9502051119757092.jpg" />
-    <Content Include="files\photoItems\9502051929780776.jpg" />
-    <Content Include="files\photoItems\950205430750458.jpg" />
-    <Content Include="files\photoItems\950205812971963.jpg" />
-    <Content Include="files\photoItems\9502141449993190.jpg" />
-    <Content Include="files\photoItems\9502142101421521.jpg" />
-    <Content Include="files\photoItems\950214254067195.jpg" />
-    <Content Include="files\photoItems\95021444794487.jpg" />
-    <Content Include="files\photoItems\950214504248069.jpg" />
-    <Content Include="files\photoItems\950214954608330.jpg" />
-    <Content Include="files\photoItems\950215621970175.jpg" />
-    <Content Include="files\photoItems\9503031425321333.jpg" />
-    <Content Include="files\photoItems\9503031846145400.jpg" />
-    <Content Include="files\photoItems\9503031919514092.jpg" />
-    <Content Include="files\photoItems\950303400092526.jpg" />
-    <Content Include="files\photoItems\950303835914192.jpg" />
-    <Content Include="files\photoItems\9503111678789527.jpg" />
-    <Content Include="files\photoItems\9508261095743563.jpg" />
-    <Content Include="files\photoItems\9508261259960279.jpg" />
-    <Content Include="files\photoItems\9508261398681983.jpg" />
-    <Content Include="files\photoItems\9508261702229267.jpg" />
-    <Content Include="files\photoItems\9508261796886228.jpg" />
-    <Content Include="files\photoItems\9508261811457813.jpg" />
-    <Content Include="files\photoItems\9508261867461291.jpg" />
-    <Content Include="files\photoItems\950826233046766.jpg" />
-    <Content Include="files\photoItems\950826257015250.jpg" />
-    <Content Include="files\photoItems\950826258732946.jpg" />
-    <Content Include="files\photoItems\950826497120596.jpg" />
-    <Content Include="files\photoItems\950826529656262.jpg" />
-    <Content Include="files\photoItems\950826629923034.jpg" />
-    <Content Include="files\photoItems\950826717489062.jpg" />
-    <Content Include="files\photoItems\950826719977858.jpg" />
-    <Content Include="files\photoItems\95082689294430.jpg" />
-    <Content Include="files\photoItems\9509021060969203.jpg" />
-    <Content Include="files\photoItems\9509021452530851.jpg" />
-    <Content Include="files\photoItems\9509021715724036.jpg" />
-    <Content Include="files\photoItems\9509022048436486.jpg" />
-    <Content Include="files\photoItems\9509022066150733.jpg" />
-    <Content Include="files\photoItems\arrow.gif" />
-    <Content Include="files\photoItems\business-it.jpg" />
-    <Content Include="files\photoItems\contract.jpg" />
-    <Content Include="files\photoItems\images.jpg" />
-    <Content Include="files\photoItems\tarikhche2.jpg" />
     <Content Include="fonts\WebYekan.svg" />
     <Content Include="Global.asax" />
     <Content Include="images\Add.png" />
@@ -1101,6 +1052,7 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\DynamicDataConfig.cs" />
+    <Compile Include="CMSLogic\Config.cs" />
     <Compile Include="CMSLogic\DateBaseHelprs.cs" />
     <Compile Include="CMSLogic\GalleryHelpers.cs" />
     <Compile Include="CMSLogic\Ititem.cs" />
@@ -1803,6 +1755,26 @@
     <Content Include="Viralme\Design\fonts\fontawesome-webfontba72.woff" />
     <Content Include="Viralme\Design\fonts\fontawesome-webfontd41d.eot" />
     <Content Include="Viralme\Design\MasterPages\HomeMaster.Master" />
+    <Content Include="Viralme\Design\css\fonts\fontawesome-webfont.eot" />
+    <Content Include="Viralme\Design\css\fonts\fontawesome-webfont.svg" />
+    <Content Include="Viralme\Design\css\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Viralme\Design\css\fonts\fontawesome-webfont.woff" />
+    <Content Include="Viralme\Design\css\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Viralme\Design\css\fonts\FontAwesome.otf" />
+    <Content Include="Viralme\Design\css\fonts\IRANSans-Light.eot" />
+    <Content Include="Viralme\Design\css\fonts\IRANSans-Light.woff" />
+    <Content Include="Viralme\Design\css\fonts\IRANSans-Light.woff2" />
+    <Content Include="Viralme\Design\css\fonts\IRANSANS.eot" />
+    <Content Include="Viralme\Design\css\fonts\IRANSANS.woff" />
+    <Content Include="Viralme\Design\css\fonts\IRANSANS.woff2" />
+    <Content Include="Viralme\Design\css\fonts\iransw.eot" />
+    <Content Include="Viralme\Design\css\fonts\iransw.ttf" />
+    <Content Include="Viralme\Design\css\fonts\iransw.woff" />
+    <Content Include="Viralme\Design\css\fonts\iransw.woff2" />
+    <Content Include="Viralme\Design\css\fonts\WebYekan.eot" />
+    <Content Include="Viralme\Design\css\fonts\WebYekan.svg" />
+    <Content Include="Viralme\Design\css\fonts\WebYekan.ttf" />
+    <Content Include="Viralme\Design\css\fonts\WebYekan.woff" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -1811,11 +1783,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="files\Album\" />
-    <Folder Include="files\GeneralFiles\" />
-    <Folder Include="files\Resume\" />
-    <Folder Include="files\UploadFiles\" />
-    <Folder Include="files\Video\" />
     <Folder Include="uploads\" />
   </ItemGroup>
   <ItemGroup>

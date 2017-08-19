@@ -25,7 +25,7 @@ namespace CMS.CMSLogic
                 string sql = string.Format("SELECT     TOP ({0})   ItemTopic,  PhotoName,  SummaryTxt, ItemID,  ShowDate,BodyTxt,GrpName ,PartID , DATEDIFF(day, GETDATE(), EventDate) as dayE, DATEDIFF(day, DATEPART(HOUR, GETDATE()), DATEPART(HOUR, EventDate)) as HourE , " +
 " abs( DATEDIFF(day, DATEPART(minute, GETDATE()), DATEPART(minute, EventDate))) as minE ,EventDate ,PhotoPath,FileURL,InputDate,VisitCnt,GrpID,PartName,AttachID FROM  dbo.ViewItemPart " +
                             "WHERE FreshStat = 3 AND PubStat = 9 AND GETDATE() >= ShowDate  {1} " +
-                            "ORDER BY  ShowDate DESC", topnumber, string.IsNullOrEmpty(Params) == false ? " and " + Params : string.Empty);
+                            "ORDER BY  ShowDate asc", topnumber, string.IsNullOrEmpty(Params) == false ? " and " + Params : string.Empty);
                 mc.connect();
                 dt = mc.select(sql);
                 return dt;
@@ -72,11 +72,12 @@ namespace CMS.CMSLogic
             {
 
                 DataTable dt = new DataTable();
-                string sql = string.Format("select * FROM [dbo].[TGroups] "  );
+                string sql = string.Format("select * FROM [dbo].[TGroups] ");
                 if (!string.IsNullOrEmpty(Parameter))
                 {
                     sql = sql + " where " + Parameter;
                 }
+                sql += sql + " order by GrpID asc";
                 mc.connect();
                 dt = mc.select(sql);
                 return dt;

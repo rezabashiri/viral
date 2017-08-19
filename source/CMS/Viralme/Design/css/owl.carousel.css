@@ -231,8 +231,8 @@
 }
 #owl-demo .item {width:100%;display:block;padding:10px 0;position:relative;}
 #owl-demo .item img{display: block;width: 100%;height: auto;}
-#clientsay .owl-next{display:block;width:25px;height:47px;position:absolute;top:50%;margin-top:-24px;right:-25px;background: url(../images/sr.png) no-repeat;overflow:hidden;text-indent:-999px;}
-#clientsay .owl-prev{display:block;width:25px;height:47px;position:absolute;top:50%;margin-top:-24px;left:-25px;background: url(../images/sl.png) no-repeat;overflow:hidden;text-indent:-999px;}
+#clientsay .owl-next , .clientsay .owl-next{display:block;width:25px;height:47px;position:absolute;top:50%;margin-top:-24px;right:-25px;background: url(../images/sr.png) no-repeat;overflow:hidden;text-indent:-999px;}
+#clientsay .owl-prev ,.clientsay .owl-prev{display:block;width:25px;height:47px;position:absolute;top:50%;margin-top:-24px;left:-25px;background: url(../images/sl.png) no-repeat;overflow:hidden;text-indent:-999px;}
 .owl-theme .owl-controls .owl-page{
 	display: inline-block;
 	zoom: 1;

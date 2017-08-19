@@ -13,9 +13,9 @@
 <!--=============== basic  ===============-->
 
 	<meta charset="UTF-8">
-	<title>Cashemir. Responsive One Page Portfolio</title>
-	<meta name="description" content="Your website description here">
-	<meta name="keywords" content="your, website, keywords, here">
+	<title><%= CMS.Config.Title %></title>
+	<meta name="description" content="<%= CMS.Config.KeyBoard %>e">
+	<meta name="keywords" content="<%= CMS.Config.Description %>">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	
 <!--=============== css  ===============-->	
@@ -135,6 +135,7 @@
 <!--=============== javascript ===============-->
 
 	<script type="text/javascript" src="/Viralme/Design/js/jquery.min.js"></script>
+    <%--<script type="text/javascript" src="/Viralme/Design/js/jquery-3.2.1.min.js"></script>--%>
 	<script type="text/javascript" src="/Viralme/Design/js/jpreloader.min.js"></script>
  
 	<script type="text/javascript" src="/Viralme/Design/js/smoothscroll.js"></script>
@@ -154,7 +155,7 @@
 	<script type="text/javascript" src="/Viralme/Design/js/jquery.magnific-popup.min.js"></script>
 	<script type="text/javascript" src="/Viralme/Design/js/scripts.js"></script>
 		<!--Styleswitch-->
-	<script src="/Viralme/Design/js/styleswitch.js" type="text/javascript"></script>
+ 
 </body>
 
 <!-- Mirrored from cashemir.kwst.net/team/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 20 Jun 2017 12:39:44 GMT -->

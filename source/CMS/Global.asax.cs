@@ -11,7 +11,7 @@ namespace CMS
 {
     public class Global : System.Web.HttpApplication
     {
-
+ 
         protected void Application_Start(object sender, EventArgs e)
         {
 
@@ -19,15 +19,17 @@ namespace CMS
             //WebUtility.AppStart.ConfigRoutes.RegisterModelRoutes(RouteTable.Routes, global::TakhteFoolad.AppStart.DynamicDataConfig.TakhteFooldModel);
             WebUtility.AppStart.EntityModelHelpers.RegisterEntityModel(global::AccessManagementService.AppStart.DynamicDataConfig.AccessManagementModel, new global::AccessManagementService.Model.AccessEntities());
             WebUtility.AppStart.ConfigRoutes.RegisterModelRoutes(RouteTable.Routes, global::AccessManagementService.AppStart.DynamicDataConfig.AccessManagementModel);
-          RegisterRoute(RouteTable.Routes);
+            RegisterRoute(RouteTable.Routes);
 
-
+            CMS.Config.Description = "وایرال می به عنوان اولین پلتفرم تبلیغات محیطی در ایران شروع به کار نموده است. این پلتفرم واسط بین تبلیغ گیرنده و تبلیغ دهنده می باشد";
+            CMS.Config.KeyBoard = "وایرال_می,تبلیغات";
+            CMS.Config.Title = "وایرال می ، پلتفرم تبلیغات محیطی";
         }
 
         private void RegisterRoute(RouteCollection rc)
         {
-            rc.MapPageRoute("Home", "", "~/TakhteFoolad/Pages/Home.aspx");
-            rc.MapPageRoute("locale", "fa/SearchMashahir", "~/TakhteFoolad/Pages/Mashahir.aspx");
+            rc.MapPageRoute("Home", "", "~/Pages/Default.aspx");
+            //rc.MapPageRoute("locale", "fa/SearchMashahir", "~/TakhteFoolad/Pages/Mashahir.aspx");
             rc.MapPageRoute("admin", "admin", "~/LoginUser.aspx");
         }
 

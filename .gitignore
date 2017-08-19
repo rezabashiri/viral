@@ -6,6 +6,10 @@ source/CMS.sln
 source/CMS.v11.suo
 source/.vs/
 source/CMS/CMS.csproj.user
+source/CMS/CMS*
+source/CMS/.CMS*
+source/_UpgradeReport_Files/
+!source/CMS/CMS.csproj
 !source/CMS/bin/AjaxControlToolkit.dll
 !source/CMS/bin/JQControls.dll
 !source/CMS/bin/tkvUtility.dll
@@ -14,7 +18,9 @@ source/CMS/CMS.csproj.user
 !source/CMS/bin/DropDownCheckBoxes.dll
 !source/CMS/bin/AccessManagementService.dll
 source/Viralme/obj/
-
+source/Viralme/bin/*
+source/CMS/Properties/
+detail.txt
 
  
 
