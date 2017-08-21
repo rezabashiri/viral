@@ -21,9 +21,9 @@ namespace CMS
             WebUtility.AppStart.ConfigRoutes.RegisterModelRoutes(RouteTable.Routes, global::AccessManagementService.AppStart.DynamicDataConfig.AccessManagementModel);
             RegisterRoute(RouteTable.Routes);
 
-            //CMS.Config.Description = "وایرال می به عنوان اولین پلتفرم تبلیغات محیطی در ایران شروع به کار نموده است. این پلتفرم واسط بین تبلیغ گیرنده و تبلیغ دهنده می باشد";
-            //CMS.Config.KeyBoard = "وایرال_می,تبلیغات";
-            //CMS.Config.Title = "وایرال می ، پلتفرم تبلیغات محیطی";
+            CMS.Config.Description = "وایرال می به عنوان اولین پلتفرم تبلیغات محیطی در ایران شروع به کار نموده است. این پلتفرم واسط بین تبلیغ گیرنده و تبلیغ دهنده می باشد";
+            CMS.Config.KeyBoard = "وایرال_می,تبلیغات";
+            CMS.Config.Title = "وایرال می ، پلتفرم تبلیغات محیطی";
         }
 
         private void RegisterRoute(RouteCollection rc)

@@ -25,3 +25,4 @@ E:\project\viral\source\Viralme\bin\EntityFramework.xml
 E:\project\viral\source\Viralme\bin\EntityFramework.SqlServer.xml
 E:\project\viral\source\Viralme\obj\Debug\Viralme.dll
 E:\project\viral\source\Viralme\obj\Debug\Viralme.pdb
+E:\project\viral\source\Viralme\obj\Debug\Viralme.csprojResolveAssemblyReference.cache

@@ -110,8 +110,8 @@
 
                       <telerik:RadScriptManager  ID="RadScriptManager1"  runat="server"></telerik:RadScriptManager>
 
-  
-
+  <uc1:LoginControl ID="LoginControl" runat="server" />
+</form>
 				
 						
 					</div>
