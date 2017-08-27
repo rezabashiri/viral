@@ -114,7 +114,7 @@
                             <telerik:RadScriptManager ID="RadScriptManager1" runat="server"></telerik:RadScriptManager>
 
                            
-                            <uc1:SignUp ID="sd" runat="server" />
+                            <uc1:SignUp ID="uscSignUp" runat="server" />
 
                         </form>
                     </div>

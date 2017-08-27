@@ -68,6 +68,24 @@
     <link rel="apple-touch-startup-image" href="img/splash/ipad-landscape.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape)">
     <link rel="apple-touch-startup-image" href="img/splash/ipad-portrait.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait)">
     <link rel="apple-touch-startup-image" href="img/splash/iphone.png" media="screen and (max-device-width: 320px)">
+
+    <script>
+        if (!window.jQuery) {
+            document.write('<script src="/Design/js/libs/jquery-2.1.1.min.js"><\/script>');
+        }
+    </script>
+    <script>
+
+        $(document).ready(function () {
+            $("nav ul ").each(function (index, val) {
+                if ($(this).has('a').length < 1) {
+
+                    $(this).parent().remove();
+
+                }
+            });
+        });
+    </script>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
@@ -335,7 +353,9 @@
 
                     <a href="javascript:void(0);" id="show-shortcut" data-action="toggleShortcut">
                         <img src="/Design/img/avatars/sunny.png" alt="me" class="online" />
-                        <span>john.doe 
+                        <span>
+                            <%= AccessManagementService.Access.AccessControl.LoggedInUser.FullName %>
+
                         </span>
                         <i class="fa fa-angle-down"></i>
                     </a>
@@ -365,7 +385,7 @@
 
                         <uc1:AccessCheckedHyperLink ID="AccessCheckedHyperLink6" runat="server" EntityName="menumanagment" LinkText="<i class='fa fa-lg fa-fw fa-cube txt-color-blue'></i><span class='menu-item-parent'></span>مدیریت منو" LinkHref="~/panel/menuitem.aspx"></uc1:AccessCheckedHyperLink>
 
-                       <!-- <a href="../../panel/menuitem.aspx"><i class="fa fa-lg fa-fw fa-cube txt-color-blue"></i><span class="menu-item-parent"></span>ddd</a>-->
+                        <!-- <a href="../../panel/menuitem.aspx"><i class="fa fa-lg fa-fw fa-cube txt-color-blue"></i><span class="menu-item-parent"></span>ddd</a>-->
                     </li>
                     <li>
                         <a href="#" title="مدیریت مطالب"><i class="fa fa-lg fa-fw fa-book"></i><span class="menu-item-parent">مدیریت مطالب</span><!-- <span class="badge pull-right inbox-badge margin-right-13">14</span>--></a>
@@ -527,11 +547,7 @@
 
         <!-- #PLUGINS -->
 
-        <script>
-            if (!window.jQuery) {
-                document.write('<script src="/Design/js/libs/jquery-2.1.1.min.js"><\/script>');
-            }
-        </script>
+
 
 
         <script>

@@ -41,6 +41,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AccessManagementService, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\AccessManagementService.dll</HintPath>
+    </Reference>
     <Reference Include="AjaxControlToolkit, Version=4.1.7.1213, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\AjaxControlToolkit.dll</HintPath>
@@ -50,7 +54,7 @@
     </Reference>
     <Reference Include="App_Web_logincontrol.ascx.cc671b29, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\publish\access\bin\App_Web_logincontrol.ascx.cc671b29.dll</HintPath>
+      <HintPath>..\packages\App_Web_logincontrol.ascx.cc671b29.dll</HintPath>
     </Reference>
     <Reference Include="App_Web_searchmashahir.ascx.cc961b29">
       <HintPath>..\..\..\..\publish\takhtefoolad\bin\App_Web_searchmashahir.ascx.cc961b29.dll</HintPath>
@@ -73,9 +77,10 @@
     </Reference>
     <Reference Include="App_Web_uscsignup.ascx.cc671b29, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\App_Web_uscsignup.ascx.cc671b29.dll</HintPath>
+      <HintPath>..\packages\App_Web_uscsignup.ascx.cc671b29.dll</HintPath>
     </Reference>
-    <Reference Include="App_Web_uscverification.ascx.cc671b29">
+    <Reference Include="App_Web_uscverification.ascx.cc671b29, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\App_Web_uscverification.ascx.cc671b29.dll</HintPath>
     </Reference>
     <Reference Include="DropDownCheckBoxes, Version=1.1.0.27408, Culture=neutral, processorArchitecture=MSIL">
@@ -103,6 +108,10 @@
     <Reference Include="JQControls, Version=1.1.0.35527, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\JQControls.dll</HintPath>
+    </Reference>
+    <Reference Include="Kavenegar, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Kavenegar.1.1.2\lib\net40\Kavenegar.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="MessagingToolkit.QRCode">
       <HintPath>..\packages\MessagingToolkit.QRCode.1.3.0\lib\MessagingToolkit.QRCode.dll</HintPath>
@@ -149,6 +158,7 @@
     </Reference>
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -193,6 +203,10 @@
     </Reference>
     <Reference Include="WebGrease">
       <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="WebUtilityv2, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\WebUtilityv2.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -913,6 +927,7 @@
     <Content Include="LoginUser.aspx" />
     <Content Include="Pages\Default.aspx" />
     <Content Include="Pages\Defualt.aspx" />
+    <Content Include="Pages\WebForm1.aspx" />
     <Content Include="Panel.aspx" />
     <Content Include="panel\AddPicture.aspx" />
     <Content Include="panel\AddVideo.aspx" />
@@ -936,6 +951,7 @@
     <Content Include="panel\MgrPanel.aspx" />
     <Content Include="panel\PictureBoard.aspx" />
     <Content Include="signup.aspx" />
+    <Content Include="test.aspx" />
     <Content Include="TransformXSLT.xslt">
       <SubType>Designer</SubType>
     </Content>
@@ -1049,6 +1065,7 @@
     <Compile Include="CMSLogic\News.cs" />
     <Compile Include="CMSLogic\QueryStringHelpers.cs" />
     <Compile Include="CMSLogic\SessionHelpers.cs" />
+    <Compile Include="CMSLogic\SMS.cs" />
     <Compile Include="CMSLogic\StringHeplers.cs" />
     <Compile Include="CMSLogic\TGroup.cs" />
     <Compile Include="CMSLogic\TItem.cs" />
@@ -1491,6 +1508,13 @@
     <Compile Include="Pages\Defualt.aspx.designer.cs">
       <DependentUpon>Defualt.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Pages\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Panel.aspx.cs">
       <DependentUpon>Panel.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1653,6 +1677,13 @@
     <Compile Include="signup.aspx.designer.cs">
       <DependentUpon>signup.aspx</DependentUpon>
     </Compile>
+    <Compile Include="test.aspx.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="test.aspx.designer.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Viralme\Design\MasterPages\HomeMaster.Master.cs">
       <DependentUpon>HomeMaster.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1777,14 +1808,6 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\accessservice\access\AccessManagementService.csproj">
-      <Project>{3b63c4e8-d047-404d-9727-0c3e44e1b8d5}</Project>
-      <Name>AccessManagementService</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\WebUtility_v2\WebUtility.csproj">
-      <Project>{d78f6bdc-6d1c-4511-add2-44b116d77cd8}</Project>
-      <Name>WebUtility</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Viralme\Viralme.csproj">
       <Project>{d288483c-b256-428f-bf0a-e75b16823d7c}</Project>
       <Name>Viralme</Name>

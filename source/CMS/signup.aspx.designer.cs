@@ -31,12 +31,12 @@ namespace CMS {
         protected global::Telerik.Web.UI.RadScriptManager RadScriptManager1;
         
         /// <summary>
-        /// sd control.
+        /// uscSignUp control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::AccessManagementService.Controls.SignUp sd;
+        protected global::AccessManagementService.Controls.SignUp uscSignUp;
     }
 }

@@ -27,7 +27,37 @@ namespace CMS.Pages
                 FillPortFolioItems();
                 FillUpperportfolio();
             }
+
+            LoginControl.OnLoggedIn += LoginControl_OnLoggedIn;
+
+            UscSignUp.OnSendVerificationCode += UscSignUp_OnSendVerificationCode;
+            UscSignUp.OnVerificationComplete += UscSignUp_OnVerificationComplete;
+
         }
+
+        void LoginControl_OnLoggedIn(AccessManagementService.Model.User user)
+        {
+            CMSLogic.SessionHelpers.SetUser(user);
+        }
+
+        private void UscSignUp_OnVerificationComplete(AccessManagementService.Access.UserActiveStatus status)
+        {
+            switch (status)
+            {
+                case AccessManagementService.Access.UserActiveStatus.Active:
+                    //Server.TransferRequest("~/LoginUser.aspx");
+                    break;
+                case AccessManagementService.Access.UserActiveStatus.NotActive:
+                    break;
+
+            }
+        }
+
+        private void UscSignUp_OnSendVerificationCode(AccessManagementService.Helpers.VerificationStatus Status)
+        {
+        }
+
+
         private void FillDriver()
         {
             Driverlvw.DataSource = _titem.Titems.Where(x => x.GrpName == TGroup.DriverGroupName);
