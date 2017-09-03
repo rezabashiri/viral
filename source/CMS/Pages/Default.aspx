@@ -1,11 +1,12 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Viralme/Design/MasterPages/HomeMaster.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="CMS.Pages.Default" %>
 
 <%@ Register Src="~/Controls/UscBoundedImageShow.ascx" TagPrefix="uc2" TagName="UscBoundedImageShow" %>
-<%@ Register Assembly="Telerik.Web.UI" Namespace="Telerik.Web.UI" TagPrefix="telerik" %>
+
 
 
 
 <asp:Content ContentPlaceHolderID="BodyContent" runat="server" ID="BodyHolder">
+       <em:MessageBox ID="msg" runat="server" ></em:MessageBox>
 
     <%--for test this is online--%>
     <%--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />--%>
@@ -168,11 +169,15 @@
 
                         </ul>
 
-
+                  
 
                     </div>
-                    <button class="btn btn-danger btn-lg" id="btnsignup">
-                        ثبت نام در وایرال می 
+                    <button class="btn btn-danger btn-lg" id="btnsignup_driver">
+                        ثبت نام به عنوان راننده 
+                    </button>
+
+                    <button class="btn btn-primary btn-lg" id="btnsignup_advertiser">
+                        ثبت نام به عنوان تبلیغ دهنده 
                     </button>
 
                     <button class="btn btn-warning btn-lg" id="btnlogin">
@@ -180,74 +185,11 @@
                     </button>
 
 
-
                     <br />
                     <br />
                 </div>
 
             </div>
-
-            <form id="Form1" name="login-form" runat="server">
-                <telerik:RadScriptManager ID="RadScriptManager1" runat="server"></telerik:RadScriptManager>
-
-
-
-                <%--<uc1:Login ID="LoginControl" runat="server" />--%>
-
-                <div class="modal fade" id="modal_signUp" tabindex="-1" role="dialog">
-                    <div class="modal-dialog modal-lg" role="document" id="modalDrag">
-                        <div class="modal-content persian">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                <h2 class="modal-title" style="text-align: right;">
-                                    <span class="label label-primary">ثبت نام در وایرال می
-                                    </span>
-                                </h2>
-
-                            </div>
-                            <div class="modal-body">
-                                <div class="box-body">
-
-                                    <uc1:SignUp runat="server" ID="UscSignUp" />
-
-                                </div>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-danger" data-dismiss="modal">بستن</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-
-                <div class="modal fade" id="modal_login" tabindex="-1" role="dialog">
-                    <div class="modal-dialog modal-lg" role="document" id="modalDrag2">
-                        <div class="modal-content persian">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                <h2 class="modal-title" style="text-align: right;">
-                                    <span class="label label-primary">ورود به وایرال می
-                                    </span>
-                                </h2>
-
-                            </div>
-                            <div class="modal-body">
-                                <div class="box-body">
-
-                                    <uc1:Login ID="LoginControl" runat="server" />
-                                </div>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-danger" data-dismiss="modal">بستن</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </form>
-
-
 
 
         </div>
@@ -408,18 +350,117 @@
     </div>
     <!--=============== section testimontal end ===============-->
 
+    <form id="Form1" name="login-form" runat="server">
+        <telerik:RadScriptManager ID="RadScriptManager1" runat="server"></telerik:RadScriptManager>
 
+
+
+        <%--<uc1:Login ID="LoginControl" runat="server" />--%>
+
+        <div class="modal fade" id="modal_signUp_advertiser" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document" id="modalDrag_advertiser">
+                <div class="modal-content persian">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h2 class="modal-title" style="text-align: right;">
+                            <span class="label label-primary">ثبت نام در وایرال می
+                            </span>
+                        </h2>
+
+                    </div>
+                    <div class="modal-body">
+                        <div class="box-body">
+
+                            <uc1:SignUp runat="server" GroupName="advertiser" ID="UscSignUpAdvertiser" />
+
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">بستن</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="modal fade" id="modal_signUp_driver" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document" id="modalDrag">
+                <div class="modal-content persian">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h2 class="modal-title" style="text-align: right;">
+                            <span class="label label-primary">ثبت نام در وایرال می
+                            </span>
+                        </h2>
+
+                    </div>
+                    <div class="modal-body">
+                        <div class="box-body">
+
+                            <uc1:SignUp runat="server" GroupName="driver" ID="SignUpDriver" />
+
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">بستن</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <div class="modal fade" id="modal_login" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document" id="modalDrag2">
+                <div class="modal-content persian">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h2 class="modal-title" style="text-align: right;">
+                            <span class="label label-primary">ورود به وایرال می
+                            </span>
+                        </h2>
+
+                    </div>
+                    <div class="modal-body">
+                        <div class="box-body">
+
+                            <uc1:Login ID="LoginControl" runat="server" />
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">بستن</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+ 
+        </form>
 
     <script type="text/javascript">
-        $('#btnsignup').on('click', function (e) {
+        $('#btnsignup_advertiser').on('click', function (e) {
             e.preventDefault();
-            $("#modal_signUp").modal();
+            $("#modal_signUp_advertiser").modal();
+        });
+
+        $('#btnsignup_driver').on('click', function (e) {
+            e.preventDefault();
+            $("#modal_signUp_driver").modal();
         });
 
         $('#btnlogin').on('click', function (e) {
             e.preventDefault();
             $("#modal_login").modal();
         });
+
+        //$('#btnTest').click(function () {
+        //    //$('#divTest').show();
+        //    //$('#divTest').fadeIn();
+        //    $("#divTest").show();
+        //    setTimeout(function () { $("#divTest").hide(); }, 5000);
+        //});
+
 
     </script>
 

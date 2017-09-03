@@ -28,10 +28,10 @@ namespace CMS.Pages
                 FillUpperportfolio();
             }
 
-            LoginControl.OnLoggedIn += LoginControl_OnLoggedIn;
+            //LoginControl.OnLoggedIn += LoginControl_OnLoggedIn;
 
-            UscSignUp.OnSendVerificationCode += UscSignUp_OnSendVerificationCode;
-            UscSignUp.OnVerificationComplete += UscSignUp_OnVerificationComplete;
+            //UscSignUp.OnSendVerificationCode += UscSignUp_OnSendVerificationCode;
+            //UscSignUp.OnVerificationComplete += UscSignUp_OnVerificationComplete;
 
         }
 
@@ -149,6 +149,11 @@ namespace CMS.Pages
             if (slidernum == items)
                 slidernum = 0;
             return divtag;
+        }
+
+        protected void btntest_Click(object sender, EventArgs e)
+        {
+            msg.ShowMessage("test",WebUtility.Controls.MessageBox.MessageType.danger);
         }
     }
 }

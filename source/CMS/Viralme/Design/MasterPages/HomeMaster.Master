@@ -49,7 +49,7 @@
 
 
 
-
+    <script type="text/javascript" src="/Viralme/Design/js/jquery-3.2.1.min.js"></script>
     <!--=============== modernizr  ===============-->
 
     <script src="/Viralme/Design/js/modernizr.custom.97074.js"></script>
@@ -121,14 +121,11 @@
         <div class="overlay fixed-overlay body-overlay"></div>
 
         <div class="wrapper">
+
+
             <asp:ContentPlaceHolder ID="BodyContent" runat="server"></asp:ContentPlaceHolder>
 
-
-
             <uc2:UscFooterGenerator runat="server" ID="UscFooterGenerator" />
-
-
-
 
 
         </div>
@@ -141,8 +138,8 @@
 
     <!--=============== javascript ===============-->
 
-    <%--<script type="text/javascript" src="/Viralme/Design/js/jquery-3.2.1.min.js"></script>--%>
-    <%--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>--%>
+
+
     <script src="/Viralme/Design/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="/Viralme/Design/js/jpreloader.min.js"></script>
 
