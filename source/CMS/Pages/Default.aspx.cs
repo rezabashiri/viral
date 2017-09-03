@@ -120,5 +120,10 @@ namespace CMS.Pages
                 slidernum = 0;
             return divtag;
         }
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            msg.ShowMessage("d", WebUtility.Controls.MessageBox.MessageType.danger);
+
+        }
     }
 }

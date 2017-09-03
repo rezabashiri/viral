@@ -41,7 +41,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AccessManagementService">
+    <Reference Include="AccessManagementService, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\AccessManagementService.dll</HintPath>
     </Reference>
     <Reference Include="AjaxControlToolkit, Version=4.1.7.1213, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
@@ -76,9 +77,6 @@
     <Reference Include="App_Web_uscsignup.ascx.cc671b29, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\App_Web_uscsignup.ascx.cc671b29.dll</HintPath>
-    </Reference>
-    <Reference Include="App_Web_uscverification.ascx.cc671b29">
-      <HintPath>..\packages\App_Web_uscverification.ascx.cc671b29.dll</HintPath>
     </Reference>
     <Reference Include="DropDownCheckBoxes, Version=1.1.0.27408, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -919,6 +917,7 @@
     <Content Include="LoginUser.aspx" />
     <Content Include="Pages\Default.aspx" />
     <Content Include="Pages\Defualt.aspx" />
+    <Content Include="Pages\test.aspx" />
     <Content Include="Panel.aspx" />
     <Content Include="panel\AddPicture.aspx" />
     <Content Include="panel\AddVideo.aspx" />
@@ -1052,6 +1051,7 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\DynamicDataConfig.cs" />
+    <Compile Include="CMSLogic\Config.cs" />
     <Compile Include="CMSLogic\DateBaseHelprs.cs" />
     <Compile Include="CMSLogic\GalleryHelpers.cs" />
     <Compile Include="CMSLogic\Ititem.cs" />
@@ -1499,6 +1499,13 @@
     </Compile>
     <Compile Include="Pages\Defualt.aspx.designer.cs">
       <DependentUpon>Defualt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\test.aspx.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\test.aspx.designer.cs">
+      <DependentUpon>test.aspx</DependentUpon>
     </Compile>
     <Compile Include="Panel.aspx.cs">
       <DependentUpon>Panel.aspx</DependentUpon>

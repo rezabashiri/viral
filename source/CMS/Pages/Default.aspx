@@ -5,7 +5,8 @@
 
 <asp:Content ContentPlaceHolderID="BodyContent" runat="server" ID="BodyHolder">
     <!--=============== intro slide ===============-->
-
+        <em:MessageBox ID="msg" runat="server" ></em:MessageBox>
+  
 	<div id="intro">
 	
 		<div id="topSlide">

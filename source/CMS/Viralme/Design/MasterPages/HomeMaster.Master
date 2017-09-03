@@ -32,6 +32,7 @@
     <link rel="stylesheet" href="/Viralme/Design/css/bootstrap.min.css" type="text/css" >
 		<!-- panel css -->
 	<link rel="stylesheet" href="/Viralme/Design/css/panel.css" type="text/css" media="screen">
+	<script type="text/javascript" src="/Viralme/Design/js/jquery.min.js"></script>
 
 	
 <!--=============== fonts  ===============-->
@@ -134,7 +135,6 @@
  
 <!--=============== javascript ===============-->
 
-	<script type="text/javascript" src="/Viralme/Design/js/jquery.min.js"></script>
     <%--<script type="text/javascript" src="/Viralme/Design/js/jquery-3.2.1.min.js"></script>--%>
 	<script type="text/javascript" src="/Viralme/Design/js/jpreloader.min.js"></script>
  

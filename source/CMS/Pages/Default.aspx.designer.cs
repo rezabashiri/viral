@@ -13,6 +13,15 @@ namespace CMS.Pages {
     public partial class Default {
         
         /// <summary>
+        /// msg control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::WebUtility.Controls.MessageBox msg;
+        
+        /// <summary>
         /// sliderlvw control.
         /// </summary>
         /// <remarks>
