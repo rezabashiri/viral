@@ -55,6 +55,10 @@
     <link rel="apple-touch-startup-image" href="img/splash/ipad-landscape.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape)">
     <link rel="apple-touch-startup-image" href="img/splash/ipad-portrait.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait)">
     <link rel="apple-touch-startup-image" href="img/splash/iphone.png" media="screen and (max-device-width: 320px)">
+    <link rel="stylesheet" type="text/css" media="screen" href="/Design/css/bootstrap.min.css">
+
+    <script src="/Design/js/libs/jquery-2.1.1.min.js" type="text/javascript"></script>
+     <script src="/Design/js/bootstrap/bootstrap.min.js"></script>
 </head>
 
 <body class="animated fadeInDown">
@@ -109,8 +113,8 @@
                         <form id="Form1" name="login-form" runat="server">
                             <telerik:RadScriptManager ID="RadScriptManager1" runat="server"></telerik:RadScriptManager>
 
-                            <uc1:SignUp runat="server" ID="LoginControl"></uc1:SignUp>
-
+                           
+                            <uc1:SignUp ID="uscSignUp" runat="server" />
 
                         </form>
                     </div>
@@ -156,6 +160,7 @@
 
 		<!-- MAIN APP JS FILE -->
 		<script src="/Design/js/app.min.js"></script>--%>
+    
 </body>
 
 <!-- Mirrored from 192.241.236.31/themes/preview/smartadmin/1.8.x/ajax/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 02 Jul 2017 06:57:57 GMT -->

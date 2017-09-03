@@ -12,7 +12,8 @@ namespace CMS
         protected void Page_Load(object sender, EventArgs e)
         {
             LoginControl.OnLoggedIn += LoginControl_OnLoggedIn;
-         
+
+
         }
 
         void LoginControl_OnLoggedIn(AccessManagementService.Model.User user)

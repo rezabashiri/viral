@@ -11,7 +11,25 @@ namespace CMS
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            uscSignUp.OnSendVerificationCode += UscSignUp_OnSendVerificationCode;
+            uscSignUp.OnVerificationComplete += UscSignUp_OnVerificationComplete;
+        }
 
+        private void UscSignUp_OnVerificationComplete(AccessManagementService.Access.UserActiveStatus status)
+        {
+            switch (status)
+            {
+                case AccessManagementService.Access.UserActiveStatus.Active:
+                    //Server.TransferRequest("~/LoginUser.aspx");
+                    break;
+                case AccessManagementService.Access.UserActiveStatus.NotActive:
+                    break;
+
+            }
+        }
+
+        private void UscSignUp_OnSendVerificationCode(AccessManagementService.Helpers.VerificationStatus Status)
+        {
         }
     }
 }

@@ -10,85 +10,95 @@
 
 <!-- Mirrored from cashemir.kwst.net/team/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 20 Jun 2017 12:36:08 GMT -->
 <head>
-<!--=============== basic  ===============-->
+    <!--=============== basic  ===============-->
 
-	<meta charset="UTF-8">
-	<title><%= CMS.Config.Title %></title>
-	<meta name="description" content="<%= CMS.Config.KeyBoard %>e">
-	<meta name="keywords" content="<%= CMS.Config.Description %>">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-	
-<!--=============== css  ===============-->	
+    <meta charset="UTF-8">
+    <title><%= CMS.Config.Title %></title>
+    <meta name="description" content="<%= CMS.Config.KeyBoard %>e">
+    <meta name="keywords" content="<%= CMS.Config.Description %>">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!--=============== css  ===============-->
+    <link rel="stylesheet" href="/Viralme/Design/css/bootstrap.min.css" type="text/css">
+
     <link rel="stylesheet" href="/Viralme/Design/css/font-awesome.min.css">
-	<link rel="stylesheet" href="/Viralme/Design/css/normalize.css" type="text/css" media="screen">
-	<link rel="stylesheet" href="/Viralme/Design/css/grid.css" type="text/css" media="screen">
-	<link rel="stylesheet" href="/Viralme/Design/css/owl.carousel.css" type="text/css" media="screen">
-	<link rel="stylesheet" href="/Viralme/Design/css/flexslider.css" type="text/css" media="screen">
-	<link rel="stylesheet" href="/Viralme/Design/css/magnific-popup.css" media="all">
-	<link rel="stylesheet" href="/Viralme/Design/css/superslides.css" type="text/css" media="screen">
-	<link rel="stylesheet" href="/Viralme/Design/css/style.css" type="text/css" media="screen">
-    <link rel="stylesheet" href="/Viralme/Design/css/custom.css" type="text/css" >
+    <link rel="stylesheet" href="/Viralme/Design/css/normalize.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="/Viralme/Design/css/grid.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="/Viralme/Design/css/owl.carousel.css" type="text/css" media="screen">
 
+    <link rel="stylesheet" href="/Viralme/Design/css/flexslider.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="/Viralme/Design/css/magnific-popup.css" media="all">
+    <link rel="stylesheet" href="/Viralme/Design/css/superslides.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="/Viralme/Design/css/style.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="/Viralme/Design/css/custom.css" type="text/css">
+
+    <!-- panel css -->
+    <link rel="stylesheet" href="/Viralme/Design/css/panel.css" type="text/css" media="screen">
+
+<<<<<<< HEAD
     <link rel="stylesheet" href="/Viralme/Design/css/bootstrap.min.css" type="text/css" >
 		<!-- panel css -->
 	<link rel="stylesheet" href="/Viralme/Design/css/panel.css" type="text/css" media="screen">
 	<script type="text/javascript" src="/Viralme/Design/js/jquery.min.js"></script>
+=======
+>>>>>>> 8a4e5dd5c5cdbdbdd7c7a371e6cea6756db2cda0
 
-	
-<!--=============== fonts  ===============-->
+    <!--=============== fonts  ===============-->
 
-	<link href='http://fonts.googleapis.com/css?family=Oswald:400,700|Open+Sans:400,300' rel='stylesheet' type='text/css'>
-	
-<!--=============== colors  ===============-->	
+    <link href='http://fonts.googleapis.com/css?family=Oswald:400,700|Open+Sans:400,300' rel='stylesheet' type='text/css'>
 
-	<link rel="alternate stylesheet" type="text/css" href="/Viralme/Design/css/blue-style.css" title="blue" media="screen" />
-	<link rel="alternate stylesheet" type="text/css" href="/Viralme/Design/css/green-style.css" title="green" media="screen" />
-	<link rel="alternate stylesheet" type="text/css" href="/Viralme/Design/css/yellow-style.css" title="yellow" media="screen" />
-	<link rel="alternate stylesheet" type="text/css" href="/Viralme/Design/css/orange-style.css" title="red" media="screen" />
+    <!--=============== colors  ===============-->
 
+    <link rel="alternate stylesheet" type="text/css" href="/Viralme/Design/css/blue-style.css" title="blue" media="screen" />
+    <link rel="alternate stylesheet" type="text/css" href="/Viralme/Design/css/green-style.css" title="green" media="screen" />
+    <link rel="alternate stylesheet" type="text/css" href="/Viralme/Design/css/yellow-style.css" title="yellow" media="screen" />
+    <link rel="alternate stylesheet" type="text/css" href="/Viralme/Design/css/orange-style.css" title="red" media="screen" />
 
 
 
-<!--=============== modernizr  ===============-->
+    <script type="text/javascript" src="/Viralme/Design/js/jquery-3.2.1.min.js"></script>
+    <!--=============== modernizr  ===============-->
 
-	<script src="/Viralme/Design/js/modernizr.custom.97074.js"></script>
-	
-<!--=============== google map ===============-->
+    <script src="/Viralme/Design/js/modernizr.custom.97074.js"></script>
 
-	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB_1YIEP1sUq7UIttlVb82CvAE7nUjfcAc"></script>
-	
-<!--=============== ie styles  ===============-->
 
-	<!--[if IE 8]><link rel="stylesheet" type="text/css" href="css/ie8.css" /><![endif]-->
-	
-<!--=============== favicons ===============-->
+    <!--=============== google map ===============-->
 
-	<link rel="shortcut icon" href="images/favicon.ico">
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB_1YIEP1sUq7UIttlVb82CvAE7nUjfcAc"></script>
+
+    <!--=============== ie styles  ===============-->
+
+    <!--[if IE 8]><link rel="stylesheet" type="text/css" href="css/ie8.css" /><![endif]-->
+
+    <!--=============== favicons ===============-->
+
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <script type="text/javascript" src="/Viralme/Design/js/jquery.min.js"></script>
 
 </head>
 
-<body onLoad="initialize()">
+<body onload="initialize()">
 
-<div id="main">
+    <div id="main">
 
-<!--=============== navigation ===============-->
+        <!--=============== navigation ===============-->
 
-	<div class="navigation isDown">
-	
-		<div class="nav-overlay"></div>
-		
-		<div class="nav-button transition">
-			<span></span>
-			<span></span>
-			<span></span>
-		</div>
-		
-		<div class="inner">
-			<img src="/Viralme/Design/images/logo.png" class="logo" alt="" title="">
-			
-			<div class="link-holder"  id="nav" >
-                <uc2:UscDynamicMenu    LinksClass="scroll-link " runat="server" ID="UscDynamicMenu" />
-			<%--<ul>
+        <div class="navigation isDown">
+
+            <div class="nav-overlay"></div>
+
+            <div class="nav-button transition">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="inner">
+                <img src="/Viralme/Design/images/logo.png" class="logo" alt="" title="">
+
+                <div class="link-holder" id="nav">
+                    <uc2:UscDynamicMenu LinksClass="scroll-link " runat="server" ID="UscDynamicMenu" />
+                    <%--<ul>
 				<li class="current"><a href="#about" class="scroll-link">About</a></li>
 				<li><a href="#team" class="scroll-link">Team</a></li>
 				<li><a href="#servises" class="scroll-link">Services</a></li>
@@ -98,64 +108,68 @@
 				<li><a href="blog.html">Blog</a></li>
 				<li><a href="shortcodes.html">Shortcodes</a></li>
 			</ul>--%>
-			</div>
-			
-		</div>
-	
-		<div class="social-list">
-			
-			<ul>
-				<li><a href="#"  target="_blank"><i class="fa fa-facebook fa-2x"></i></a></li>
-				<li><a href="#"  target="_blank"><i class="fa fa-twitter fa-2x"></i></a></li>
-				<li><a href="#"  target="_blank"><i class="fa fa-linkedin fa-2x"></i></a></li>	
-			</ul>
-						
-		</div>	
-			 
-	</div><!--=============== navigation end ===============-->
+                </div>
 
-	<div class="overlay fixed-overlay body-overlay"></div>	
-	
-	<div class="wrapper">
-        <asp:ContentPlaceHolder ID ="BodyContent" runat="server" ></asp:ContentPlaceHolder>
-	
+            </div>
+
+            <div class="social-list">
+
+                <ul>
+                    <li><a href="#" target="_blank"><i class="fa fa-facebook fa-2x"></i></a></li>
+                    <li><a href="#" target="_blank"><i class="fa fa-twitter fa-2x"></i></a></li>
+                    <li><a href="#" target="_blank"><i class="fa fa-linkedin fa-2x"></i></a></li>
+                </ul>
+
+            </div>
+
+        </div>
+        <!--=============== navigation end ===============-->
+
+        <div class="overlay fixed-overlay body-overlay"></div>
+
+        <div class="wrapper">
 
 
-        <uc2:UscFooterGenerator runat="server" ID="UscFooterGenerator" />
-	
+            <asp:ContentPlaceHolder ID="BodyContent" runat="server"></asp:ContentPlaceHolder>
 
-	
+            <uc2:UscFooterGenerator runat="server" ID="UscFooterGenerator" />
 
-	
-</div><!--=============== wrapper end ===============-->
-		
- 
-		
-</div><!--=============== main end ===============-->
- 
-<!--=============== javascript ===============-->
 
-    <%--<script type="text/javascript" src="/Viralme/Design/js/jquery-3.2.1.min.js"></script>--%>
-	<script type="text/javascript" src="/Viralme/Design/js/jpreloader.min.js"></script>
- 
-	<script type="text/javascript" src="/Viralme/Design/js/smoothscroll.js"></script>
-	<script type="text/javascript" src="/Viralme/Design/js/jquery.easing.1.3.js"></script>
-	<script type="text/javascript" src="/Viralme/Design/js/superslides.js"></script>
-	<script type="text/javascript" src="/Viralme/Design/js/mixitup.js"></script>
-	<script type="text/javascript" defer src="/Viralme/Design/js/jquery.flexslider.js"></script>
-	<script type="text/javascript" src="/Viralme/Design/js/jquery.parallax-1.1.3.js"></script>
-	<script type="text/javascript" src="/Viralme/Design/js/jquery.scrollTo-1.4.2-min.js"></script>
-	<script type="text/javascript" src="/Viralme/Design/js/hoverdir.js"></script>
-	<script type="text/javascript" src="/Viralme/Design/js/owl.carousel.min.js"></script>
-	<script type="text/javascript" src="/Viralme/Design/js/appear.js"></script>
-	<script type="text/javascript" src="/Viralme/Design/js/jquery.nav.js"></script>
-	<script type="text/javascript" src="/Viralme/Design/js/fitvids.js"></script>
-	<script type="text/javascript" src="/Viralme/Design/js/jquery.lavalamp.min.js"></script>
-	<script type="text/javascript" src="/Viralme/Design/js/jquery.hammer.min.js"></script>
-	<script type="text/javascript" src="/Viralme/Design/js/jquery.magnific-popup.min.js"></script>
-	<script type="text/javascript" src="/Viralme/Design/js/scripts.js"></script>
-		<!--Styleswitch-->
- 
+        </div>
+        <!--=============== wrapper end ===============-->
+
+
+
+    </div>
+    <!--=============== main end ===============-->
+
+    <!--=============== javascript ===============-->
+
+
+
+    <script src="/Viralme/Design/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/Viralme/Design/js/jpreloader.min.js"></script>
+
+    <script type="text/javascript" src="/Viralme/Design/js/smoothscroll.js"></script>
+    <script type="text/javascript" src="/Viralme/Design/js/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="/Viralme/Design/js/superslides.js"></script>
+    <script type="text/javascript" src="/Viralme/Design/js/mixitup.js"></script>
+    <script type="text/javascript" defer src="/Viralme/Design/js/jquery.flexslider.js"></script>
+    <script type="text/javascript" src="/Viralme/Design/js/jquery.parallax-1.1.3.js"></script>
+    <script type="text/javascript" src="/Viralme/Design/js/jquery.scrollTo-1.4.2-min.js"></script>
+    <script type="text/javascript" src="/Viralme/Design/js/hoverdir.js"></script>
+    <script type="text/javascript" src="/Viralme/Design/js/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="/Viralme/Design/js/appear.js"></script>
+    <script type="text/javascript" src="/Viralme/Design/js/jquery.nav.js"></script>
+    <script type="text/javascript" src="/Viralme/Design/js/fitvids.js"></script>
+    <script type="text/javascript" src="/Viralme/Design/js/jquery.lavalamp.min.js"></script>
+    <script type="text/javascript" src="/Viralme/Design/js/jquery.hammer.min.js"></script>
+    <script type="text/javascript" src="/Viralme/Design/js/jquery.magnific-popup.min.js"></script>
+    <script type="text/javascript" src="/Viralme/Design/js/scripts.js"></script>
+
+    <%-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>--%>
+    <!--Styleswitch-->
+
 </body>
 
 <!-- Mirrored from cashemir.kwst.net/team/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 20 Jun 2017 12:39:44 GMT -->
