@@ -21,7 +21,15 @@ E:\project\viral\source\Viralme\bin\Viralme.dll
 E:\project\viral\source\Viralme\bin\Viralme.pdb
 E:\project\viral\source\Viralme\bin\EntityFramework.dll
 E:\project\viral\source\Viralme\bin\EntityFramework.SqlServer.dll
+E:\project\viral\source\Viralme\bin\Newtonsoft.Json.dll
+E:\project\viral\source\Viralme\bin\System.Net.Http.Formatting.dll
+E:\project\viral\source\Viralme\bin\System.Web.Http.dll
+E:\project\viral\source\Viralme\bin\System.Web.Http.WebHost.dll
 E:\project\viral\source\Viralme\bin\EntityFramework.xml
 E:\project\viral\source\Viralme\bin\EntityFramework.SqlServer.xml
+E:\project\viral\source\Viralme\bin\Newtonsoft.Json.xml
+E:\project\viral\source\Viralme\bin\System.Net.Http.Formatting.xml
+E:\project\viral\source\Viralme\bin\System.Web.Http.xml
+E:\project\viral\source\Viralme\bin\System.Web.Http.WebHost.xml
 E:\project\viral\source\Viralme\obj\Debug\Viralme.dll
 E:\project\viral\source\Viralme\obj\Debug\Viralme.pdb

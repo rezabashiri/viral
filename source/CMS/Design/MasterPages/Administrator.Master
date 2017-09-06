@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Administrator.master.cs" Inherits="CMS.Design.MasterPages.Administrator" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Administrator22.Master.cs" Inherits="CMS.Design.MasterPages.Administrator" %>
 
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
 <%@ Register Assembly="Telerik.Web.UI" Namespace="Telerik.Web.UI" TagPrefix="telerik" %>
@@ -24,25 +24,27 @@
     <link rel="stylesheet" type="text/css" media="screen" href="/Design/css/smartadmin-production-plugins.min.css">
     <link rel="stylesheet" type="text/css" media="screen" href="/Design/css/smartadmin-production.min.css">
     <link rel="stylesheet" type="text/css" media="screen" href="/Design/css/smartadmin-skins.min.css">
+    <%--<link rel="stylesheet" type="text/css" media="screen" href="/Design/css/jarvis-widgets.css">--%>
+
 
     <!-- DEV links : turn this on when you like to develop directly -->
-    <!--<link rel="stylesheet" type="text/css" media="screen" href="../Source_UNMINIFIED_CSS/smartadmin-production.css">-->
-    <!--<link rel="stylesheet" type="text/css" media="screen" href="../Source_UNMINIFIED_CSS/smartadmin-skins.css">-->
+    <%--    <link rel="stylesheet" type="text/css" media="screen" href="../source_unminified_css/smartadmin-production.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="../Source_UNMINIFIED_CSS/smartadmin-skins.css">--%>
 
     <!-- SmartAdmin RTL Support -->
     <link rel="stylesheet" type="text/css" media="screen" href="/Design/css/smartadmin-rtl.min.css">
 
-    <!-- For Me -->
-    <link href="../../css/Style.css" rel="stylesheet" />
+    <!-- For Me 
+    <link href="../../css/Style.css" rel="stylesheet" />-->
 
     <!-- We recommend you use "your_style.css" to override SmartAdmin
 		     specific styles this will also ensure you retrain your customization with each SmartAdmin update.
 		<link rel="stylesheet" type="text/css" media="screen" href="/Design/css/your_style.css"> -->
 
-    <!-- Demo purpose only: goes with demo.js, you can delete this css when designing your own WebApp 
-		<link rel="stylesheet" type="text/css" media="screen" href="/Design/css/demo.min.css">-->
+    <!-- Demo purpose only: goes with demo.js, you can delete this css when designing your own WebApp -->
+    <link rel="stylesheet" type="text/css" media="screen" href="/Design/css/demo.min.css">
 
-    <link rel="stylesheet" type="text/css" media="screen" href="/Design/css/custom.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/custom.css">
 
 
     <!-- #FAVICONS -->
@@ -408,6 +410,16 @@
                     </li>
 
                     <li>
+                        <a href="#" title="رانندگان"><i class="fa fa-lg fa-fw fa-car"></i><span class="menu-item-parent">راننده ها </span></a>
+                        <ul>
+                            <li>
+                                <uc1:AccessCheckedHyperLink ID="AccessCheckedHyperLink8" runat="server" EntityName="partmanagmentArticle" LinkText="<i class='fa fa-car'></i>   تعیین نوع خودرو و پکیج تبلیغات   " LinkHref="~/Viralme/Driver/DriverPackage.aspx"></uc1:AccessCheckedHyperLink>
+                            </li>
+                        </ul>
+                    </li>
+
+
+                    <li>
                         <a href="#" title="مدیریت جامعه مجازی"><i class="fa fa-lg fa-fw fa-list-alt"></i><span class="menu-item-parent">مدیریت جامعه مجازی</span></a>
                         <ul>
                             <li>
@@ -489,8 +501,10 @@
             <div id="content">
 
                 <telerik:RadScriptManager ID="RadScriptManager1" runat="server"></telerik:RadScriptManager>
-                <asp:ContentPlaceHolder ID="TitleContentPH" runat="server">
-                </asp:ContentPlaceHolder>
+                <div class="smart-form">
+                    <asp:ContentPlaceHolder ID="TitleContentPH" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
             </div>
 
             <!-- END #MAIN CONTENT -->
@@ -565,54 +579,58 @@
         <!-- BOOTSTRAP JS -->
         <script src="/Design/js/bootstrap/bootstrap.min.js"></script>
 
-        <!-- CUSTOM NOTIFICATION 
-		<script src="/Design/js/notification/SmartNotification.min.js"></script>-->
+        <!-- CUSTOM NOTIFICATION -->
+        <script src="/Design/js/notification/SmartNotification.min.js"></script>
 
-        <!-- JARVIS WIDGETS 
-		<script src="/Design/js/smartwidgets/jarvis.widget.min.js"></script>-->
+        <!-- JARVIS WIDGETS -->
+        <script src="/Design/js/smartwidgets/jarvis.widget.min.js"></script>
 
-        <!-- EASY PIE CHARTS 
-		<script src="/Design/js/plugin/easy-pie-chart/jquery.easy-pie-chart.min.js"></script>-->
+        <!-- EASY PIE CHARTS -->
+        <script src="/Design/js/plugin/easy-pie-chart/jquery.easy-pie-chart.min.js"></script>
 
-        <!-- SPARKLINES 
-		<script src="/Design/js/plugin/sparkline/jquery.sparkline.min.js"></script>-->
+        <!-- SPARKLINES -->
+        <script src="/Design/js/plugin/sparkline/jquery.sparkline.min.js"></script>
 
-        <!-- JQUERY VALIDATE 
-		<script src="/Design/js/plugin/jquery-validate/jquery.validate.min.js"></script>-->
-
+        <!-- JQUERY VALIDAT
+        <script src="/Design/js/plugin/jquery-validate/jquery.validate.min.js"></script>
+E -->
         <!-- JQUERY MASKED INPUT 
-		<script src="/Design/js/plugin/masked-input/jquery.maskedinput.min.js"></script>-->
+        <script src="/Design/js/plugin/masked-input/jquery.maskedinput.min.js"></script>-->
 
-        <!-- JQUERY SELECT2 INPUT 
-		<script src="/Design/js/plugin/select2/select2.min.js"></script>-->
+        <!-- JQUERY SELECT2 INPUT -->
+        <script src="/Design/js/plugin/select2/select2.min.js"></script>
 
         <!-- JQUERY UI + Bootstrap Slider 
-		<script src="/Design/js/plugin/bootstrap-slider/bootstrap-slider.min.js"></script>-->
+        <script src="/Design/js/plugin/bootstrap-slider/bootstrap-slider.min.js"></script>-->
 
         <!-- browser msie issue fix -->
         <script src="/Design/js/plugin/msie-fix/jquery.mb.browser.min.js"></script>
 
-        <!-- FastClick: For mobile devices: you can disable this in app.js -->
-        <script src="/Design/js/plugin/fastclick/fastclick.min.js"></script>
+        <!-- FastClick: For mobile devices: you can disable this in app.js
+        <script src="/Design/js/plugin/fastclick/fastclick.min.js"></script> -->
 
         <!--[if IE 8]>
 			<h1>Your browser is out of date, please update your browser by going to www.microsoft.com/download</h1>
 		<![endif]-->
 
-        <!-- Demo purpose only 
-		<script src="js/demo.min.js"></script>-->
-
+        <%--Demo purpose only
+        <script src="/Design/js/demo.min.js"></script>
+--%>
         <!-- MAIN APP JS FILE -->
         <script src="/Design/js/app.min.js"></script>
 
-        <!-- ENHANCEMENT PLUGINS : NOT A REQUIREMENT -->
+        <!-- ENHANCEMENT PLUGINS : NOT A REQUIREMENT 
         <!-- Voice command : plugin
-		<script src="js/speech/voicecommand.min.js"></script> -->
+        <script src="js/speech/voicecommand.min.js"></script>-->
 
-        <!-- SmartChat UI : plugin 
-		<script src="js/smart-chat-ui/smart.chat.ui.min.js"></script>
-		<script src="js/smart-chat-ui/smart.chat.manager.min.js"></script>-->
-
+        <!-- SmartChat UI : plugin
+        <script src="/Design/js/smart-chat-ui/smart.chat.ui.min.js"></script>
+        <script src="js/smart-chat-ui/smart.chat.manager.min.js"></script> -->
+   
+   
+        <script type="text/javascript">
+            pageSetUp();
+            </script>
         <!-- Your GOOGLE ANALYTICS CODE Below 
 		<script type="text/javascript">
 

@@ -610,6 +610,7 @@
     <Content Include="Design\css\custom.css" />
     <Content Include="Design\css\demo.min.css" />
     <Content Include="Design\css\font-awesome.min.css" />
+    <Content Include="Design\css\jarvis-widgets.css" />
     <Content Include="Design\css\lockscreen.min.css" />
     <Content Include="Design\css\smartadmin-production-plugins.min.css" />
     <Content Include="Design\css\smartadmin-production.min.css" />
@@ -670,6 +671,7 @@
     <Content Include="Design\js\app.min.js" />
     <Content Include="Design\js\bootstrap\bootstrap.min.js" />
     <Content Include="Design\js\demo.min.js" />
+    <Content Include="Design\js\jarvis.widget.min.js" />
     <Content Include="Design\js\JavaScript1.js" />
     <Content Include="Design\js\libs\jquery-2.1.1.min.js" />
     <Content Include="Design\js\libs\jquery-ui-1.10.3.min.js" />
@@ -1052,6 +1054,7 @@
     <Content Include="Viralme\Design\shortcodes.html" />
     <Content Include="Viralme\Design\single-project.html" />
     <Content Include="Viralme\Design\video-bg.html" />
+    <Content Include="Viralme\Driver\DriverPackage.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -1694,6 +1697,13 @@
     <Compile Include="Viralme\Design\MasterPages\HomeMaster.Master.designer.cs">
       <DependentUpon>HomeMaster.Master</DependentUpon>
     </Compile>
+    <Compile Include="Viralme\Driver\DriverPackage.aspx.cs">
+      <DependentUpon>DriverPackage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Viralme\Driver\DriverPackage.aspx.designer.cs">
+      <DependentUpon>DriverPackage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="WebForm1.aspx.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1753,7 +1763,6 @@
     <Content Include="assets\js\jquery-migrate-1.4.1.min.js" />
     <Content Include="Design\fonts\fontawesome-webfont78ce.svg" />
     <Content Include="Design\fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="Design\MasterPages\Administrator.Master" />
     <Content Include="Design\fonts\BYekan.eot" />
     <Content Include="Design\fonts\BYekan.ttf" />
     <Content Include="Design\fonts\BYekan.woff" />
@@ -1767,6 +1776,7 @@
     <Content Include="Design\fonts\iransw.ttf" />
     <Content Include="Design\fonts\iransw.woff" />
     <Content Include="Design\fonts\iransw.woff2" />
+    <Content Include="Design\MasterPages\Administrator.Master" />
     <None Include="Properties\PublishProfiles\GolestanShohada.pubxml" />
     <Content Include="Viralme\Design\fonts\fontawesome-webfontba72.eot" />
     <Content Include="Viralme\Design\fonts\fontawesome-webfontba72.svg" />

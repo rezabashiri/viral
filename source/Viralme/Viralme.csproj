@@ -83,10 +83,25 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Controls\UscDriverPackage.ascx" />
+    <Content Include="Controls\UscDrivingArea.ascx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Contols\ValuesController1.cs" />
+    <Compile Include="Controls\UscDriverPackage.ascx.cs">
+      <DependentUpon>UscDriverPackage.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\UscDriverPackage.ascx.designer.cs">
+      <DependentUpon>UscDriverPackage.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UscDrivingArea.ascx.cs">
+      <DependentUpon>UscDrivingArea.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\UscDrivingArea.ascx.designer.cs">
+      <DependentUpon>UscDrivingArea.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Helpers\Interface.cs" />
     <Compile Include="Model\TGroup.cs">
       <DependentUpon>ViralMe.tt</DependentUpon>
