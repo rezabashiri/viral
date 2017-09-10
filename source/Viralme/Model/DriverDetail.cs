@@ -12,15 +12,10 @@ namespace Viralme.Model
     using System;
     using System.Collections.Generic;
     
-    public partial class TGroup
+    public partial class DriverDetail
     {
-        public int GrpID { get; set; }
-        public Nullable<int> PartID { get; set; }
-        public string GrpName { get; set; }
-        public Nullable<int> StatID { get; set; }
-        public Nullable<int> CustomerID { get; set; }
-        public Nullable<int> root { get; set; }
-        public Nullable<int> fatherID { get; set; }
-        public Nullable<int> Removeable { get; set; }
+        public int DriverID { get; set; }
+        public string DrivingStatistics { get; set; }
+        public string Car { get; set; }
     }
 }

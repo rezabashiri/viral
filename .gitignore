@@ -20,6 +20,7 @@ source/_UpgradeReport_Files/
 source/Viralme/obj/
 source/Viralme/bin/*
 source/CMS/Properties/
+*.orig
 detail.txt
 
  

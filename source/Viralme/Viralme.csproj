@@ -81,14 +81,46 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
+    <Reference Include="WebUtilityv2">
+      <HintPath>..\packages\WebUtilityv2.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Controls\UscDriverPackage.ascx" />
+    <Content Include="Controls\UscDrivingArea.ascx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Contols\ValuesController1.cs" />
+    <Compile Include="AppStart\DynamicDataConfig.cs" />
+    <Compile Include="Controls\UscDriverPackage.ascx.cs">
+      <DependentUpon>UscDriverPackage.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\UscDriverPackage.ascx.designer.cs">
+      <DependentUpon>UscDriverPackage.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UscDrivingArea.ascx.cs">
+      <DependentUpon>UscDrivingArea.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\UscDrivingArea.ascx.designer.cs">
+      <DependentUpon>UscDrivingArea.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\ContextHelper.cs" />
     <Compile Include="Helpers\Interface.cs" />
-    <Compile Include="Model\TGroup.cs">
+    <Compile Include="Logic\Driver.cs" />
+    <Compile Include="Logic\DriverDetail.cs" />
+    <Compile Include="Logic\DriverPrice.cs" />
+    <Compile Include="Logic\Enums.cs" />
+    <Compile Include="Logic\Package.cs" />
+    <Compile Include="Logic\Point.cs" />
+    <Compile Include="Model\DriverDetail.cs">
+      <DependentUpon>ViralMe.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\DriverPrice.cs">
+      <DependentUpon>ViralMe.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Package.cs">
       <DependentUpon>ViralMe.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\ViralMe.Context.cs">
@@ -137,6 +169,7 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

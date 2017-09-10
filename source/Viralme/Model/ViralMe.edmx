@@ -5,62 +5,166 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="viralmeModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-        <EntityType Name="TGroups">
+        <EntityType Name="Package">
           <Key>
-            <PropertyRef Name="GrpID" />
+            <PropertyRef Name="ID" />
           </Key>
-          <Property Name="GrpID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="PartID" Type="int" />
-          <Property Name="GrpName" Type="nvarchar" MaxLength="50" />
-          <Property Name="StatID" Type="int" />
-          <Property Name="CustomerID" Type="int" />
-          <Property Name="root" Type="int" />
-          <Property Name="fatherID" Type="int" />
-          <Property Name="Removeable" Type="int" />
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Unit" Type="nvarchar" MaxLength="50" />
         </EntityType>
+        <EntityType Name="DriverDetail">
+          <Key>
+            <PropertyRef Name="DriverID" />
+          </Key>
+          <Property Name="DriverID" Type="int" Nullable="false" />
+          <Property Name="DrivingStatistics" Type="nvarchar(max)" />
+          <Property Name="Car" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="DriverPrice">
+          <Key>
+            <PropertyRef Name="DriverID" />
+            <PropertyRef Name="PackageID" />
+          </Key>
+          <Property Name="DriverID" Type="int" Nullable="false" />
+          <Property Name="PackageID" Type="int" Nullable="false" />
+          <Property Name="Price" Type="int" />
+        </EntityType>
+        <Association Name="FK_DriverPrice_Package">
+          <End Role="Package" Type="Self.Package" Multiplicity="1" />
+          <End Role="DriverPrice" Type="Self.DriverPrice" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Package">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="DriverPrice">
+              <PropertyRef Name="DriverID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="DeleteDriverDetail" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="vir">
+          <Parameter Name="DriverID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="InsertInDriverDetail" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="vir">
+          <Parameter Name="DriverID" Type="int" Mode="In" />
+          <Parameter Name="DrivingStatistics" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="Car" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="UpdateDriverDetail" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="vir">
+          <Parameter Name="DriverID" Type="int" Mode="In" />
+          <Parameter Name="DrivingStatistics" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="Car" Type="nvarchar" Mode="In" />
+        </Function>
         <EntityContainer Name="viralmeModelStoreContainer">
-          <EntitySet Name="TGroups" EntityType="Self.TGroups" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Package" EntityType="Self.Package" Schema="bse" store:Type="Tables" />
+          <EntitySet Name="DriverDetail" EntityType="Self.DriverDetail" Schema="vir" store:Type="Tables" />
+          <EntitySet Name="DriverPrice" EntityType="Self.DriverPrice" Schema="vir" store:Type="Tables" />
+          <AssociationSet Name="FK_DriverPrice_Package" Association="Self.FK_DriverPrice_Package">
+            <End Role="Package" EntitySet="Package" />
+            <End Role="DriverPrice" EntitySet="DriverPrice" />
+          </AssociationSet>
         </EntityContainer>
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="viralmeModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityContainer Name="viralmeEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="TGroups" EntityType="viralmeModel.TGroup" />
+          <EntitySet Name="Packages" EntityType="viralmeModel.Package" />
+          <EntitySet Name="DriverDetails" EntityType="viralmeModel.DriverDetail" />
+          <EntitySet Name="DriverPrices" EntityType="viralmeModel.DriverPrice" />
+          <AssociationSet Name="FK_DriverPrice_Package" Association="viralmeModel.FK_DriverPrice_Package">
+            <End Role="Package" EntitySet="Packages" />
+            <End Role="DriverPrice" EntitySet="DriverPrices" />
+          </AssociationSet>
+          <FunctionImport Name="DeleteDriverDetail">
+            <Parameter Name="DriverID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="InsertInDriverDetail" ReturnType="Collection(Int32)">
+            <Parameter Name="DriverID" Mode="In" Type="Int32" />
+            <Parameter Name="DrivingStatistics" Mode="In" Type="String" />
+            <Parameter Name="Car" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="UpdateDriverDetail">
+            <Parameter Name="DriverID" Mode="In" Type="Int32" />
+            <Parameter Name="DrivingStatistics" Mode="In" Type="String" />
+            <Parameter Name="Car" Mode="In" Type="String" />
+          </FunctionImport>
         </EntityContainer>
-        <EntityType Name="TGroup">
+        <EntityType Name="Package">
           <Key>
-            <PropertyRef Name="GrpID" />
+            <PropertyRef Name="ID" />
           </Key>
-          <Property Name="GrpID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="PartID" Type="Int32" />
-          <Property Name="GrpName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="StatID" Type="Int32" />
-          <Property Name="CustomerID" Type="Int32" />
-          <Property Name="root" Type="Int32" />
-          <Property Name="fatherID" Type="Int32" />
-          <Property Name="Removeable" Type="Int32" />
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Unit" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="DriverPrices" Relationship="viralmeModel.FK_DriverPrice_Package" FromRole="Package" ToRole="DriverPrice" />
         </EntityType>
-      </Schema>
+        <EntityType Name="DriverDetail">
+          <Key>
+            <PropertyRef Name="DriverID" />
+          </Key>
+          <Property Name="DriverID" Type="Int32" Nullable="false" />
+          <Property Name="DrivingStatistics" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Car" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="DriverPrice">
+          <Key>
+            <PropertyRef Name="DriverID" />
+            <PropertyRef Name="PackageID" />
+          </Key>
+          <Property Name="DriverID" Type="Int32" Nullable="false" />
+          <Property Name="PackageID" Type="Int32" Nullable="false" />
+          <Property Name="Price" Type="Int32" />
+          <NavigationProperty Name="Package" Relationship="viralmeModel.FK_DriverPrice_Package" FromRole="DriverPrice" ToRole="Package" />
+        </EntityType>
+        <Association Name="FK_DriverPrice_Package">
+          <End Type="viralmeModel.Package" Role="Package" Multiplicity="1" />
+          <End Type="viralmeModel.DriverPrice" Role="DriverPrice" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Package">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="DriverPrice">
+              <PropertyRef Name="DriverID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="viralmeModelStoreContainer" CdmEntityContainer="viralmeEntities">
-          <EntitySetMapping Name="TGroups">
-            <EntityTypeMapping TypeName="viralmeModel.TGroup">
-              <MappingFragment StoreEntitySet="TGroups">
-                <ScalarProperty Name="Removeable" ColumnName="Removeable" />
-                <ScalarProperty Name="fatherID" ColumnName="fatherID" />
-                <ScalarProperty Name="root" ColumnName="root" />
-                <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
-                <ScalarProperty Name="StatID" ColumnName="StatID" />
-                <ScalarProperty Name="GrpName" ColumnName="GrpName" />
-                <ScalarProperty Name="PartID" ColumnName="PartID" />
-                <ScalarProperty Name="GrpID" ColumnName="GrpID" />
+          <EntitySetMapping Name="Packages">
+            <EntityTypeMapping TypeName="viralmeModel.Package">
+              <MappingFragment StoreEntitySet="Package">
+                <ScalarProperty Name="Unit" ColumnName="Unit" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="DriverDetails">
+            <EntityTypeMapping TypeName="viralmeModel.DriverDetail">
+              <MappingFragment StoreEntitySet="DriverDetail">
+                <ScalarProperty Name="Car" ColumnName="Car" />
+                <ScalarProperty Name="DrivingStatistics" ColumnName="DrivingStatistics" />
+                <ScalarProperty Name="DriverID" ColumnName="DriverID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DriverPrices">
+            <EntityTypeMapping TypeName="viralmeModel.DriverPrice">
+              <MappingFragment StoreEntitySet="DriverPrice">
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="PackageID" ColumnName="PackageID" />
+                <ScalarProperty Name="DriverID" ColumnName="DriverID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="DeleteDriverDetail" FunctionName="viralmeModel.Store.DeleteDriverDetail" />
+          <FunctionImportMapping FunctionImportName="InsertInDriverDetail" FunctionName="viralmeModel.Store.InsertInDriverDetail" />
+          <FunctionImportMapping FunctionImportName="UpdateDriverDetail" FunctionName="viralmeModel.Store.UpdateDriverDetail" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
