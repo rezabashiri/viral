@@ -33,3 +33,4 @@ E:\project\viral\source\Viralme\bin\System.Web.Http.xml
 E:\project\viral\source\Viralme\bin\System.Web.Http.WebHost.xml
 E:\project\viral\source\Viralme\obj\Debug\Viralme.dll
 E:\project\viral\source\Viralme\obj\Debug\Viralme.pdb
+E:\project\viral\source\Viralme\obj\Debug\Viralme.csprojResolveAssemblyReference.cache

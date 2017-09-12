@@ -24,7 +24,9 @@
     <link rel="stylesheet" type="text/css" media="screen" href="/Design/css/smartadmin-production-plugins.min.css">
     <link rel="stylesheet" type="text/css" media="screen" href="/Design/css/smartadmin-production.min.css">
     <link rel="stylesheet" type="text/css" media="screen" href="/Design/css/smartadmin-skins.min.css">
-    <%--<link rel="stylesheet" type="text/css" media="screen" href="/Design/css/jarvis-widgets.css">--%>
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap-theme.min.css">
+
 
 
     <!-- DEV links : turn this on when you like to develop directly -->
@@ -615,7 +617,7 @@ E -->
 
         <%--Demo purpose only
         <script src="/Design/js/demo.min.js"></script>
---%>
+        --%>
         <!-- MAIN APP JS FILE -->
         <script src="/Design/js/app.min.js"></script>
 
@@ -626,11 +628,12 @@ E -->
         <!-- SmartChat UI : plugin
         <script src="/Design/js/smart-chat-ui/smart.chat.ui.min.js"></script>
         <script src="js/smart-chat-ui/smart.chat.manager.min.js"></script> -->
-   
-   
+
+
+
         <script type="text/javascript">
             pageSetUp();
-            </script>
+        </script>
         <!-- Your GOOGLE ANALYTICS CODE Below 
 		<script type="text/javascript">
 
