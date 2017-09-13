@@ -294,7 +294,7 @@
 
 
                                     <section class="col col-1">
-                                      <span onclick="insertintoGrid();" class="btn btn-lg glyphicon glyphicon-plus-sign no-padding no-margin"></span>
+                                        <span onclick="insertintoAreaJSGrid();" class="btn btn-lg glyphicon glyphicon-plus-sign no-padding no-margin"></span>
                                     </section>
                                 </div>
 
@@ -302,7 +302,7 @@
                                     <section class="col col-12">
 
                                         <%--div for grid--%>
-                                        <div id="jsGrid"></div>
+                                        <div id="jsAreaGrid"></div>
 
                                     </section>
                                 </div>
@@ -311,7 +311,7 @@
 
 
                             <footer>
-                                <button type="submit" class="btn btn-primary">
+                                <button type="button" class="btn btn-primary" onclick="saveIntoAreaJSGrid();">
                                     تعیین ناحیه
                                 </button>
                             </footer>
@@ -360,88 +360,74 @@
         //];
 
         var clients = [
-         //{ "drivingTime": "", "drivingArea": "" }
+             //{ id: "0", drivingTime: "ss", drivingArea: [] }
         ];
 
-        $("#jsGrid").jsGrid({
+
+
+        $("#jsAreaGrid").jsGrid({
             width: "100%",
             height: "400px",
 
-            //filtering: true,
-            //inserting: true,
-            editing: true,
+
+            editing: false,
             sorting: true,
             paging: true,
 
-            data: clients,
 
-            //fields: [
-            //    { name: "Name", type: "text", width: 150, validate: "required" },
-            //    { name: "Age", type: "number", width: 50 },
-            //    { name: "Address", type: "text", width: 200 },
-            //    { name: "Country", type: "select", items: countries, valueField: "Id", textField: "Name" },
-            //    { name: "Married", type: "checkbox", title: "Is Married", sorting: false },
-            //    { type: "control" }
-            //]
+            deleteConfirm: function () {
+                return "آیا از حذف اطمینان دارید؟ ";
+            },
 
-            
-            fields: [ 
-                { name: "drivingTime", type: "text",title:"زمان رانندگی", width: 200},
-                { name: "drivingArea", type: "text", title:"ناحیه انتخابی", width: 150, validate: "required" },
-                { type: "control" }
+
+            //data: clients,
+            controller:
+            {
+                loadData: function (filter) {
+                    return clients;
+                }
+            },
+
+            fields: [
+                { name: "drivingTime", type: "text", title: "زمان رانندگی", width: 200, align: "center" },
+                //{ name: "drivingArea", type: "text", title: "ناحیه انتخابی", width: 150, align: "center", validate: "required" },
+                { type: "control", editButton: false }
             ]
         });
 
-       
-        $("#jsGrid").jsGrid({
 
+        var i = 0;
+        var area;
 
-            onDataLoading: function(args) {
-                // cancel loading data if 'name' is empty
-                //if(args.filter.name === "") {
-                //    args.cancel = true;
-                //}
-                alert('salam');
-            }
-        
-        
-
-
-            //onItemUpdated: function (args) {
-            //    // cancel editing of the row of item with field 'ID' = 0
-            //    update(args.item);
-            //    alert(args.item.Name);
-            //    clients[0].Name = args.item.Name;
-            //    if (args.item.Address == "") {
-            //        args.cancel = true;
-            //        alert('آدرس نمی تواند خالی باشد');
-            //    }
-            //}
-
-        });
-
-
-
-
-
-
-        //$("#jsGrid").jsGrid("updateItem", { Name: "John", Age: 25, Country: 2 }).done(function () {
-        //    alert("update completed");
-        //});
-
-
-        function insertintoGrid()
-        {
+        function insertintoAreaJSGrid() {
             var e = document.getElementById("select_drivingTime");
             var selected_drivingTime = e.options[e.selectedIndex].value;
-            //alert(selected_drivingTime);
+      
+            //$("#jsAreaGrid").jsGrid("insertItem", { drivingTime: String(selected_drivingTime), drivingArea: 25 }).done(function () {
+            //    alert(routeMarkers[0].position.lat());
+            //});
+
+            i++;
+            var positions_area = [];
 
 
+            for (var j = 0; j < routeMarkers.length; j++) {
+                positions_area.push(routeMarkers[j].position.lat(), routeMarkers[j].position.lng());
+            }
 
-            $("#jsGrid").jsGrid("insertItem", { drivingTime: String(selected_drivingTime), drivingArea: 25 }).done(function () {
-                alert(routeMarkers[0].position.lat());
-            });
+            clients.push(
+                { id: i, drivingTime: String(selected_drivingTime), drivingArea: routeMarkers }
+            );
+
+            $("#jsAreaGrid").jsGrid("loadData");
+
+            ClearAllPoints();
         }
+
+
+        function saveIntoAreaJSGrid() {
+        }
+
 
     </script>
 
