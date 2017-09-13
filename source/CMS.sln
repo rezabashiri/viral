@@ -7,10 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CMS", "CMS\CMS.csproj", "{B
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Viralme", "Viralme\Viralme.csproj", "{D288483C-B256-428F-BF0A-E75B16823D7C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccessManagementService", "..\..\accessservice\access\AccessManagementService.csproj", "{3B63C4E8-D047-404D-9727-0C3E44E1B8D5}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebUtility", "..\..\WebUtility_v2\WebUtility.csproj", "{D78F6BDC-6D1C-4511-ADD2-44B116D77CD8}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

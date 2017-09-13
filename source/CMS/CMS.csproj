@@ -935,7 +935,6 @@
     <Content Include="LoginUser.aspx" />
     <Content Include="Pages\Default.aspx" />
     <Content Include="Pages\Defualt.aspx" />
-    <Content Include="Pages\WebForm1.aspx" />
     <Content Include="Panel.aspx" />
     <Content Include="panel\AddPicture.aspx" />
     <Content Include="panel\AddVideo.aspx" />
@@ -1824,13 +1823,13 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\Viralme\Viralme.csproj">
       <Project>{d288483c-b256-428f-bf0a-e75b16823d7c}</Project>
       <Name>Viralme</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <WebReferences Include="Web References\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

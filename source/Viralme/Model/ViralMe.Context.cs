@@ -12,6 +12,8 @@ namespace Viralme.Model
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
+    using System.Data.Entity.Core.Objects;
+    using System.Linq;
     
     public partial class viralmeEntities : DbContext
     {
@@ -25,6 +27,51 @@ namespace Viralme.Model
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<TGroup> TGroups { get; set; }
+        public virtual DbSet<Package> Packages { get; set; }
+        public virtual DbSet<DriverDetail> DriverDetails { get; set; }
+        public virtual DbSet<DriverPrice> DriverPrices { get; set; }
+    
+        public virtual int DeleteDriverDetail(Nullable<int> driverID)
+        {
+            var driverIDParameter = driverID.HasValue ?
+                new ObjectParameter("DriverID", driverID) :
+                new ObjectParameter("DriverID", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("DeleteDriverDetail", driverIDParameter);
+        }
+    
+        public virtual ObjectResult<Nullable<int>> InsertInDriverDetail(Nullable<int> driverID, string drivingStatistics, string car)
+        {
+            var driverIDParameter = driverID.HasValue ?
+                new ObjectParameter("DriverID", driverID) :
+                new ObjectParameter("DriverID", typeof(int));
+    
+            var drivingStatisticsParameter = drivingStatistics != null ?
+                new ObjectParameter("DrivingStatistics", drivingStatistics) :
+                new ObjectParameter("DrivingStatistics", typeof(string));
+    
+            var carParameter = car != null ?
+                new ObjectParameter("Car", car) :
+                new ObjectParameter("Car", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<int>>("InsertInDriverDetail", driverIDParameter, drivingStatisticsParameter, carParameter);
+        }
+    
+        public virtual int UpdateDriverDetail(Nullable<int> driverID, string drivingStatistics, string car)
+        {
+            var driverIDParameter = driverID.HasValue ?
+                new ObjectParameter("DriverID", driverID) :
+                new ObjectParameter("DriverID", typeof(int));
+    
+            var drivingStatisticsParameter = drivingStatistics != null ?
+                new ObjectParameter("DrivingStatistics", drivingStatistics) :
+                new ObjectParameter("DrivingStatistics", typeof(string));
+    
+            var carParameter = car != null ?
+                new ObjectParameter("Car", car) :
+                new ObjectParameter("Car", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("UpdateDriverDetail", driverIDParameter, drivingStatisticsParameter, carParameter);
+        }
     }
 }

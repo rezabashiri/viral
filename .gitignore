@@ -14,13 +14,13 @@ source/_UpgradeReport_Files/
 !source/CMS/bin/AjaxControlToolkit.dll
 !source/CMS/bin/JQControls.dll
 !source/CMS/bin/tkvUtility.dll
-!source/CMS/bin/WebUtilityv2.dll
 !source/CMS/bin/App_Web_*
 !source/CMS/bin/DropDownCheckBoxes.dll
 !source/CMS/bin/AccessManagementService.dll
 source/Viralme/obj/
 source/Viralme/bin/*
 source/CMS/Properties/
+*.orig
 detail.txt
 
  
