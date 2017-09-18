@@ -14,11 +14,11 @@
     font-style: normal;
 }
 
-nav ul li a
-{
+nav ul li a {
     font-size: 8pt !important;
 }
-body {
+
+body, .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
     font-family: iransw !important;
 }
 
@@ -59,4 +59,10 @@ nav > ul > li > a b {
 .page-footer {
     padding-right: 233px;
     padding-left: initial !important;
+}
+
+.jarviswidget > div {
+    float: initial !important;
+    padding: 0 !important;
+    overflow: hidden;
 }

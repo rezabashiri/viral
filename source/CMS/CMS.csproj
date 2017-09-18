@@ -71,6 +71,10 @@
     <Reference Include="App_Web_uscdatetime.ascx.cc671b29">
       <HintPath>..\..\..\..\publish\WebUtilityv2\bin\App_Web_uscdatetime.ascx.cc671b29.dll</HintPath>
     </Reference>
+    <Reference Include="App_Web_uscdriverpackage.ascx.cc671b29, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\publish\bin\App_Web_uscdriverpackage.ascx.cc671b29.dll</HintPath>
+    </Reference>
     <Reference Include="App_Web_uscfileupload.ascx.cc671b29, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\App_Web_uscfileupload.ascx.cc671b29.dll</HintPath>
@@ -610,6 +614,7 @@
     <Content Include="Design\css\custom.css" />
     <Content Include="Design\css\demo.min.css" />
     <Content Include="Design\css\font-awesome.min.css" />
+    <Content Include="Design\css\jarvis-widgets.css" />
     <Content Include="Design\css\lockscreen.min.css" />
     <Content Include="Design\css\smartadmin-production-plugins.min.css" />
     <Content Include="Design\css\smartadmin-production.min.css" />
@@ -671,6 +676,9 @@
     <Content Include="Design\js\bootstrap\bootstrap.min.js" />
     <Content Include="Design\js\demo.min.js" />
     <Content Include="Design\js\JavaScript1.js" />
+    <Content Include="Design\js\jsgrid-1.5.3\jsgrid-theme.min.css" />
+    <Content Include="Design\js\jsgrid-1.5.3\jsgrid.min.css" />
+    <Content Include="Design\js\jsgrid-1.5.3\jsgrid.min.js" />
     <Content Include="Design\js\libs\jquery-2.1.1.min.js" />
     <Content Include="Design\js\libs\jquery-ui-1.10.3.min.js" />
     <Content Include="Design\js\notification\SmartNotification.min.js" />
@@ -684,6 +692,7 @@
     <Content Include="Design\js\plugin\pace\pace.min.js" />
     <Content Include="Design\js\plugin\select2\select2.min.js" />
     <Content Include="Design\js\plugin\sparkline\jquery.sparkline.min.js" />
+    <Content Include="Design\js\sandbox-google-maps-marker-lasso-search-tool.js" />
     <Content Include="Design\js\smart-chat-ui\smart.chat.manager.min.js" />
     <Content Include="Design\js\smart-chat-ui\smart.chat.ui.min.js" />
     <Content Include="Design\js\smartwidgets\jarvis.widget.min.js" />
@@ -1051,6 +1060,7 @@
     <Content Include="Viralme\Design\shortcodes.html" />
     <Content Include="Viralme\Design\single-project.html" />
     <Content Include="Viralme\Design\video-bg.html" />
+    <Content Include="Viralme\Driver\DriverPackage.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -1693,6 +1703,13 @@
     <Compile Include="Viralme\Design\MasterPages\HomeMaster.Master.designer.cs">
       <DependentUpon>HomeMaster.Master</DependentUpon>
     </Compile>
+    <Compile Include="Viralme\Driver\DriverPackage.aspx.cs">
+      <DependentUpon>DriverPackage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Viralme\Driver\DriverPackage.aspx.designer.cs">
+      <DependentUpon>DriverPackage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="WebForm1.aspx.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1752,7 +1769,6 @@
     <Content Include="assets\js\jquery-migrate-1.4.1.min.js" />
     <Content Include="Design\fonts\fontawesome-webfont78ce.svg" />
     <Content Include="Design\fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="Design\MasterPages\Administrator.Master" />
     <Content Include="Design\fonts\BYekan.eot" />
     <Content Include="Design\fonts\BYekan.ttf" />
     <Content Include="Design\fonts\BYekan.woff" />
@@ -1766,6 +1782,7 @@
     <Content Include="Design\fonts\iransw.ttf" />
     <Content Include="Design\fonts\iransw.woff" />
     <Content Include="Design\fonts\iransw.woff2" />
+    <Content Include="Design\MasterPages\Administrator.Master" />
     <None Include="Properties\PublishProfiles\GolestanShohada.pubxml" />
     <Content Include="Viralme\Design\fonts\fontawesome-webfontba72.eot" />
     <Content Include="Viralme\Design\fonts\fontawesome-webfontba72.svg" />

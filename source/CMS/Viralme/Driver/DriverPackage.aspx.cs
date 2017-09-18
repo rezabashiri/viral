@@ -5,9 +5,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace Viralme.Controls
+namespace CMS.Viralme.Driver
 {
-    public partial class UscDrivingArea : System.Web.UI.UserControl
+    public partial class DriverPackage : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
