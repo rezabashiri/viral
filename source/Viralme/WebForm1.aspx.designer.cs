@@ -7,10 +7,19 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CMS.Viralme.Driver {
+namespace Viralme {
     
     
-    public partial class DriverPackage {
+    public partial class WebForm1 {
+        
+        /// <summary>
+        /// form1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
         /// UscDriverPackage control.
@@ -19,6 +28,6 @@ namespace CMS.Viralme.Driver {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Viralme.Controls.DriverPackage UscDriverPackage;
+        protected global::Viralme.Controls.UscDriverPackage UscDriverPackage;
     }
 }

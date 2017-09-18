@@ -22,15 +22,16 @@ var meters2PerHectare = 10000.0;
 var feetPerMeter = 3.2808399;
 var feetPerMile = 5280.0;
 var acresPerMile2 = 640;
-
+//google.maps.event.addDomListener(window, 'load', initialize);
 function initialize() {
     var latlng = new google.maps.LatLng(32.6546, 51.6680);
     var myOptions = { zoom: 15, center: latlng, mapTypeId: google.maps.MapTypeId.SATELITE, draggableCursor: 'crosshair', mapTypeControlOptions: { style: google.maps.MapTypeControlStyle.DROPDOWN_MENU } };
     map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
     google.maps.event.addListener(map, 'click', mapclick);
 
-    areaDiv.innerHTML = '0 m&sup2;';
-    areaDivkm.innerHTML = '0 km&sup2;';
+
+        areaDiv.innerHTML = '0 m&sup2;';
+        areaDivkm.innerHTML = '0 km&sup2;';
 
     Display();
 
@@ -132,8 +133,8 @@ function Display() {
         if (areaMeters2 < 1000000.0)
             areaMeters2 = PlanarPolygonAreaMeters2(points);
         //update display for area
-        //areaDiv.innerHTML = Areas(areaMeters2);
-        //areaDivkm.innerHTML = Areaskm(areaMeters2);
+        areaDiv.innerHTML = Areas(areaMeters2);
+        areaDivkm.innerHTML = Areaskm(areaMeters2);
     }
 
 
@@ -441,38 +442,3 @@ google.maps.LatLng.prototype.distanceFrom = function (newLatLng) {
     // return the distance
     return distance;
 };
-
-
- //for search textbox
-var input = (document.getElementById('txtsearch'));
-map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
-
-var searchBox = new google.maps.places.SearchBox((input));
-
-
-// Listen for the event fired when the user selects an item from the
-// pick list. Retrieve the matching places for that item.
-google.maps.event.addListener(searchBox, 'places_changed', function () {
-    var places = searchBox.getPlaces();
-
-    if (places.length == 0) {
-        return;
-    }
-
-
-
-    var searchbounds = new google.maps.LatLngBounds();
-    for (var i = 0, place; place = places[i]; i++) {
-        points.push(place.geometry.location);
-        Display();
-        searchbounds.extend(place.geometry.location);
-    }
-
-    map.fitBounds(searchbounds);
-});
-
-// current map's viewport.
-google.maps.event.addListener(map, 'bounds_changed', function () {
-    var listenerbounds = map.getBounds();
-    searchBox.setBounds(listenerbounds);
-});

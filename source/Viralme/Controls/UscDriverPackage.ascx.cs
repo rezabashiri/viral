@@ -11,7 +11,8 @@ namespace Viralme.Controls
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            //WebUtility.Helpers.RegisterHelpers.RegisterResourceJS(this, typeof(UscDriverPackage), "Viralme.Resources.sandbox-google-maps-marker-lasso-search-tool.js");
+            //WebUtility.Helpers.RegisterHelpers.RegisterResourceJS(this, typeof(UscDriverPackage), "Viralme.Resources.jsgrid.min.js");
         }
     }
 }

@@ -71,6 +71,10 @@
     <Reference Include="App_Web_uscdatetime.ascx.cc671b29">
       <HintPath>..\..\..\..\publish\WebUtilityv2\bin\App_Web_uscdatetime.ascx.cc671b29.dll</HintPath>
     </Reference>
+    <Reference Include="App_Web_uscdriverpackage.ascx.cc671b29, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\publish\bin\App_Web_uscdriverpackage.ascx.cc671b29.dll</HintPath>
+    </Reference>
     <Reference Include="App_Web_uscfileupload.ascx.cc671b29, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\App_Web_uscfileupload.ascx.cc671b29.dll</HintPath>
