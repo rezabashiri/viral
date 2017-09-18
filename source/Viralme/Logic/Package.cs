@@ -18,7 +18,7 @@ namespace Viralme.Model
             [Display(Name="واحد")]
             public string Unit { get; set; }
             [ScaffoldColumn(false)]
-            public virtual ICollection<DriverPrice> DriverPrices { get; set; }
+            
         }
         public List<Package> GetPackages()
         {

@@ -110,17 +110,20 @@
     <Compile Include="Helpers\Interface.cs" />
     <Compile Include="Logic\Driver.cs" />
     <Compile Include="Logic\DriverDetail.cs" />
-    <Compile Include="Logic\DriverPrice.cs" />
+    <Compile Include="Logic\DrivingStatistics.cs" />
     <Compile Include="Logic\Enums.cs" />
     <Compile Include="Logic\Package.cs" />
     <Compile Include="Logic\Point.cs" />
+    <Compile Include="Model\Campaign.cs">
+      <DependentUpon>ViralMe.tt</DependentUpon>
+    </Compile>
     <Compile Include="Model\DriverDetail.cs">
       <DependentUpon>ViralMe.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\DriverPrice.cs">
+    <Compile Include="Model\Package.cs">
       <DependentUpon>ViralMe.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\Package.cs">
+    <Compile Include="Model\PublicRequest.cs">
       <DependentUpon>ViralMe.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\ViralMe.Context.cs">
