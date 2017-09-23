@@ -363,7 +363,7 @@
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                         <h2 class="modal-title" style="text-align: right;">
-                            <span class="label label-primary">ثبت نام در وایرال می
+                            <span class="label label-primary"> ثبت نام در وایرال می به عنوان تبلیغ دهنده
                             </span>
                         </h2>
 
@@ -371,7 +371,7 @@
                     <div class="modal-body">
                         <div class="box-body">
 
-                            <uc1:SignUp runat="server" GroupName="advertiser" ID="UscSignUpAdvertiser" />
+                            <uc1:SignUp runat="server" ISLoadGroup="false" GroupName="advertiser" ID="UscSignUpAdvertiser" />
 
                         </div>
                     </div>
@@ -389,7 +389,7 @@
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                         <h2 class="modal-title" style="text-align: right;">
-                            <span class="label label-primary">ثبت نام در وایرال می
+                            <span class="label label-primary">ثبت نام در وایرال می به عنوان راننده
                             </span>
                         </h2>
 
@@ -397,7 +397,7 @@
                     <div class="modal-body">
                         <div class="box-body">
 
-                            <uc1:SignUp runat="server" GroupName="driver" ID="SignUpDriver" />
+                            <uc1:SignUp runat="server" GroupName="driver" ISLoadGroup="false" ID="SignUpDriver" />
 
                         </div>
                     </div>
@@ -453,14 +453,6 @@
             e.preventDefault();
             $("#modal_login").modal();
         });
-
-        //$('#btnTest').click(function () {
-        //    //$('#divTest').show();
-        //    //$('#divTest').fadeIn();
-        //    $("#divTest").show();
-        //    setTimeout(function () { $("#divTest").hide(); }, 5000);
-        //});
-
 
     </script>
 
