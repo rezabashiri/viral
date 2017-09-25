@@ -480,7 +480,6 @@
         var listenerbounds = map.getBounds();
         searchBox.setBounds(listenerbounds);
         map.setZoom(15);
-
     });
 
 

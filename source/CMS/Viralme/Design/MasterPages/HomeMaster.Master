@@ -34,14 +34,10 @@
 
     <!-- panel css -->
     <link rel="stylesheet" href="/Viralme/Design/css/panel.css" type="text/css" media="screen">
+    <!-- panel css -->
+    <link rel="stylesheet" href="/Viralme/Design/css/panel.css" type="text/css" media="screen">
+    <script type="text/javascript" src="/Viralme/Design/js/jquery.min.js"></script>
 
-<<<<<<< HEAD
-    <link rel="stylesheet" href="/Viralme/Design/css/bootstrap.min.css" type="text/css" >
-		<!-- panel css -->
-	<link rel="stylesheet" href="/Viralme/Design/css/panel.css" type="text/css" media="screen">
-	<script type="text/javascript" src="/Viralme/Design/js/jquery.min.js"></script>
-=======
->>>>>>> 8a4e5dd5c5cdbdbdd7c7a371e6cea6756db2cda0
 
     <!--=============== fonts  ===============-->
 

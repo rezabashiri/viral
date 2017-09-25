@@ -59,6 +59,9 @@
     <Reference Include="App_Web_searchmashahir.ascx.cc961b29">
       <HintPath>..\..\..\..\publish\takhtefoolad\bin\App_Web_searchmashahir.ascx.cc961b29.dll</HintPath>
     </Reference>
+    <Reference Include="App_Web_usccampains.ascx.cc671b29">
+      <HintPath>..\..\publish\bin\App_Web_usccampains.ascx.cc671b29.dll</HintPath>
+    </Reference>
     <Reference Include="App_Web_usccontrol.ascx.cc671b29">
       <HintPath>..\packages\App_Web_usccontrol.ascx.cc671b29.dll</HintPath>
     </Reference>
@@ -978,6 +981,7 @@
     <Content Include="TransformXSLT.xslt">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="Viralme\Advertiser\Campains.aspx" />
     <Content Include="Viralme\Design\blog-single.html" />
     <Content Include="Viralme\Design\blog.html" />
     <Content Include="Viralme\Design\css\blue-style.css" />
@@ -1707,6 +1711,13 @@
     </Compile>
     <Compile Include="test.aspx.designer.cs">
       <DependentUpon>test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Viralme\Advertiser\Campains.aspx.cs">
+      <DependentUpon>Campains.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Viralme\Advertiser\Campains.aspx.designer.cs">
+      <DependentUpon>Campains.aspx</DependentUpon>
     </Compile>
     <Compile Include="Viralme\Design\MasterPages\HomeMaster.Master.cs">
       <DependentUpon>HomeMaster.Master</DependentUpon>

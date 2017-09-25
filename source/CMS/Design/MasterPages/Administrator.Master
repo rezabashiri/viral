@@ -420,6 +420,15 @@
                         </ul>
                     </li>
 
+                       <li>
+                        <a href="#" title="تبلیغ دهندگان"><i class="fa fa-lg fa-fw fa-cubes"></i><span class="menu-item-parent">تبلیغ دهنده ها </span></a>
+                        <ul>
+                            <li>
+                                <uc1:AccessCheckedHyperLink ID="AccessCheckedHyperLink9" runat="server" EntityName="partmanagmentArticle" LinkText="<i class='fa fa-cubes'></i> لیست کمپین ها " LinkHref="~/Viralme/Advertiser/Campains.aspx"></uc1:AccessCheckedHyperLink>
+                            </li>
+                        </ul>
+                    </li>
+
 
                     <li>
                         <a href="#" title="مدیریت جامعه مجازی"><i class="fa fa-lg fa-fw fa-list-alt"></i><span class="menu-item-parent">مدیریت جامعه مجازی</span></a>

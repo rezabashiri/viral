@@ -45,6 +45,10 @@
     <Reference Include="EntityFramework.SqlServer">
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="JQControls, Version=1.1.0.35527, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\JQControls.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
@@ -81,7 +85,8 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
-    <Reference Include="tkvUtility">
+    <Reference Include="tkvUtility, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\tkvUtility.dll</HintPath>
     </Reference>
     <Reference Include="WebUtilityv2">
@@ -89,6 +94,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Controls\UscCampains.ascx" />
     <Content Include="Controls\UscDriverPackage.ascx" />
     <Content Include="CSS\bootstrap-rtl.min.css" />
     <Content Include="CSS\bootstrap.min.css" />
@@ -98,6 +104,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppStart\DynamicDataConfig.cs" />
+    <Compile Include="Controls\UscCampains.ascx.cs">
+      <DependentUpon>UscCampains.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\UscCampains.ascx.designer.cs">
+      <DependentUpon>UscCampains.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Controls\UscDriverPackage.ascx.cs">
       <DependentUpon>UscDriverPackage.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

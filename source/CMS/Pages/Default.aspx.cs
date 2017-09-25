@@ -14,7 +14,6 @@ namespace CMS.Pages
         private TItem _titem = new TItem();
         protected void Page_Load(object sender, EventArgs e)
         {
-            
             if (!IsPostBack)
             {
                 _titem = _titem.SearchItem("100", string.Empty);
@@ -153,7 +152,7 @@ namespace CMS.Pages
 
         protected void btntest_Click(object sender, EventArgs e)
         {
-            msg.ShowMessage("test",WebUtility.Controls.MessageBox.MessageType.danger);
+            //msg.ShowMessage("test",WebUtility.Controls.MessageBox.MessageType.danger);
         }
     }
 }
