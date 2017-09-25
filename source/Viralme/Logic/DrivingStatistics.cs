@@ -17,7 +17,7 @@ namespace Viralme.Logic
             set;
         }
     }
-    public class Package
+    public class DriverPackage
     {
           int ID { get; set; }
           double Price
@@ -31,7 +31,7 @@ namespace Viralme.Logic
         public DrivingStatistics()
         {
             DirivingTimes = new List<DrivingTime>();
-            PackagePrices = new List<Package>();
+            PackagePrices = new List<DriverPackage>();
         }
         public string Car
         {
@@ -43,7 +43,7 @@ namespace Viralme.Logic
             get;
             set;
         }
-        public List<Package> PackagePrices
+        public List<DriverPackage> PackagePrices
         {
             get;
             set;

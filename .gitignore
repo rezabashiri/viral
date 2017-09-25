@@ -1,3 +1,4 @@
+lib/
 source/CMS/App_Data/
 source/CMS/bin/*
 source/UpgradeLog* 

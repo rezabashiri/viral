@@ -10,64 +10,64 @@ by editing this MSBuild file. In order to learn more about this please visit htt
   </PropertyGroup>
   <ItemGroup>
     <File Include="bin/App_Web_uscdriverpackage.ascx.cc671b29.dll">
-      <publishTime>09/18/2017 09:46:33</publishTime>
+      <publishTime>09/18/2017 11:11:34</publishTime>
     </File>
     <File Include="bin/App_Web_webform1.aspx.cdcab7d2.dll">
       <publishTime>09/18/2017 09:46:33</publishTime>
     </File>
     <File Include="bin/EntityFramework.dll">
-      <publishTime>08/05/2017 12:59:21</publishTime>
+      <publishTime>10/16/2016 14:42:23</publishTime>
     </File>
     <File Include="bin/EntityFramework.SqlServer.dll">
-      <publishTime>08/05/2017 12:59:21</publishTime>
+      <publishTime>10/16/2016 14:42:24</publishTime>
     </File>
     <File Include="bin/Newtonsoft.Json.dll">
-      <publishTime>08/03/2014 20:33:56</publishTime>
+      <publishTime>09/03/2017 13:32:31</publishTime>
     </File>
     <File Include="bin/System.Net.Http.Formatting.dll">
-      <publishTime>01/28/2015 04:02:42</publishTime>
+      <publishTime>09/03/2017 13:32:31</publishTime>
     </File>
     <File Include="bin/System.Web.Http.dll">
-      <publishTime>01/28/2015 04:02:54</publishTime>
+      <publishTime>09/03/2017 13:32:31</publishTime>
     </File>
     <File Include="bin/System.Web.Http.WebHost.dll">
-      <publishTime>01/28/2015 04:03:46</publishTime>
+      <publishTime>09/03/2017 13:32:31</publishTime>
     </File>
     <File Include="bin/tkvUtility.dll">
-      <publishTime>07/18/2017 10:05:35</publishTime>
+      <publishTime>09/18/2017 11:03:32</publishTime>
     </File>
     <File Include="bin/uscdriverpackage.ascx.cc671b29.compiled">
-      <publishTime>09/18/2017 09:46:33</publishTime>
+      <publishTime>09/18/2017 11:11:34</publishTime>
     </File>
     <File Include="bin/Viralme.dll">
-      <publishTime>09/18/2017 09:29:52</publishTime>
+      <publishTime>09/18/2017 11:11:25</publishTime>
     </File>
     <File Include="bin/webform1.aspx.cdcab7d2.compiled">
       <publishTime>09/18/2017 09:46:33</publishTime>
     </File>
     <File Include="bin/WebUtilityv2.dll">
-      <publishTime>08/30/2017 14:25:46</publishTime>
+      <publishTime>09/03/2017 13:32:31</publishTime>
     </File>
     <File Include="Controls/UscDriverPackage.ascx">
       <publishTime>09/17/2017 12:32:17</publishTime>
     </File>
     <File Include="CSS/bootstrap-rtl.min.css">
-      <publishTime>08/13/2015 17:45:38</publishTime>
+      <publishTime>09/18/2017 11:03:31</publishTime>
     </File>
     <File Include="CSS/bootstrap.min.css">
-      <publishTime>08/05/2017 12:57:57</publishTime>
+      <publishTime>09/18/2017 11:03:31</publishTime>
     </File>
     <File Include="js/bootstrap.min.js">
-      <publishTime>01/23/2016 08:43:34</publishTime>
+      <publishTime>09/18/2017 11:03:31</publishTime>
     </File>
     <File Include="Model/ViralMe.edmx.diagram">
-      <publishTime>09/13/2017 13:22:41</publishTime>
+      <publishTime>09/17/2017 12:35:54</publishTime>
     </File>
     <File Include="packages.config">
-      <publishTime>09/03/2017 13:01:49</publishTime>
+      <publishTime>09/03/2017 13:32:30</publishTime>
     </File>
     <File Include="PrecompiledApp.config">
-      <publishTime>09/18/2017 09:46:27</publishTime>
+      <publishTime>09/18/2017 11:11:28</publishTime>
     </File>
     <File Include="Resources/jsgrid-theme.min.css">
       <publishTime>09/13/2017 13:21:39</publishTime>
@@ -82,7 +82,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/17/2017 11:52:25</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>09/17/2017 12:41:19</publishTime>
+      <publishTime>09/18/2017 11:11:25</publishTime>
     </File>
     <File Include="WebForm1.aspx">
       <publishTime>09/18/2017 09:46:33</publishTime>
