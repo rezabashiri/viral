@@ -4,14 +4,14 @@ using System.Linq;
 using System.Web;
 using System.Web.Security;
 using System.Web.SessionState;
- 
+
 using System.Web.DynamicData;
 using System.Web.Routing;
 namespace CMS
 {
     public class Global : System.Web.HttpApplication
     {
- 
+
         protected void Application_Start(object sender, EventArgs e)
         {
 
@@ -42,10 +42,10 @@ namespace CMS
 
         void Application_BeginRequest(object sender, EventArgs e)
         {
-           System.Threading.Thread.CurrentThread.CurrentCulture = new tkv.Utility.CultureHelpers().GetCulture();
+            System.Threading.Thread.CurrentThread.CurrentCulture = new tkv.Utility.CultureHelpers().GetCulture();
         }
 
-        
+
         protected void Application_AuthenticateRequest(object sender, EventArgs e)
         {
 
@@ -64,8 +64,8 @@ namespace CMS
 
         protected void Application_End(object sender, EventArgs e)
         {
-   
-            
+
+
         }
     }
 }

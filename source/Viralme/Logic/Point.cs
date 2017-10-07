@@ -18,4 +18,12 @@ namespace Viralme.Logic
             get;
         }
     }
+    public class PolyGon
+    {
+        public PolyGon()
+        {
+            Points = new List<Point>();
+        }
+        public List<Point> Points;
+    }
 }

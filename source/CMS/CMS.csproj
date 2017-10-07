@@ -29,7 +29,7 @@
     <OutputPath>bin\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>1</WarningLevel>
+    <WarningLevel>4</WarningLevel>
     <UseVSHostingProcess>true</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -45,9 +45,8 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\AccessManagementService.dll</HintPath>
     </Reference>
-    <Reference Include="AjaxControlToolkit, Version=4.1.7.1213, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\AjaxControlToolkit.dll</HintPath>
+    <Reference Include="AjaxControlToolkit">
+      <HintPath>..\packages\AjaxControlToolkit.dll</HintPath>
     </Reference>
     <Reference Include="Antlr3.Runtime">
       <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
@@ -60,7 +59,7 @@
       <HintPath>..\..\..\..\publish\takhtefoolad\bin\App_Web_searchmashahir.ascx.cc961b29.dll</HintPath>
     </Reference>
     <Reference Include="App_Web_usccampains.ascx.cc671b29">
-      <HintPath>..\..\publish\bin\App_Web_usccampains.ascx.cc671b29.dll</HintPath>
+      <HintPath>..\packages\App_Web_usccampains.ascx.cc671b29.dll</HintPath>
     </Reference>
     <Reference Include="App_Web_usccontrol.ascx.cc671b29">
       <HintPath>..\packages\App_Web_usccontrol.ascx.cc671b29.dll</HintPath>
@@ -74,9 +73,8 @@
     <Reference Include="App_Web_uscdatetime.ascx.cc671b29">
       <HintPath>..\..\..\..\publish\WebUtilityv2\bin\App_Web_uscdatetime.ascx.cc671b29.dll</HintPath>
     </Reference>
-    <Reference Include="App_Web_uscdriverpackage.ascx.cc671b29, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\publish\bin\App_Web_uscdriverpackage.ascx.cc671b29.dll</HintPath>
+    <Reference Include="App_Web_uscdriverpackage.ascx.cc671b29">
+      <HintPath>..\packages\App_Web_uscdriverpackage.ascx.cc671b29.dll</HintPath>
     </Reference>
     <Reference Include="App_Web_uscfileupload.ascx.cc671b29, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -90,8 +88,7 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\App_Web_uscverification.ascx.cc671b29.dll</HintPath>
     </Reference>
-    <Reference Include="DropDownCheckBoxes, Version=1.1.0.27408, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="DropDownCheckBoxes">
       <HintPath>..\packages\DropDownCheckBoxes.dll</HintPath>
     </Reference>
     <Reference Include="DynamicData">
@@ -112,9 +109,8 @@
     <Reference Include="ImageResizer">
       <HintPath>..\packages\ImageResizer.4.0.5\lib\net45\ImageResizer.dll</HintPath>
     </Reference>
-    <Reference Include="JQControls, Version=1.1.0.35527, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\JQControls.dll</HintPath>
+    <Reference Include="JQControls">
+      <HintPath>..\packages\JQControls.dll</HintPath>
     </Reference>
     <Reference Include="Kavenegar, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Kavenegar.1.1.2\lib\net40\Kavenegar.dll</HintPath>
