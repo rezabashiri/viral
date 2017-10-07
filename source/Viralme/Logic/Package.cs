@@ -8,7 +8,6 @@ namespace Viralme.Model
 {
 
     [MetadataType(typeof(MetaData))]
-
     public partial class Package
     {
         private class MetaData
@@ -17,8 +16,8 @@ namespace Viralme.Model
             public string Name { get; set; }
             [Display(Name="واحد")]
             public string Unit { get; set; }
-            [ScaffoldColumn(false)]
-            public virtual ICollection<DriverPrice> DriverPrices { get; set; }
+           
+            
         }
         public List<Package> GetPackages()
         {

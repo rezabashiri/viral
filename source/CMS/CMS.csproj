@@ -29,7 +29,7 @@
     <OutputPath>bin\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>1</WarningLevel>
+    <WarningLevel>4</WarningLevel>
     <UseVSHostingProcess>true</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -45,9 +45,8 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\AccessManagementService.dll</HintPath>
     </Reference>
-    <Reference Include="AjaxControlToolkit, Version=4.1.7.1213, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\AjaxControlToolkit.dll</HintPath>
+    <Reference Include="AjaxControlToolkit">
+      <HintPath>..\packages\AjaxControlToolkit.dll</HintPath>
     </Reference>
     <Reference Include="Antlr3.Runtime">
       <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
@@ -60,7 +59,7 @@
       <HintPath>..\..\..\..\publish\takhtefoolad\bin\App_Web_searchmashahir.ascx.cc961b29.dll</HintPath>
     </Reference>
     <Reference Include="App_Web_usccampains.ascx.cc671b29">
-      <HintPath>..\..\publish\bin\App_Web_usccampains.ascx.cc671b29.dll</HintPath>
+      <HintPath>..\packages\App_Web_usccampains.ascx.cc671b29.dll</HintPath>
     </Reference>
     <Reference Include="App_Web_usccontrol.ascx.cc671b29">
       <HintPath>..\packages\App_Web_usccontrol.ascx.cc671b29.dll</HintPath>
@@ -74,9 +73,8 @@
     <Reference Include="App_Web_uscdatetime.ascx.cc671b29">
       <HintPath>..\..\..\..\publish\WebUtilityv2\bin\App_Web_uscdatetime.ascx.cc671b29.dll</HintPath>
     </Reference>
-    <Reference Include="App_Web_uscdriverpackage.ascx.cc671b29, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\publish\bin\App_Web_uscdriverpackage.ascx.cc671b29.dll</HintPath>
+    <Reference Include="App_Web_uscdriverpackage.ascx.cc671b29">
+      <HintPath>..\packages\App_Web_uscdriverpackage.ascx.cc671b29.dll</HintPath>
     </Reference>
     <Reference Include="App_Web_uscfileupload.ascx.cc671b29, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -90,8 +88,7 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\App_Web_uscverification.ascx.cc671b29.dll</HintPath>
     </Reference>
-    <Reference Include="DropDownCheckBoxes, Version=1.1.0.27408, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="DropDownCheckBoxes">
       <HintPath>..\packages\DropDownCheckBoxes.dll</HintPath>
     </Reference>
     <Reference Include="DynamicData">
@@ -103,9 +100,6 @@
     <Reference Include="EntityFramework.SqlServer">
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
-    <Reference Include="GoogleReCaptcha">
-      <HintPath>..\..\..\accessservice\access\bin\GoogleReCaptcha.dll</HintPath>
-    </Reference>
     <Reference Include="Heidarpour.WebControlUI">
       <HintPath>..\packages\Heidarpour.WebControlUI.dll</HintPath>
     </Reference>
@@ -115,9 +109,8 @@
     <Reference Include="ImageResizer">
       <HintPath>..\packages\ImageResizer.4.0.5\lib\net45\ImageResizer.dll</HintPath>
     </Reference>
-    <Reference Include="JQControls, Version=1.1.0.35527, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\JQControls.dll</HintPath>
+    <Reference Include="JQControls">
+      <HintPath>..\packages\JQControls.dll</HintPath>
     </Reference>
     <Reference Include="Kavenegar, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Kavenegar.1.1.2\lib\net40\Kavenegar.dll</HintPath>
@@ -188,21 +181,36 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
-    <Reference Include="Telerik.Web.Design, Version=2014.2.618.45, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+    <Reference Include="Telerik.Web.Design, Version=2017.3.913.45, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.Web.Device.Detection, Version=2017.3.913.45, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Telerik.Web.Design.dll</HintPath>
+      <HintPath>..\lib\RCAJAX\2017.3.913.45\Telerik.Web.Device.Detection.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Web.Device.Detection, Version=2014.2.618.45, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Telerik.Web.Device.Detection.dll</HintPath>
+    <Reference Include="Telerik.Web.Spreadsheet">
+      <HintPath>..\lib\RCAJAX\2017.3.913.45\AdditionalLibraries\Bin45\Telerik.Web.Spreadsheet.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Web.UI, Version=2014.2.618.45, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+    <Reference Include="Telerik.Web.UI, Version=2017.3.913.45, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Telerik.Web.UI.dll</HintPath>
+      <HintPath>..\lib\RCAJAX\2017.3.913.45\Telerik.Web.UI.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Web.UI.Skins, Version=2014.2.618.45, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+    <Reference Include="Telerik.Web.UI.Skins, Version=2017.3.913.45, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Telerik.Web.UI.Skins.dll</HintPath>
+      <HintPath>..\lib\RCAJAX\2017.3.913.45\Telerik.Web.UI.Skins.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Core">
+      <HintPath>..\lib\RCAJAX\2017.3.913.45\AdditionalLibraries\Bin45\Telerik.Windows.Documents.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Flow">
+      <HintPath>..\lib\RCAJAX\2017.3.913.45\AdditionalLibraries\Bin45\Telerik.Windows.Documents.Flow.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Spreadsheet">
+      <HintPath>..\lib\RCAJAX\2017.3.913.45\AdditionalLibraries\Bin45\Telerik.Windows.Documents.Spreadsheet.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml">
+      <HintPath>..\lib\RCAJAX\2017.3.913.45\AdditionalLibraries\Bin45\Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Zip">
+      <HintPath>..\lib\RCAJAX\2017.3.913.45\AdditionalLibraries\Bin45\Telerik.Windows.Zip.dll</HintPath>
     </Reference>
     <Reference Include="TimePicker">
       <HintPath>..\packages\TimePicker.dll</HintPath>

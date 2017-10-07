@@ -28,8 +28,9 @@ namespace Viralme.Model
         }
     
         public virtual DbSet<Package> Packages { get; set; }
+        public virtual DbSet<Campaign> Campaigns { get; set; }
         public virtual DbSet<DriverDetail> DriverDetails { get; set; }
-        public virtual DbSet<DriverPrice> DriverPrices { get; set; }
+        public virtual DbSet<PublicRequest> PublicRequests { get; set; }
     
         public virtual int DeleteDriverDetail(Nullable<int> driverID)
         {

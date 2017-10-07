@@ -121,7 +121,7 @@
                 <div class="col-xs-12 col-sm-12 col-md-5 col-lg-4">
                     <form id="Form1" name="login-form" runat="server">
                         <telerik:RadScriptManager ID="RadScriptManager1" runat="server"></telerik:RadScriptManager>
-                        <uc1:Login ID="LoginControl" runat="server" />
+                        <uc1:Login ID="LoginControl" runat="server" /> 
 
 
                        <%-- <div class="modal fade" id="modal_signUp" tabindex="-1" role="dialog">

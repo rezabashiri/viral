@@ -101,7 +101,6 @@
     <Content Include="js\bootstrap.min.js" />
     <EmbeddedResource Include="Resources\sandbox-google-maps-marker-lasso-search-tool.js" />
     <Content Include="Web.config" />
-    <Content Include="WebForm1.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppStart\DynamicDataConfig.cs" />
@@ -121,19 +120,23 @@
     </Compile>
     <Compile Include="Helpers\ContextHelper.cs" />
     <Compile Include="Helpers\Interface.cs" />
+    <Compile Include="Logic\CampainStatistics.cs" />
     <Compile Include="Logic\Driver.cs" />
     <Compile Include="Logic\DriverDetail.cs" />
-    <Compile Include="Logic\DriverPrice.cs" />
+    <Compile Include="Logic\DrivingStatistics.cs" />
     <Compile Include="Logic\Enums.cs" />
     <Compile Include="Logic\Package.cs" />
     <Compile Include="Logic\Point.cs" />
+    <Compile Include="Model\Campaign.cs">
+      <DependentUpon>ViralMe.tt</DependentUpon>
+    </Compile>
     <Compile Include="Model\DriverDetail.cs">
       <DependentUpon>ViralMe.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\DriverPrice.cs">
+    <Compile Include="Model\Package.cs">
       <DependentUpon>ViralMe.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\Package.cs">
+    <Compile Include="Model\PublicRequest.cs">
       <DependentUpon>ViralMe.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\ViralMe.Context.cs">
@@ -152,13 +155,6 @@
       <DependentUpon>ViralMe.edmx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="WebForm1.aspx.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="WebForm1.aspx.designer.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
