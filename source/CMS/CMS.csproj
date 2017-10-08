@@ -781,6 +781,7 @@
     <Content Include="images\bg_top.jpg" />
     <Content Include="images\Board_Icon.png" />
     <Content Include="images\bullet1.png" />
+    <Content Include="images\car.jpg" />
     <Content Include="images\close.gif" />
     <Content Include="images\Confirm.png" />
     <Content Include="images\content-bg.jpg" />
@@ -1073,11 +1074,13 @@
     <Content Include="Viralme\Design\single-project.html" />
     <Content Include="Viralme\Design\video-bg.html" />
     <Content Include="Viralme\Driver\DriverPackage.aspx" />
+    <Content Include="Viralme\Driver\SelectCampain.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
     <Content Include="WebForm1.aspx" />
     <Content Include="WebService\MoroorgaranWebService.asmx" />
+    <EmbeddedResource Include="Properties\licenses.licx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
@@ -1496,6 +1499,8 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Viralme\Helpers\ContextHelpers.cs" />
+    <Compile Include="Viralme\Helpers\ExtensionHelprs.cs" />
     <Compile Include="LoginUser.aspx.cs">
       <DependentUpon>LoginUser.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1728,6 +1733,13 @@
     </Compile>
     <Compile Include="Viralme\Driver\DriverPackage.aspx.designer.cs">
       <DependentUpon>DriverPackage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Viralme\Driver\SelectCampain.aspx.cs">
+      <DependentUpon>SelectCampain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Viralme\Driver\SelectCampain.aspx.designer.cs">
+      <DependentUpon>SelectCampain.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebForm1.aspx.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>
