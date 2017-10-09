@@ -6,15 +6,8 @@
 
 
     <style>
-        body {
-            direction: rtl;
-        }
-
-
-        .CampainRow {
-            padding: 0 35px 0 0;
-        }
-
+    
+ 
             .CampainRow div {
                 /*float: right;*/
             }

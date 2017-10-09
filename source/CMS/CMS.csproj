@@ -1080,7 +1080,6 @@
     </Content>
     <Content Include="WebForm1.aspx" />
     <Content Include="WebService\MoroorgaranWebService.asmx" />
-    <EmbeddedResource Include="Properties\licenses.licx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />

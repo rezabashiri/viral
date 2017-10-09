@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Administrator22.Master.cs" Inherits="CMS.Design.MasterPages.Administrator" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Administrator.master.cs" Inherits="CMS.Design.MasterPages.Administrator" %>
 
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
 <%@ Register Assembly="Telerik.Web.UI" Namespace="Telerik.Web.UI" TagPrefix="telerik" %>
@@ -6,7 +6,7 @@
 <html lang="en-us">
 
 <!-- Mirrored from 192.241.236.31/themes/preview/smartadmin/1.8.x/ajax/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 02 Jul 2017 06:56:31 GMT -->
-<head runat="server">
+<head id="Head1" runat="server">
     <meta charset="utf-8">
     <title>مرورگران CMS</title>
     <meta name="description" content="پرتال اطلاع رسانی، شما می توانید از آخرین اخبار و اطلاعیه های ما در اینجا با خبر گردید">
@@ -24,38 +24,31 @@
     <link rel="stylesheet" type="text/css" media="screen" href="/Design/css/smartadmin-production-plugins.min.css">
     <link rel="stylesheet" type="text/css" media="screen" href="/Design/css/smartadmin-production.min.css">
     <link rel="stylesheet" type="text/css" media="screen" href="/Design/css/smartadmin-skins.min.css">
-    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
-    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap-theme.min.css">
-
-
 
     <!-- DEV links : turn this on when you like to develop directly -->
-    <%--    <link rel="stylesheet" type="text/css" media="screen" href="../source_unminified_css/smartadmin-production.css">
-    <link rel="stylesheet" type="text/css" media="screen" href="../Source_UNMINIFIED_CSS/smartadmin-skins.css">--%>
+    <!--<link rel="stylesheet" type="text/css" media="screen" href="../Source_UNMINIFIED_CSS/smartadmin-production.css">-->
+    <!--<link rel="stylesheet" type="text/css" media="screen" href="../Source_UNMINIFIED_CSS/smartadmin-skins.css">-->
 
     <!-- SmartAdmin RTL Support -->
     <link rel="stylesheet" type="text/css" media="screen" href="/Design/css/smartadmin-rtl.min.css">
 
-    <!-- For Me 
-    <link href="../../css/Style.css" rel="stylesheet" />-->
+    <!-- For Me -->
+    <%--<link href="../../css/Style.css" rel="stylesheet" />--%>
 
     <!-- We recommend you use "your_style.css" to override SmartAdmin
 		     specific styles this will also ensure you retrain your customization with each SmartAdmin update.
 		<link rel="stylesheet" type="text/css" media="screen" href="/Design/css/your_style.css"> -->
 
-    <!-- Demo purpose only: goes with demo.js, you can delete this css when designing your own WebApp -->
-    <link rel="stylesheet" type="text/css" media="screen" href="/Design/css/demo.min.css">
+    <!-- Demo purpose only: goes with demo.js, you can delete this css when designing your own WebApp 
+		<link rel="stylesheet" type="text/css" media="screen" href="/Design/css/demo.min.css">-->
 
-    <link rel="stylesheet" type="text/css" media="screen" href="../css/custom.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="/Design/css/custom.css">
 
 
     <!-- #FAVICONS -->
     <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
     <link rel="icon" href="img/favicon/favicon.ico" type="image/x-icon">
-
-    <!-- #GOOGLE FONT -->
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,300,400,700">
-
+ 
     <!-- #APP SCREEN / ICONS -->
     <!-- Specifying a Webpage Icon for Web Clip 
 			 Ref: https://developer.apple.com/library/ios/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html -->
@@ -72,24 +65,24 @@
     <link rel="apple-touch-startup-image" href="img/splash/ipad-landscape.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape)">
     <link rel="apple-touch-startup-image" href="img/splash/ipad-portrait.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait)">
     <link rel="apple-touch-startup-image" href="img/splash/iphone.png" media="screen and (max-device-width: 320px)">
+           <script>
+               if (!window.jQuery) {
+                   document.write('<script src="/Design/js/libs/jquery-2.1.1.min.js"><\/script>');
+               }
 
-    <script>
-        if (!window.jQuery) {
-            document.write('<script src="/Design/js/libs/jquery-2.1.1.min.js"><\/script>');
-        }
-    </script>
-    <script>
+        </script>
+           <script>
 
-        $(document).ready(function () {
-            $("nav ul ").each(function (index, val) {
-                if ($(this).has('a').length < 1) {
+               $(document).ready(function () {
+                   $("nav ul ").each(function (index, val) {
+                       if ($(this).has('a').length < 1) {
 
-                    $(this).parent().remove();
+                           $(this).parent().remove();
 
-                }
-            });
-        });
-    </script>
+                       }
+                   });
+               });
+        </script>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
