@@ -73,9 +73,6 @@
     <Reference Include="App_Web_uscdatetime.ascx.cc671b29">
       <HintPath>..\..\..\..\publish\WebUtilityv2\bin\App_Web_uscdatetime.ascx.cc671b29.dll</HintPath>
     </Reference>
-    <Reference Include="App_Web_uscdriverpackage.ascx.cc671b29">
-      <HintPath>..\packages\App_Web_uscdriverpackage.ascx.cc671b29.dll</HintPath>
-    </Reference>
     <Reference Include="App_Web_uscfileupload.ascx.cc671b29, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\App_Web_uscfileupload.ascx.cc671b29.dll</HintPath>
@@ -1073,7 +1070,6 @@
     <Content Include="Viralme\Design\shortcodes.html" />
     <Content Include="Viralme\Design\single-project.html" />
     <Content Include="Viralme\Design\video-bg.html" />
-    <Content Include="Viralme\Driver\DriverPackage.aspx" />
     <Content Include="Viralme\Driver\SelectCampain.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -1725,13 +1721,6 @@
     </Compile>
     <Compile Include="Viralme\Design\MasterPages\HomeMaster.Master.designer.cs">
       <DependentUpon>HomeMaster.Master</DependentUpon>
-    </Compile>
-    <Compile Include="Viralme\Driver\DriverPackage.aspx.cs">
-      <DependentUpon>DriverPackage.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Viralme\Driver\DriverPackage.aspx.designer.cs">
-      <DependentUpon>DriverPackage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Viralme\Driver\SelectCampain.aspx.cs">
       <DependentUpon>SelectCampain.aspx</DependentUpon>
