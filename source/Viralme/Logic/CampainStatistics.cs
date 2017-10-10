@@ -29,6 +29,7 @@ namespace Viralme.Logic
         {
             CampainArea = new List<PolyGon>();
             PackagePrices = new List<PackagePrice>();
+            DrivingTime = new List<string>();
         }
         public string Name
         {
@@ -45,6 +46,11 @@ namespace Viralme.Logic
             get;
             set;
         }
+        public List<string> DrivingTime
+        {
+            get;
+            set;
+        }
         public List<PackagePrice> PackagePrices
         {
             get;
@@ -54,6 +60,14 @@ namespace Viralme.Logic
         {
             get;
             set;
+        }
+        public void AddPackagePrice(PackagePrice price)
+        {
+            PackagePrices.Add(price);
+        }
+        public void AddCampainArea(PolyGon polygon)
+        {
+            CampainArea.Add(polygon);
         }
         public string SerializeIntoJson(CampainStatistics entity)
         {

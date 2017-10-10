@@ -66,3 +66,6 @@ nav > ul > li > a b {
     padding: 0 !important;
     overflow: hidden;
 }
+.smart-form footer .btn {
+float:left !important;
+}

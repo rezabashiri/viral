@@ -89,28 +89,31 @@
     }
 </style>
 
-<div class="row">
-    <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
-        <h1 class="page-title txt-color-blueDark">
-
-            <i class="fa-fw fa fa-cubes"></i>
-            کمپین های تبلیغاتی
-        </h1>
-    </div>
-</div>
+ <div class="row">
+	<div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
+		<h1 class="page-title txt-color-blueDark">
+			
+			<!-- PAGE HEADER -->
+			<i class="fa-fw fa fa-pencil-square-o"></i> 
+				کمپین های تبلیغاتی
+			 
+		</h1>
+	</div>
+     </div>
+ 
 
 
 <section id="widget-grid">
 
-    <div class="row no-margin">
+    <div class="row ">
 
-        <article class="col-sm-12 col-md-12 col-lg-10">
+        <article  class="col-sm-12 col-md-12"  >
 
             <div class="jarviswidget" id="wid-id-1" data-widget-editbutton="false" data-widget-custombutton="false" data-widget-deletebutton="false" data-widget-colorbutton="false" data-widget-sortable="false">
 
                 <header>
                     <span class="widget-icon"><i class="fa fa-cubes"></i></span>
-                    <h2>لیست کمپین ها  </h2>
+                    <h2>  Checkout Form </h2>
 
                 </header>
 
@@ -120,24 +123,12 @@
                     </div>
 
                     <div class="widget-body no-padding no-margin">
-
-                        <%--                            <fieldset>
-                                <div class="row">
-                                    <section class="col col-2 no-margin" style="padding: 0 10px 0 0;">
-                                        <label>
-                                            اضافه کردن کمپین
-                                        </label>
-                                    </section>
-                                    <section class="col col-1">
-                                        <span onclick="insertIntoJsCampainGrid();" class="btn btn-lg glyphicon glyphicon-plus-sign no-padding no-margin"></span>
-                                    </section>
-                                </div>
-                            </fieldset>--%>
+  
 
                         <fieldset>
 
                             <div class="row">
-                                <section class="col col-12">
+                                <section class="col col-sm-12">
 
                                     <%--grid for show prices--%>
                                     <div id="jsCampainGrid"></div>
@@ -178,17 +169,17 @@
                     </div>
 
                     <div class="widget-body no-padding no-margin">
-
+                        <div class="smart-form">
                         <fieldset>
                             <div class="row">
-                                <section class="col col-2">
+                                <section class="col-sm-12 col-md-2">
                                     <label>
                                         نام کمپین
                                     </label>
                                 </section>
 
 
-                                <section class="col col-3">
+                                <section class="col-sm-12 col-md-4">
                                     <label class="input">
                                         <i class="icon-prepend fa fa-cubes"></i>
                                         <input type="text" id="txtCampainName" placeholder="نام کمپین " class="comment-input form-control" />
@@ -197,14 +188,14 @@
                             </div>
 
                             <div class="row">
-                                <section class="col col-2">
+                                <section class="col-sm-12 col-md-2">
                                     <label>
                                         تاریخ شروع
                                     </label>
                                 </section>
 
 
-                                <section class="col col-3">
+                                <section class="col-sm-12 col-md-3">
 
                                     <%--js data picker--%>
                                     <label class="input">
@@ -215,14 +206,14 @@
                                 </section>
 
 
-                                <section class="col col-2">
+                                <section class="col-sm-12 col-md-2">
                                     <label>
-                                        مدت کمپین
+                                        مدت کمپین (ماه)
                                     </label>
                                 </section>
 
 
-                                <section class="col col-3">
+                                <section class="col-sm-12 col-md-3">
                                     <label class="input">
                                         <i class="icon-prepend fa fa-calendar-o"></i>
                                         <input type="text" id="txtCampainLenghTime" placeholder="مدت کمپین " class="comment-input form-control" />
@@ -238,13 +229,13 @@
 
                         <fieldset>
                             <div class="row">
-                                <section class="col col-2">
+                                <section class="col-sm-12 col-md-2">
                                     <label>
                                         قیمت پکیج
                                     </label>
                                 </section>
 
-                                <section class="col col-3">
+                                <section class="col-sm-12 col-md-3">
                                     <label class="select">
                                         <select id="cmbPackageType">
                                             <option value="باکس">باکس</option>
@@ -254,14 +245,14 @@
                                     </label>
                                 </section>
 
-                                <section class="col col-3">
+                                <section class="col-sm-12 col-md-2">
                                     <label class="input">
                                         <i class="icon-prepend fa fa-usd"></i>
                                         <input type="text" id="txtPackagePriceMin" placeholder="حداقل قیمت پکیج " class="comment-input form-control" />
                                     </label>
                                 </section>
 
-                                <section class="col col-3">
+                                <section class="col-sm-12 col-md-2">
                                     <label class="input">
                                         <i class="icon-prepend fa fa-usd"></i>
                                         <input type="text" id="txtPackagePriceMax" placeholder="حداکثر قیمت پکیج " class="comment-input form-control" />
@@ -274,7 +265,7 @@
                             </div>
 
                             <div class="row">
-                                <section class="col col-12">
+                                <section class="col-sm-12 col-md-12">
 
                                     <%--grid for show prices--%>
                                     <div id="jsPackagGrid"></div>
@@ -286,7 +277,7 @@
 
                         <fieldset>
                             <div class="row">
-                                <section class="col col-12">
+                                <section class="col-sm-12 col-md-12">
                                     <label>
                                         مکان های مورد نظر را در نقشه انتخاب کنید
                                     </label>
@@ -295,23 +286,23 @@
 
                             <div class="row">
 
-                                <section class="col col-12">
+                                <section class="col-sm-12 col-md-12">
 
                                     <input id="txtsearch" class="apply" type="text" placeholder="لطفا مکان مورد نظر خود را وارد نمائید" autocomplete="on" />
                                     <%--<div id="divloadMap"></div>--%>
-                                    <div id="map_canvas" style="width: 800px; height: 350px"></div>
+                                    <div id="map_canvas" style="width:100%"></div>
                                 </section>
 
                             </div>
 
 
                             <div class="row">
-                                <section class="col col-5">
+                                <section class="col-sm-12 col-md-5">
                                     <label>
                                         مساحت ناحیه انتخاب شده 
                                     </label>
                                 </section>
-                                <section class="col col-4">
+                                <section class="col-sm-12 col-md-4">
 
                                     <div id="area">0 m&sup2;</div>
                                     <div id="areakm">0 km&sup2;</div>
@@ -320,24 +311,24 @@
 
                             <div class="row">
 
-                                <section class="col col-3">
+                                <section class="col-sm-12 col-md-3">
                                     <label>
                                         گزینه های انتخابی 
                                     </label>
                                 </section>
 
-                                <section class="col col-2">
+                                <section class="col-sm-12 col-md-2">
                                     <input type="button" value="حذف اخرین نقطه" onclick="DeleteLastPoint();" class="btn btn-info" />
                                 </section>
 
-                                <section class="col col-2">
+                                <section class="col-sm-12 col-md-2">
                                     <input type="button" value="حذف تمامی نقاط" onclick="ClearAllPoints();" class="btn btn-danger" />
                                 </section>
                             </div>
 
                         </fieldset>
-
-                        <fieldset>
+                        <%--our analys has been changed , we dont need driving time any more--%>
+                    <%--    <fieldset>
 
 
                             <div class="row">
@@ -368,20 +359,23 @@
                             <div class="row">
                                 <section class="col col-12">
 
-                                    <%--div for grid--%>
+                                     div for grid 
                                     <div id="jsAreaGrid"></div>
 
                                 </section>
                             </div>
-                        </fieldset>
+                        </fieldset>--%>
 
 
                         <footer>
-                            <button type="button" class="btn btn-primary" onclick="saveIntoAreaJSGrid();">
+                            <div class="col-sm-12 center-block" >
+                        <button type="button" class="btn btn-primary" onclick="saveIntoAreaJSGrid();">
                                 اضافه کردن کمپین
                             </button>
+                            </div>
+                          
                         </footer>
-
+                            </div>
                     </div>
                     <!-- end widget content -->
 

@@ -16,13 +16,14 @@
 
     <!-- #CSS Links -->
     <!-- Basic Styles -->
-    <link rel="stylesheet" type="text/css" media="screen" href="/Design/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" media="screen" href="/Design/css/bootstrap-rtl.min.css">
+   
     <link rel="stylesheet" type="text/css" media="screen" href="/Design/css/font-awesome.min.css">
 
     <!-- SmartAdmin Styles : Caution! DO NOT change the order -->
     <link rel="stylesheet" type="text/css" media="screen" href="/Design/css/smartadmin-production-plugins.min.css">
     <link rel="stylesheet" type="text/css" media="screen" href="/Design/css/smartadmin-production.min.css">
+     <link rel="stylesheet" type="text/css" media="screen" href="/Design/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="/Design/css/bootstrap-rtl.min.css">
     <link rel="stylesheet" type="text/css" media="screen" href="/Design/css/smartadmin-skins.min.css">
 
     <!-- DEV links : turn this on when you like to develop directly -->
@@ -505,8 +506,11 @@
             <div id="content">
 
                 <telerik:RadScriptManager ID="RadScriptManager1" runat="server"></telerik:RadScriptManager>
+
                 <asp:ContentPlaceHolder ID="TitleContentPH" runat="server">
                 </asp:ContentPlaceHolder>
+              
+
             </div>
 
             <!-- END #MAIN CONTENT -->
