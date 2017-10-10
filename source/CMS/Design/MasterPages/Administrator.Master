@@ -48,7 +48,7 @@
     <!-- #FAVICONS -->
     <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
     <link rel="icon" href="img/favicon/favicon.ico" type="image/x-icon">
- 
+
     <!-- #APP SCREEN / ICONS -->
     <!-- Specifying a Webpage Icon for Web Clip 
 			 Ref: https://developer.apple.com/library/ios/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html -->
@@ -65,24 +65,24 @@
     <link rel="apple-touch-startup-image" href="img/splash/ipad-landscape.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape)">
     <link rel="apple-touch-startup-image" href="img/splash/ipad-portrait.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait)">
     <link rel="apple-touch-startup-image" href="img/splash/iphone.png" media="screen and (max-device-width: 320px)">
-           <script>
+    <script>
                if (!window.jQuery) {
                    document.write('<script src="/Design/js/libs/jquery-2.1.1.min.js"><\/script>');
                }
 
-        </script>
-           <script>
+    </script>
+    <script>
 
-               $(document).ready(function () {
-                   $("nav ul ").each(function (index, val) {
-                       if ($(this).has('a').length < 1) {
+        $(document).ready(function () {
+            $("nav ul ").each(function (index, val) {
+                if ($(this).has('a').length < 1) {
 
-                           $(this).parent().remove();
+                    $(this).parent().remove();
 
-                       }
-                   });
-               });
-        </script>
+                }
+            });
+        });
+    </script>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
@@ -413,7 +413,7 @@
                         </ul>
                     </li>
 
-                       <li>
+                    <li>
                         <a href="#" title="تبلیغ دهندگان"><i class="fa fa-lg fa-fw fa-cubes"></i><span class="menu-item-parent">تبلیغ دهنده ها </span></a>
                         <ul>
                             <li>
@@ -505,10 +505,8 @@
             <div id="content">
 
                 <telerik:RadScriptManager ID="RadScriptManager1" runat="server"></telerik:RadScriptManager>
-                <div class="smart-form">
-                    <asp:ContentPlaceHolder ID="TitleContentPH" runat="server">
-                    </asp:ContentPlaceHolder>
-                </div>
+                <asp:ContentPlaceHolder ID="TitleContentPH" runat="server">
+                </asp:ContentPlaceHolder>
             </div>
 
             <!-- END #MAIN CONTENT -->

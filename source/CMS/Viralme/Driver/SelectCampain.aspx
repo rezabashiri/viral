@@ -6,40 +6,26 @@
 
 
     <style>
-    
- 
-            .CampainRow div {
-                /*float: right;*/
-            }
-
         .CampainBorder {
-            border: 2px groove black;
             margin: 10px 40px;
         }
 
-        .CampainImage {
-            padding-left: 220px;
+        .Campain-padding-top-text {
+            padding-top: 37px;
         }
 
-        .CampainText {
-            padding: 33px 0 0 0;
+        .Campain-padding-top-button {
+            padding-top: 50px;
         }
 
         .center {
             text-align: center;
         }
 
-        .CampainText .row2 {
-            /*line-height: 33px;*/
-            margin-top: 10px;
-        }
 
-        .CampainText .buttonRow3 {
-            margin: 5px 0px 10px -55px;
-        }
 
         #listview2Button {
-            margin: 14px 0px 10px -193px;
+            /*margin: 14px 0px 10px -193px;*/
         }
     </style>
 
@@ -52,299 +38,314 @@
 
     <%--for list view 1--%>
 
-    <div class="CampainRow row">
+    <div class="row well CampainBorder">
 
-        <div class="col-sm-11 col-md-11 CampainBorder">
+        <div class="col-sm-12 col-md-4 col-md-offset-1 Campain-padding-top-text">
 
-            <div class="col-sm-12 col-md-4 CampainImage">
-                <%-- read from DB --%>
-                <asp:Image ImageUrl="~/images/car.jpg" runat="server" ID="img" />
-            </div>
+            <div class="row">
 
-            <div class="col-sm-12 col-md-5 CampainText">
+                <div class="col-sm-12 col-md-6">
 
-
-                <div class="col-md-9">
-
-                    <div class="col-sm-12 col-md-4">
-                        <p>
-                            <%-- read from DB --%>
-                   شرکت پگاه
-                        </p>
-                    </div>
-                    <div class="col-sm-12 col-md-4">
-
-                        <label>
-                            نام تبلیغ دهنده:
-                        </label>
-                    </div>
-
-                    <br />
-
-                    <div class="col-sm-12 col-md-4 row2">
-                        <p>
-                            <%-- read from DB --%>
-                   سه ماه
-                        </p>
-                    </div>
-
-                    <div class="col-sm-12 col-md-4 row2">
-                        <label>
-                            مدت زمان:
-                        </label>
-                    </div>
-
+                    <label>
+                        نام تبلیغ دهنده:
+                    </label>
                 </div>
 
-                <br />
+                <div class="col-sm-12 col-md-6">
+                    <p>
+                        <%-- read from DB --%>
+                   شرکت پگاه
+                    </p>
+                </div>
 
-                <div class="col-sm-12 col-md-7 buttonRow3">
-                    <asp:Button ID="btnCampainSelect" runat="server" CssClass="btn btn-info" Text="انتخاب"></asp:Button>
+            </div>
+            <div class="row">
+
+                <div class="col-sm-12 col-md-6">
+                    <label>
+                        مدت زمان:
+                    </label>
+                </div>
+
+                <div class="col-sm-12 col-md-6">
+                    <p>
+                        <%-- read from DB --%>
+                   سه ماه
+                    </p>
                 </div>
             </div>
         </div>
-    </div>
 
+        <%--image--%>
+        <div class="col-sm-12 col-md-5 no-padding">
+            <%-- read from DB --%>
+            <asp:Image ImageUrl="~/images/car.jpg" runat="server" ID="img" />
+        </div>
+
+        <div class="col-sm-12 col-md-1 Campain-padding-top-button">
+            <asp:Button ID="btnCampainSelect" runat="server" CssClass="btn btn-info" Text="انتخاب"></asp:Button>
+        </div>
+
+    </div>
 
 
 
 
     <%--for list view 2--%>
 
-    <div class="CampainRow row">
+    <div class="row well CampainBorder">
 
-        <div class="col-sm-11 col-md-11 CampainBorder">
+        <div class="row">
+            <div class="col-sm-12 col-md-4 col-md-offset-1 Campain-padding-top-text">
 
-            <div class="row">
+                <div class="row">
 
-
-                <div class="col-sm-12 col-md-4 CampainImage">
-                    <%-- read from DB --%>
-                    <asp:Image ImageUrl="~/images/car.jpg" runat="server" ID="Image1" />
-                </div>
-
-
-                <div class="col-sm-12 col-md-5 CampainText">
-
-                    <div class="col-sm-12 col-md-4">
-                        <p>
-                            <%-- read from DB --%>
-                   شرکت پگاه
-                        </p>
-                    </div>
-                    <div class="col-sm-12 col-md-4">
+                    <div class="col-sm-12 col-md-6">
 
                         <label>
                             نام تبلیغ دهنده:
                         </label>
                     </div>
 
-                    <br />
-
-                    <div class="col-sm-12 col-md-4 row2">
+                    <div class="col-sm-12 col-md-6">
                         <p>
                             <%-- read from DB --%>
-                   سه ماه
+                   شرکت پگاه
                         </p>
                     </div>
 
-                    <div class="col-sm-12 col-md-4 row2">
+                </div>
+                <div class="row">
+
+                    <div class="col-sm-12 col-md-6">
                         <label>
                             مدت زمان:
                         </label>
                     </div>
 
-                    <br />
-
-                    <div class="col-sm-12 col-md-4 row2">
+                    <div class="col-sm-12 col-md-6">
                         <p>
                             <%-- read from DB --%>
-                   50 کیلومتر
+                   سه ماه
                         </p>
                     </div>
+                </div>
 
-                    <div class="col-sm-12 col-md-4 row2">
+                <div class="row">
+
+                    <div class="col-sm-12 col-md-6">
+
                         <label>
-                            حداکثر مسافت:
+                            حداکثز مسافت در روز:
                         </label>
                     </div>
 
-
-                    <br />
-
-                    <div class="col-sm-12 col-md-4 row2">
+                    <div class="col-sm-12 col-md-6">
                         <p>
                             <%-- read from DB --%>
-                  70 تا 100 هزار تومان
+                  100 کیلومتر
                         </p>
                     </div>
 
-                    <div class="col-sm-12 col-md-4 row2">
+                </div>
+                <div class="row">
+
+                    <div class="col-sm-12 col-md-6">
                         <label>
                             میزان درامد روزانه:
                         </label>
                     </div>
 
+                    <div class="col-sm-12 col-md-6">
+                        <p>
+                            <%-- read from DB --%>
+70 تا 100 هزار تومان
+                        </p>
+                    </div>
                 </div>
             </div>
 
+            <%--image--%>
+            <div class="col-sm-12 col-md-5 no-padding">
+                <%-- read from DB --%>
+                <asp:Image ImageUrl="~/images/car.jpg" runat="server" ID="Image5" />
+            </div>
 
-            <div class="row">
-
-                <div class="col-md-12 col-md-6">
-                    <%--map--%>
-
-
-                    <div id="googleMap" style="width: 100%; height: 200px;"></div>
-                </div>
-
-                <div id="listview2Button" class="col-sm-12 col-md-5">
-                    <asp:Button ID="btn" runat="server" CssClass="btn btn-info" Text="انتخاب"></asp:Button>
-                </div>
+            <div class="col-sm-12 col-md-1 Campain-padding-top-button">
+                <asp:Button ID="Button4" runat="server" CssClass="btn btn-info" Text="انتخاب"></asp:Button>
             </div>
 
         </div>
+
+        <div class="row">
+
+            <div class="col-md-12 col-md-12">
+                <%--map--%>
+                <div id="googleMap" style="width: 100%; height: 200px;"></div>
+            </div>
+
+        </div>
+
     </div>
 
 
 
     <%--for list view 3--%>
 
-    <div class="CampainRow row">
+    <div class="row well CampainBorder">
 
-        <div class="col-sm-11 col-md-11 CampainBorder">
+        <div class="row">
 
-            <div class="col-sm-12 col-md-4 CampainImage">
+            <div class="col-sm-12 col-md-4 col-md-offset-1 Campain-padding-top-text">
+
+                <div class="row">
+
+                    <div class="col-sm-12 col-md-6">
+
+                        <label>
+                            نوع کمپین:
+                        </label>
+                    </div>
+
+                    <div class="col-sm-12 col-md-6">
+                        <p>
+                            <%-- read from DB --%>
+                   تم
+                        </p>
+                    </div>
+
+                </div>
+                <div class="row">
+
+                    <div class="col-sm-12 col-md-6">
+                        <label>
+                            میزان درامد روزانه: 
+                        </label>
+                    </div>
+
+                    <div class="col-sm-12 col-md-6">
+                        <p>
+                            <%-- read from DB --%>
+                  70 تا 100 هزار تومان
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <%--image--%>
+            <div class="col-sm-12 col-md-4 no-padding">
                 <%-- read from DB --%>
-                <asp:Image ImageUrl="~/images/car.jpg" runat="server" ID="Image2" />
+                <asp:Image ImageUrl="~/images/car.jpg" runat="server" ID="Image1" />
             </div>
 
-            <div class="col-sm-12 col-md-5 CampainText">
-
-                <%-- تم --%>
-                <div class="col-sm-12 col-md-4">
-                    <p>
-                        <%-- read from DB --%>
-                 تم
-                    </p>
-                </div>
-                <div class="col-sm-12 col-md-4">
-
-                    <label>
-                        نوع کمپین
-                    </label>
-                </div>
-
-                <div class="col-sm-12 col-md-4">
-                    <p>
-                        <%-- read from DB --%>
-                   70 تا 100 هزار تومان
-                    </p>
-                </div>
-                <div class="col-sm-12 col-md-4">
-
-                    <label>
-                        میزان درامد روزانه
-                    </label>
-                </div>
-
-                <br />
-
-                <div class="col-sm-12 col-md-7 buttonRow3">
-                    <asp:Button ID="Button1" runat="server" CssClass="btn btn-info" Text="انتخاب"></asp:Button>
-                </div>
+            <div class="col-sm-12 col-md-2 Campain-padding-top-button">
+                <asp:Button ID="Button2" runat="server" CssClass="btn btn-info" Text="ملحق شدن به کمپین"></asp:Button>
             </div>
-
-
-            <div class="col-sm-12 col-md-4 CampainImage">
-                <%-- read from DB --%>
-                <asp:Image ImageUrl="~/images/car.jpg" runat="server" ID="Image3" />
-            </div>
-
-            <div class="col-sm-12 col-md-5 CampainText">
-
-                <div class="col-sm-12 col-md-4">
-                    <p>
-                        <%-- read from DB --%>
-                 نیمه خودرو
-                    </p>
-                </div>
-                <div class="col-sm-12 col-md-4">
-
-                    <label>
-                        نوع کمپین
-                    </label>
-                </div>
-
-                <div class="col-sm-12 col-md-4">
-                    <p>
-                        <%-- read from DB --%>
-                  50 تا 70 هزار تومان
-                    </p>
-                </div>
-                <div class="col-sm-12 col-md-4">
-
-                    <label>
-                        میزان درامد روزانه
-                    </label>
-                </div>
-
-                <br />
-
-                <div class="col-sm-12 col-md-7 buttonRow3">
-                    <asp:Button ID="Button2" runat="server" CssClass="btn btn-info" Text="انتخاب"></asp:Button>
-                </div>
-            </div>
-
-
-            <div class="col-sm-12 col-md-4 CampainImage">
-                <%-- read from DB --%>
-                <asp:Image ImageUrl="~/images/car.jpg" runat="server" ID="Image4" />
-            </div>
-
-            <div class="col-sm-12 col-md-5 CampainText">
-
-                <div class="col-sm-12 col-md-4">
-                    <p>
-                        <%-- read from DB --%>
-                 باکس
-                    </p>
-                </div>
-                <div class="col-sm-12 col-md-4">
-
-                    <label>
-                        نوع کمپین
-                    </label>
-                </div>
-
-                <div class="col-sm-12 col-md-4">
-                    <p>
-                        <%-- read from DB --%>
-                   30 تا 50 هزار تومان
-                    </p>
-                </div>
-                <div class="col-sm-12 col-md-4">
-
-                    <label>
-                        میزان درامد روزانه
-                    </label>
-                </div>
-
-                <br />
-
-                <div class="col-sm-12 col-md-7 buttonRow3">
-                    <asp:Button ID="Button3" runat="server" CssClass="btn btn-info" Text="انتخاب"></asp:Button>
-                </div>
-            </div>
-
 
         </div>
+
+        <div class="row">
+
+            <div class="col-sm-12 col-md-4 col-md-offset-1 Campain-padding-top-text">
+
+                <div class="row">
+
+                    <div class="col-sm-12 col-md-6">
+
+                        <label>
+                            نوع کمپین:
+                        </label>
+                    </div>
+
+                    <div class="col-sm-12 col-md-6">
+                        <p>
+                            <%-- read from DB --%>
+                   نیمه خودرو
+                        </p>
+                    </div>
+
+                </div>
+                <div class="row">
+
+                    <div class="col-sm-12 col-md-6">
+                        <label>
+                            میزان درامد روزانه: 
+                        </label>
+                    </div>
+
+                    <div class="col-sm-12 col-md-6">
+                        <p>
+                            <%-- read from DB --%>
+                 50 تا 100 هزار تومان
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <%--image--%>
+            <div class="col-sm-12 col-md-4 no-padding">
+                <%-- read from DB --%>
+                <asp:Image ImageUrl="~/images/car.jpg" runat="server" ID="Image6" />
+            </div>
+
+            <div class="col-sm-12 col-md-2 Campain-padding-top-button">
+                <asp:Button ID="Button6" runat="server" CssClass="btn btn-info" Text="ملحق شدن به کمپین"></asp:Button>
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="col-sm-12 col-md-4 col-md-offset-1 Campain-padding-top-text">
+
+                <div class="row">
+
+                    <div class="col-sm-12 col-md-6">
+
+                        <label>
+                            نوع کمپین:
+                        </label>
+                    </div>
+
+                    <div class="col-sm-12 col-md-6">
+                        <p>
+                            <%-- read from DB --%>
+                   باکس
+                        </p>
+                    </div>
+
+                </div>
+                <div class="row">
+
+                    <div class="col-sm-12 col-md-6">
+                        <label>
+                            میزان درامد روزانه: 
+                        </label>
+                    </div>
+
+                    <div class="col-sm-12 col-md-6">
+                        <p>
+                            <%-- read from DB --%>
+                50 تا 70 هزار تومان
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <%--image--%>
+            <div class="col-sm-12 col-md-4 no-padding">
+                <%-- read from DB --%>
+                <asp:Image ImageUrl="~/images/car.jpg" runat="server" ID="Image7" />
+            </div>
+
+            <div class="col-sm-12 col-md-2 Campain-padding-top-button">
+                <asp:Button ID="Button1" runat="server" CssClass="btn btn-info" Text="ملحق شدن به کمپین"></asp:Button>
+            </div>
+
+        </div>
+
+
     </div>
-
-
-
-
-
 
 
 
