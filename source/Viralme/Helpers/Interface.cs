@@ -28,20 +28,20 @@ namespace Viralme.Helpers
         {
             return new Driver().DeSerializeFromJson(driverJson); ;
         }
-        public int? AddDriverDetail(DriverDetail Driverdetail)
-        {
-            DriverDetail driver = new DriverDetail();
-            return driver.AddDriverDetail(Driverdetail);
-        }
-        public int UpdatedDriverDetail(DriverDetail detail)
-        {
-            DriverDetail driver = new DriverDetail();
-            return driver.UpdatedDriverDetail(detail);  
-        }
-        public int DeleteDriverDetail(int driverID)
-        {
-            DriverDetail driver = new DriverDetail();
-            return driver.DeleteDriverDetail(driverID);
-        }
+        //public int? AddDriverDetail(DriverDetail Driverdetail)
+        //{
+        //    DriverDetail driver = new DriverDetail();
+        //    return driver.AddDriverDetail(Driverdetail);
+        //}
+        //public int UpdatedDriverDetail(DriverDetail detail)
+        //{
+        //    DriverDetail driver = new DriverDetail();
+        //    return driver.UpdatedDriverDetail(detail);  
+        //}
+        //public int DeleteDriverDetail(int driverID)
+        //{
+        //    DriverDetail driver = new DriverDetail();
+        //    return driver.DeleteDriverDetail(driverID);
+        //}
     }
 }

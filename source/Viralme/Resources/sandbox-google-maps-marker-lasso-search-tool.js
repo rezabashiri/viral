@@ -28,7 +28,30 @@ function initialize() {
     var myOptions = { zoom: 15, center: latlng, mapTypeId: google.maps.MapTypeId.SATELITE, draggableCursor: 'crosshair', mapTypeControlOptions: { style: google.maps.MapTypeControlStyle.DROPDOWN_MENU } };
     map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
     google.maps.event.addListener(map, 'click', mapclick);
+    //for search textbox
+    var input = (document.getElementById('txtsearch'));
+    map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
 
+    var searchBox = new google.maps.places.SearchBox((input));
+    google.maps.event.addListener(searchBox, 'places_changed', function () {
+        var places = searchBox.getPlaces();
+        if (places.length == 0) {
+            return;
+        }
+        var searchbounds = new google.maps.LatLngBounds();
+        for (var i = 0, place; place = places[i]; i++) {
+            points.push(place.geometry.location);
+            Display();
+            searchbounds.extend(place.geometry.location);
+        }
+        map.fitBounds(searchbounds);
+    });
+    // current map's viewport.
+    google.maps.event.addListener(map, 'bounds_changed', function () {
+        var listenerbounds = map.getBounds();
+        searchBox.setBounds(listenerbounds);
+        map.setZoom(15);
+    });
 
         areaDiv.innerHTML = '0 m&sup2;';
         areaDivkm.innerHTML = '0 km&sup2;';

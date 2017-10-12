@@ -459,8 +459,8 @@
 
         fields: [
             { name: "PackageType", type: "text", title: "نوع پکیج", width: 200, align: "center" },
-            { name: "packagePriceMin", type: "text", title: "حداقل قیمت پکیج", width: 250, align: "center" },
-            { name: "packagePriceMax", type: "text", title: "حداکثر قیمت پکیج", width: 250, align: "center" },
+            { name: "MinPrice", type: "text", title: "حداقل قیمت پکیج", width: 250, align: "center" },
+            { name: "MaxPrice", type: "text", title: "حداکثر قیمت پکیج", width: 250, align: "center" },
             { type: "control", editButton: false }
         ]
     });
@@ -477,7 +477,7 @@
 
             i++;
             packages.push(
-                { id: i, PackageType: String(Packagetype), packagePriceMin: String(PackagePriceMin), packagePriceMax: String(PackagePriceMax) }
+                { ID: i, PackageType: String(Packagetype), MinPrice: String(PackagePriceMin), MaxPrice: String(PackagePriceMax) }
             );
 
             $("#jsPackagGrid").jsGrid("loadData");
@@ -539,7 +539,7 @@
 
         var positions_area = [];
 
-        if (routeMarkers.length >= 2) {
+        if (routeMarkers.length >= 3) {
 
             for (var j = 0; j < routeMarkers.length; j++) {
                 positions_area.push(routeMarkers[j].position.lat(), routeMarkers[j].position.lng());
@@ -555,12 +555,21 @@
             ClearAllPoints();
         }
         else {
-            alert('لطفا ناحیه مورد نظر خود را با حداقل دو کلیک بر روی نقشه انتخاب کنید.');
+            alert('لطفا ناحیه مورد نظر خود را با حداقل سه کلیک بر روی نقشه انتخاب کنید.');
         }
     }
 
 
     function saveIntoAreaJSGrid() {
+        var points =[];
+        if (routeMarkers) {
+            for (i in routeMarkers) {
+                points.push({Lat: routeMarkers[i].getPosition().lat(),Lng:routeMarkers[i].getPosition().lng()});
+            }
+        }
+        var packageobj = { PackagePrices: packages, CampainArea:  points   };
+  
+        SaveData(packageobj);
     }
 
 

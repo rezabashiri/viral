@@ -112,6 +112,7 @@
     </Compile>
     <Compile Include="Helpers\ContextHelper.cs" />
     <Compile Include="Helpers\Interface.cs" />
+    <Compile Include="Logic\Campaign.cs" />
     <Compile Include="Logic\CampainStatistics.cs" />
     <Compile Include="Logic\Driver.cs" />
     <Compile Include="Logic\DriverDetail.cs" />

@@ -26,28 +26,28 @@ namespace Viralme.Model
             get;
             set;
         }
-        public int? AddDriverDetail(DriverDetail detail)
-        {
-            using (var en = Helpers.ContextHelper.GetContext)
-            {
-                if (detail.Driver == null )
-                    throw new Exception("set drvier's detail");
-                return en.InsertInDriverDetail(detail.DriverID, detail.Driver.SerializeToJson(), detail.Car).FirstOrDefault();
-            }
-        }
-        public int  UpdatedDriverDetail(DriverDetail detail)
-        {
-            using (var en = Helpers.ContextHelper.GetContext)
-            {
-                return en.UpdateDriverDetail(detail.DriverID, detail.DrivingStatistics, detail.Car) ;
-            }
-        }
-        public int DeleteDriverDetail(int driverID)
-        {
-            using (var en = Helpers.ContextHelper.GetContext)
-            {
-                return en.DeleteDriverDetail(driverID);
-            }
-        }
+        //public int? AddDriverDetail(DriverDetail detail)
+        //{
+        //    using (var en = Helpers.ContextHelper.GetContext)
+        //    {
+        //        if (detail.Driver == null )
+        //            throw new Exception("set drvier's detail");
+        //        return en.InsertInDriverDetail(detail.DriverID, detail.Driver.SerializeToJson(), detail.Car).FirstOrDefault();
+        //    }
+        //}
+        //public int  UpdatedDriverDetail(DriverDetail detail)
+        //{
+        //    using (var en = Helpers.ContextHelper.GetContext)
+        //    {
+        //        return en.UpdateDriverDetail(detail.DriverID, detail.DrivingStatistics, detail.Car) ;
+        //    }
+        //}
+        //public int DeleteDriverDetail(int driverID)
+        //{
+        //    using (var en = Helpers.ContextHelper.GetContext)
+        //    {
+        //        return en.DeleteDriverDetail(driverID);
+        //    }
+        //}
     }
 }

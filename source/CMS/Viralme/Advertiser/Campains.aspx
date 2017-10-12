@@ -11,8 +11,38 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="TitleContentPH" runat="server">
 
     <script src="../../Design/js/jsgrid-1.5.3/jsgrid.min.js"></script>
+    <script src="../../Design/js/jquery.json.min.js"></script>
 
     <uc1:Campains runat="server" ID="uscCompain" />
    
+    <script type="text/javascript">
 
+        function SaveData(data) {
+            seen = [];
+            var str = JSON.stringify(data, function (key, val) {
+                if (val != null && typeof val == "object") {
+                    if (seen.indexOf(val) >= 0) {
+                        return;
+                    }
+                    seen.push(val);
+                }
+                return val;
+            });
+       
+            $.ajax({
+                type: "post",
+                url: "/Viralme/ClientCalls.aspx/SaveCampagin",
+                dataType: "json",
+                contentType: "application/json; charset=utf-8",
+                data: "{statics:'" + str + "'}",
+                success: function (msg) {
+                    alert('اطلاعات ثبت شد');
+                },
+                error: function (xhr, status, error) {
+
+                    alert(xhr.responseText);
+                }
+            });
+        }
+    </script>
 </asp:Content>

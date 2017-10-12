@@ -13,7 +13,8 @@ namespace CMS
         {
             LoginControl.OnLoggedIn += LoginControl_OnLoggedIn;
 
-
+          
+           
         }
 
         void LoginControl_OnLoggedIn(AccessManagementService.Model.User user)

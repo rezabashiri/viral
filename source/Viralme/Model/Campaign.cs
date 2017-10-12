@@ -22,9 +22,10 @@ namespace Viralme.Model
     
         public int ID { get; set; }
         public Nullable<int> UserID { get; set; }
-        public Nullable<System.DateTime> CreateDate { get; set; }
+        public string Name { get; set; }
         public Nullable<System.DateTime> StartDate { get; set; }
-        public Nullable<System.DateTime> FinishDate { get; set; }
+        public Nullable<System.DateTime> EndDate { get; set; }
+        public string Json_Statistics { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PublicRequest> PublicRequests { get; set; }

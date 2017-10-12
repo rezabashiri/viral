@@ -19,9 +19,10 @@
           </Key>
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="UserID" Type="int" />
-          <Property Name="CreateDate" Type="datetime" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
           <Property Name="StartDate" Type="datetime" />
-          <Property Name="FinishDate" Type="datetime" />
+          <Property Name="EndDate" Type="datetime" />
+          <Property Name="Json_Statistics" Type="nvarchar(max)" />
         </EntityType>
         <EntityType Name="DriverDetail">
           <Key>
@@ -29,7 +30,6 @@
           </Key>
           <Property Name="DriverID" Type="int" Nullable="false" />
           <Property Name="DrivingStatistics" Type="nvarchar(max)" />
-          <Property Name="Car" Type="nvarchar" MaxLength="50" />
           <Property Name="AttachID" Type="uniqueidentifier" />
         </EntityType>
         <EntityType Name="PublicRequest">
@@ -94,9 +94,9 @@
             <Parameter Name="Car" Mode="In" Type="String" />
           </FunctionImport>
           <EntitySet Name="Packages" EntityType="viralmeModel.Package" />
-          <EntitySet Name="Campaigns" EntityType="viralmeModel.Campaign" />
-          <EntitySet Name="DriverDetails" EntityType="viralmeModel.DriverDetail" />
           <EntitySet Name="PublicRequests" EntityType="viralmeModel.PublicRequest" />
+          <EntitySet Name="DriverDetails" EntityType="viralmeModel.DriverDetail" />
+          <EntitySet Name="Campaigns" EntityType="viralmeModel.Campaign" />
           <AssociationSet Name="FK_PublicRequest_Campaign" Association="viralmeModel.FK_PublicRequest_Campaign">
             <End Role="Campaign" EntitySet="Campaigns" />
             <End Role="PublicRequest" EntitySet="PublicRequests" />
@@ -110,26 +110,6 @@
           <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Unit" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
-        <EntityType Name="Campaign">
-          <Key>
-            <PropertyRef Name="ID" />
-          </Key>
-          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="UserID" Type="Int32" />
-          <Property Name="CreateDate" Type="DateTime" Precision="3" />
-          <Property Name="StartDate" Type="DateTime" Precision="3" />
-          <Property Name="FinishDate" Type="DateTime" Precision="3" />
-          <NavigationProperty Name="PublicRequests" Relationship="viralmeModel.FK_PublicRequest_Campaign" FromRole="Campaign" ToRole="PublicRequest" />
-        </EntityType>
-        <EntityType Name="DriverDetail">
-          <Key>
-            <PropertyRef Name="DriverID" />
-          </Key>
-          <Property Name="DriverID" Type="Int32" Nullable="false" />
-          <Property Name="DrivingStatistics" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="Car" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="AttachID" Type="Guid" />
-        </EntityType>
         <EntityType Name="PublicRequest">
           <Key>
             <PropertyRef Name="ID" />
@@ -138,6 +118,26 @@
           <Property Name="CampaignID" Type="Int32" />
           <Property Name="Criteria" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Campaign" Relationship="viralmeModel.FK_PublicRequest_Campaign" FromRole="PublicRequest" ToRole="Campaign" />
+        </EntityType>
+        <EntityType Name="DriverDetail">
+          <Key>
+            <PropertyRef Name="DriverID" />
+          </Key>
+          <Property Name="DriverID" Type="Int32" Nullable="false" />
+          <Property Name="DrivingStatistics" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="AttachID" Type="Guid" />
+        </EntityType>
+        <EntityType Name="Campaign">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserID" Type="Int32" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="StartDate" Type="DateTime" Precision="3" />
+          <Property Name="EndDate" Type="DateTime" Precision="3" />
+          <Property Name="Json_Statistics" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="PublicRequests" Relationship="viralmeModel.FK_PublicRequest_Campaign" FromRole="Campaign" ToRole="PublicRequest" />
         </EntityType>
         <Association Name="FK_PublicRequest_Campaign">
           <End Type="viralmeModel.Campaign" Role="Campaign" Multiplicity="0..1" />
@@ -169,13 +169,11 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Campaigns">
-            <EntityTypeMapping TypeName="viralmeModel.Campaign">
-              <MappingFragment StoreEntitySet="Campaign">
-                <ScalarProperty Name="FinishDate" ColumnName="FinishDate" />
-                <ScalarProperty Name="StartDate" ColumnName="StartDate" />
-                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
-                <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <EntitySetMapping Name="PublicRequests">
+            <EntityTypeMapping TypeName="viralmeModel.PublicRequest">
+              <MappingFragment StoreEntitySet="PublicRequest">
+                <ScalarProperty Name="Criteria" ColumnName="Criteria" />
+                <ScalarProperty Name="CampaignID" ColumnName="CampaignID" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>
@@ -184,17 +182,19 @@
             <EntityTypeMapping TypeName="viralmeModel.DriverDetail">
               <MappingFragment StoreEntitySet="DriverDetail">
                 <ScalarProperty Name="AttachID" ColumnName="AttachID" />
-                <ScalarProperty Name="Car" ColumnName="Car" />
                 <ScalarProperty Name="DrivingStatistics" ColumnName="DrivingStatistics" />
                 <ScalarProperty Name="DriverID" ColumnName="DriverID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="PublicRequests">
-            <EntityTypeMapping TypeName="viralmeModel.PublicRequest">
-              <MappingFragment StoreEntitySet="PublicRequest">
-                <ScalarProperty Name="Criteria" ColumnName="Criteria" />
-                <ScalarProperty Name="CampaignID" ColumnName="CampaignID" />
+          <EntitySetMapping Name="Campaigns">
+            <EntityTypeMapping TypeName="viralmeModel.Campaign">
+              <MappingFragment StoreEntitySet="Campaign">
+                <ScalarProperty Name="Json_Statistics" ColumnName="Json_Statistics" />
+                <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+                <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>

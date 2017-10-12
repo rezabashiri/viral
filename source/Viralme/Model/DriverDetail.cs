@@ -16,7 +16,6 @@ namespace Viralme.Model
     {
         public int DriverID { get; set; }
         public string DrivingStatistics { get; set; }
-        public string Car { get; set; }
         public Nullable<System.Guid> AttachID { get; set; }
     }
 }

@@ -505,7 +505,7 @@
             <!-- #MAIN CONTENT -->
             <div id="content">
 
-                <telerik:RadScriptManager ID="RadScriptManager1" runat="server"></telerik:RadScriptManager>
+                <telerik:RadScriptManager ID="RadScriptManager1" runat="server" EnablePageMethods="true"></telerik:RadScriptManager>
                 
                     <asp:ContentPlaceHolder ID="TitleContentPH" runat="server">
                     </asp:ContentPlaceHolder>
