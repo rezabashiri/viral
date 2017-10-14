@@ -9,17 +9,16 @@ namespace Viralme.Model
 
     [MetadataType(typeof(MetaData))]
     [ScaffoldTable(false)]
-    public partial class DriverDetail
+    public partial class DriverCampaign
     {
-        public DriverDetail()
-        {
-
-        }
+      
         private class MetaData
         {
-            public int DriverID { get; set; }
-            public string DrivingStatistics { get; set; }
-            public string Car { get; set; }
+             public int DriverID { get; set; }
+        public int CampaignID { get; set; }
+        public Nullable<int> PackageID { get; set; }
+        public Nullable<System.DateTime> JoinDate { get; set; }
+        public string DrivingStatistics { get; set; }
         }
         public Driver Driver
         {
@@ -49,5 +48,24 @@ namespace Viralme.Model
         //        return en.DeleteDriverDetail(driverID);
         //    }
         //}
+        public int JoinCampaign(DriverCampaign drivercampaign)
+        {
+            using (var en = Helpers.ContextHelper.GetContext)
+            {
+                try
+                {
+                    return en.JoinCampaign(drivercampaign.DriverID, drivercampaign.CampaignID, drivercampaign.PackageID, drivercampaign.JoinDate);
+                }
+                catch (Exception ex)
+                {
+                    WebUtility.Helpers.LogHelpers.TakeALogWithTime(ex.Message);
+                    return -1;
+                }
+            }
+        }
+        public int JoinCampaign( )
+        {
+            JoinCampaign(this);
+        }
     }
 }

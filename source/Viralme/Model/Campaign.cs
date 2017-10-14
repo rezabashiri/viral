@@ -18,6 +18,7 @@ namespace Viralme.Model
         public Campaign()
         {
             this.PublicRequests = new HashSet<PublicRequest>();
+            this.DriverCampaigns = new HashSet<DriverCampaign>();
         }
     
         public int ID { get; set; }
@@ -29,5 +30,7 @@ namespace Viralme.Model
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PublicRequest> PublicRequests { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<DriverCampaign> DriverCampaigns { get; set; }
     }
 }

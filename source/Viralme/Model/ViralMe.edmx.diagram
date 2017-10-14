@@ -7,9 +7,10 @@
       <Diagram DiagramId="7d7d33a8c0ec405c80eadddd43e08d96" Name="Diagram1">
         <EntityTypeShape EntityType="viralmeModel.Package" Width="1.5" PointX="2.75" PointY="3.75" />
         <EntityTypeShape EntityType="viralmeModel.PublicRequest" Width="1.5" PointX="3" PointY="1.125" />
-        <EntityTypeShape EntityType="viralmeModel.DriverDetail" Width="1.5" PointX="5.375" PointY="0.75" />
         <EntityTypeShape EntityType="viralmeModel.Campaign" Width="1.5" PointX="0.75" PointY="0.75" />
         <AssociationConnector Association="viralmeModel.FK_PublicRequest_Campaign" />
+        <EntityTypeShape EntityType="viralmeModel.DriverCampaign" Width="1.5" PointX="3" PointY="7" />
+        <AssociationConnector Association="viralmeModel.FK_DriverCampaign_Campaign" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

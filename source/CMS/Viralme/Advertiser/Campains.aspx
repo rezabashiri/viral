@@ -17,7 +17,7 @@
    
     <script type="text/javascript">
 
-        function SaveData(data) {
+        function SaveData(name,start,duration,data) {
             seen = [];
             var str = JSON.stringify(data, function (key, val) {
                 if (val != null && typeof val == "object") {
@@ -34,9 +34,9 @@
                 url: "/Viralme/ClientCalls.aspx/SaveCampagin",
                 dataType: "json",
                 contentType: "application/json; charset=utf-8",
-                data: "{statics:'" + str + "'}",
+                data: "{statics:'" + str + "',name:'" + name + "',startdate:'" + start + "',duraion:'"+duration+"'}",
                 success: function (msg) {
-                    alert('اطلاعات ثبت شد');
+                    alert('کمپین شما با موفقیت ایجاد شد');
                 },
                 error: function (xhr, status, error) {
 

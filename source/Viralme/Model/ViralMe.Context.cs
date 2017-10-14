@@ -29,8 +29,8 @@ namespace Viralme.Model
     
         public virtual DbSet<Package> Packages { get; set; }
         public virtual DbSet<PublicRequest> PublicRequests { get; set; }
-        public virtual DbSet<DriverDetail> DriverDetails { get; set; }
         public virtual DbSet<Campaign> Campaigns { get; set; }
+        public virtual DbSet<DriverCampaign> DriverCampaigns { get; set; }
     
         public virtual int DeleteDriverDetail(Nullable<int> driverID)
         {
@@ -73,6 +73,45 @@ namespace Viralme.Model
                 new ObjectParameter("Car", typeof(string));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("UpdateDriverDetail", driverIDParameter, drivingStatisticsParameter, carParameter);
+        }
+    
+        public virtual ObjectResult<Campaign> SearchOnCampaign(string whereParameters)
+        {
+            var whereParametersParameter = whereParameters != null ?
+                new ObjectParameter("WhereParameters", whereParameters) :
+                new ObjectParameter("WhereParameters", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Campaign>("SearchOnCampaign", whereParametersParameter);
+        }
+    
+        public virtual ObjectResult<Campaign> SearchOnCampaign(string whereParameters, MergeOption mergeOption)
+        {
+            var whereParametersParameter = whereParameters != null ?
+                new ObjectParameter("WhereParameters", whereParameters) :
+                new ObjectParameter("WhereParameters", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Campaign>("SearchOnCampaign", mergeOption, whereParametersParameter);
+        }
+    
+        public virtual int JoinCampaign(Nullable<int> driverID, Nullable<int> campaignID, Nullable<int> packageID, Nullable<System.DateTime> joinDate)
+        {
+            var driverIDParameter = driverID.HasValue ?
+                new ObjectParameter("DriverID", driverID) :
+                new ObjectParameter("DriverID", typeof(int));
+    
+            var campaignIDParameter = campaignID.HasValue ?
+                new ObjectParameter("CampaignID", campaignID) :
+                new ObjectParameter("CampaignID", typeof(int));
+    
+            var packageIDParameter = packageID.HasValue ?
+                new ObjectParameter("PackageID", packageID) :
+                new ObjectParameter("PackageID", typeof(int));
+    
+            var joinDateParameter = joinDate.HasValue ?
+                new ObjectParameter("JoinDate", joinDate) :
+                new ObjectParameter("JoinDate", typeof(System.DateTime));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("JoinCampaign", driverIDParameter, campaignIDParameter, packageIDParameter, joinDateParameter);
         }
     }
 }

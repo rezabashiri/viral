@@ -568,8 +568,8 @@
             }
         }
         var packageobj = { PackagePrices: packages, CampainArea:  points   };
-  
-        SaveData(packageobj);
+        var dt= $("#<%= dteStartDate.ClientID %>").datepicker('getDate').format('yyyy/MM/dd');
+        SaveData($("#txtCampainName").val(),dt,$("#txtCampainLenghTime").val(),packageobj);
     }
 
 

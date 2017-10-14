@@ -12,10 +12,14 @@ namespace Viralme.Model
     using System;
     using System.Collections.Generic;
     
-    public partial class DriverDetail
+    public partial class DriverCampaign
     {
         public int DriverID { get; set; }
+        public int CampaignID { get; set; }
+        public Nullable<int> PackageID { get; set; }
+        public Nullable<System.DateTime> JoinDate { get; set; }
         public string DrivingStatistics { get; set; }
-        public Nullable<System.Guid> AttachID { get; set; }
+    
+        public virtual Campaign Campaign { get; set; }
     }
 }

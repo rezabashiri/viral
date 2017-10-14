@@ -24,13 +24,16 @@
           <Property Name="EndDate" Type="datetime" />
           <Property Name="Json_Statistics" Type="nvarchar(max)" />
         </EntityType>
-        <EntityType Name="DriverDetail">
+        <EntityType Name="DriverCampaign">
           <Key>
             <PropertyRef Name="DriverID" />
+            <PropertyRef Name="CampaignID" />
           </Key>
           <Property Name="DriverID" Type="int" Nullable="false" />
+          <Property Name="CampaignID" Type="int" Nullable="false" />
+          <Property Name="PackageID" Type="int" />
+          <Property Name="JoinDate" Type="datetime" />
           <Property Name="DrivingStatistics" Type="nvarchar(max)" />
-          <Property Name="AttachID" Type="uniqueidentifier" />
         </EntityType>
         <EntityType Name="PublicRequest">
           <Key>
@@ -40,6 +43,18 @@
           <Property Name="CampaignID" Type="int" />
           <Property Name="Criteria" Type="nvarchar" MaxLength="150" />
         </EntityType>
+        <Association Name="FK_DriverCampaign_Campaign">
+          <End Role="Campaign" Type="Self.Campaign" Multiplicity="1" />
+          <End Role="DriverCampaign" Type="Self.DriverCampaign" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Campaign">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="DriverCampaign">
+              <PropertyRef Name="CampaignID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_PublicRequest_Campaign">
           <End Role="Campaign" Type="Self.Campaign" Multiplicity="0..1" />
           <End Role="PublicRequest" Type="Self.PublicRequest" Multiplicity="*" />
@@ -60,6 +75,15 @@
           <Parameter Name="DrivingStatistics" Type="nvarchar(max)" Mode="In" />
           <Parameter Name="Car" Type="nvarchar" Mode="In" />
         </Function>
+        <Function Name="JoinCampaign" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="vir">
+          <Parameter Name="DriverID" Type="int" Mode="In" />
+          <Parameter Name="CampaignID" Type="int" Mode="In" />
+          <Parameter Name="PackageID" Type="int" Mode="In" />
+          <Parameter Name="JoinDate" Type="datetime" Mode="In" />
+        </Function>
+        <Function Name="SearchOnCampaign" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="vir">
+          <Parameter Name="WhereParameters" Type="nvarchar(max)" Mode="In" />
+        </Function>
         <Function Name="UpdateDriverDetail" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="vir">
           <Parameter Name="DriverID" Type="int" Mode="In" />
           <Parameter Name="DrivingStatistics" Type="nvarchar(max)" Mode="In" />
@@ -68,8 +92,12 @@
         <EntityContainer Name="viralmeModelStoreContainer">
           <EntitySet Name="Package" EntityType="Self.Package" Schema="bse" store:Type="Tables" />
           <EntitySet Name="Campaign" EntityType="Self.Campaign" Schema="vir" store:Type="Tables" />
-          <EntitySet Name="DriverDetail" EntityType="Self.DriverDetail" Schema="vir" store:Type="Tables" />
+          <EntitySet Name="DriverCampaign" EntityType="Self.DriverCampaign" Schema="vir" store:Type="Tables" />
           <EntitySet Name="PublicRequest" EntityType="Self.PublicRequest" Schema="vir" store:Type="Tables" />
+          <AssociationSet Name="FK_DriverCampaign_Campaign" Association="Self.FK_DriverCampaign_Campaign">
+            <End Role="Campaign" EntitySet="Campaign" />
+            <End Role="DriverCampaign" EntitySet="DriverCampaign" />
+          </AssociationSet>
           <AssociationSet Name="FK_PublicRequest_Campaign" Association="Self.FK_PublicRequest_Campaign">
             <End Role="Campaign" EntitySet="Campaign" />
             <End Role="PublicRequest" EntitySet="PublicRequest" />
@@ -95,12 +123,25 @@
           </FunctionImport>
           <EntitySet Name="Packages" EntityType="viralmeModel.Package" />
           <EntitySet Name="PublicRequests" EntityType="viralmeModel.PublicRequest" />
-          <EntitySet Name="DriverDetails" EntityType="viralmeModel.DriverDetail" />
           <EntitySet Name="Campaigns" EntityType="viralmeModel.Campaign" />
           <AssociationSet Name="FK_PublicRequest_Campaign" Association="viralmeModel.FK_PublicRequest_Campaign">
             <End Role="Campaign" EntitySet="Campaigns" />
             <End Role="PublicRequest" EntitySet="PublicRequests" />
           </AssociationSet>
+          <EntitySet Name="DriverCampaigns" EntityType="viralmeModel.DriverCampaign" />
+          <AssociationSet Name="FK_DriverCampaign_Campaign" Association="viralmeModel.FK_DriverCampaign_Campaign">
+            <End Role="Campaign" EntitySet="Campaigns" />
+            <End Role="DriverCampaign" EntitySet="DriverCampaigns" />
+          </AssociationSet>
+          <FunctionImport Name="SearchOnCampaign" EntitySet="Campaigns" ReturnType="Collection(viralmeModel.Campaign)">
+          <Parameter Name="WhereParameters" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="JoinCampaign">
+            <Parameter Name="DriverID" Mode="In" Type="Int32" />
+            <Parameter Name="CampaignID" Mode="In" Type="Int32" />
+            <Parameter Name="PackageID" Mode="In" Type="Int32" />
+            <Parameter Name="JoinDate" Mode="In" Type="DateTime" />
+          </FunctionImport>
         </EntityContainer>
         <EntityType Name="Package">
           <Key>
@@ -119,14 +160,6 @@
           <Property Name="Criteria" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Campaign" Relationship="viralmeModel.FK_PublicRequest_Campaign" FromRole="PublicRequest" ToRole="Campaign" />
         </EntityType>
-        <EntityType Name="DriverDetail">
-          <Key>
-            <PropertyRef Name="DriverID" />
-          </Key>
-          <Property Name="DriverID" Type="Int32" Nullable="false" />
-          <Property Name="DrivingStatistics" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="AttachID" Type="Guid" />
-        </EntityType>
         <EntityType Name="Campaign">
           <Key>
             <PropertyRef Name="ID" />
@@ -138,6 +171,7 @@
           <Property Name="EndDate" Type="DateTime" Precision="3" />
           <Property Name="Json_Statistics" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="PublicRequests" Relationship="viralmeModel.FK_PublicRequest_Campaign" FromRole="Campaign" ToRole="PublicRequest" />
+          <NavigationProperty Name="DriverCampaigns" Relationship="viralmeModel.FK_DriverCampaign_Campaign" FromRole="Campaign" ToRole="DriverCampaign" />
         </EntityType>
         <Association Name="FK_PublicRequest_Campaign">
           <End Type="viralmeModel.Campaign" Role="Campaign" Multiplicity="0..1" />
@@ -147,6 +181,30 @@
               <PropertyRef Name="ID" />
             </Principal>
             <Dependent Role="PublicRequest">
+              <PropertyRef Name="CampaignID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="DriverCampaign">
+          <Key>
+            <PropertyRef Name="DriverID" />
+            <PropertyRef Name="CampaignID" />
+          </Key>
+          <Property Name="DriverID" Type="Int32" Nullable="false" />
+          <Property Name="CampaignID" Type="Int32" Nullable="false" />
+          <Property Name="PackageID" Type="Int32" />
+          <Property Name="JoinDate" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="Campaign" Relationship="viralmeModel.FK_DriverCampaign_Campaign" FromRole="DriverCampaign" ToRole="Campaign" />
+          <Property Name="DrivingStatistics" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <Association Name="FK_DriverCampaign_Campaign">
+          <End Type="viralmeModel.Campaign" Role="Campaign" Multiplicity="1" />
+          <End Type="viralmeModel.DriverCampaign" Role="DriverCampaign" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Campaign">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="DriverCampaign">
               <PropertyRef Name="CampaignID" />
             </Dependent>
           </ReferentialConstraint>
@@ -178,15 +236,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="DriverDetails">
-            <EntityTypeMapping TypeName="viralmeModel.DriverDetail">
-              <MappingFragment StoreEntitySet="DriverDetail">
-                <ScalarProperty Name="AttachID" ColumnName="AttachID" />
-                <ScalarProperty Name="DrivingStatistics" ColumnName="DrivingStatistics" />
-                <ScalarProperty Name="DriverID" ColumnName="DriverID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="Campaigns">
             <EntityTypeMapping TypeName="viralmeModel.Campaign">
               <MappingFragment StoreEntitySet="Campaign">
@@ -199,6 +248,19 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="DriverCampaigns">
+            <EntityTypeMapping TypeName="viralmeModel.DriverCampaign">
+              <MappingFragment StoreEntitySet="DriverCampaign">
+                <ScalarProperty Name="DrivingStatistics" ColumnName="DrivingStatistics" />
+                <ScalarProperty Name="JoinDate" ColumnName="JoinDate" />
+                <ScalarProperty Name="PackageID" ColumnName="PackageID" />
+                <ScalarProperty Name="CampaignID" ColumnName="CampaignID" />
+                <ScalarProperty Name="DriverID" ColumnName="DriverID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="SearchOnCampaign" FunctionName="viralmeModel.Store.SearchOnCampaign" />
+          <FunctionImportMapping FunctionImportName="JoinCampaign" FunctionName="viralmeModel.Store.JoinCampaign" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

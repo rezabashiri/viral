@@ -39,6 +39,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AccessManagementService">
+      <HintPath>..\packages\AccessManagementService.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework">
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -115,7 +118,7 @@
     <Compile Include="Logic\Campaign.cs" />
     <Compile Include="Logic\CampainStatistics.cs" />
     <Compile Include="Logic\Driver.cs" />
-    <Compile Include="Logic\DriverDetail.cs" />
+    <Compile Include="Logic\DriverCampaign.cs" />
     <Compile Include="Logic\DrivingStatistics.cs" />
     <Compile Include="Logic\Enums.cs" />
     <Compile Include="Logic\Package.cs" />
@@ -123,7 +126,7 @@
     <Compile Include="Model\Campaign.cs">
       <DependentUpon>ViralMe.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\DriverDetail.cs">
+    <Compile Include="Model\DriverCampaign.cs">
       <DependentUpon>ViralMe.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\Package.cs">
