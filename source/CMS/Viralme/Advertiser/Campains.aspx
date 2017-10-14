@@ -16,7 +16,26 @@
     <uc1:Campains runat="server" ID="uscCompain" />
    
     <script type="text/javascript">
+        function LoadCampignDatas() {
+            var ret;
+            $.ajax({
+                type: "post",
+                url: "/Viralme/ClientCalls.aspx/LoadCampignDatas",
+                dataType: "json",
+                contentType: "application/json; charset=utf-8",
+                
+                success: function (msg) {
+             
+                    ret = msg.d;
+                    
+                },
+                error: function (xhr, status, error) {
 
+                    alert(xhr.responseText);
+                }
+            });
+            return ret;
+        }
         function SaveData(name,start,duration,data) {
             seen = [];
             var str = JSON.stringify(data, function (key, val) {

@@ -22,7 +22,7 @@ namespace Viralme.Model
             {
                 try
                 {
-                    
+
                     en.Campaigns.Add(newcamp);
                     return en.SaveChanges();
                 }
@@ -39,6 +39,8 @@ namespace Viralme.Model
             {
                 try
                 {
+
+
                     return en.SearchOnCampaign(whereCondition).ToList();
                 }
                 catch (Exception ex)

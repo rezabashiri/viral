@@ -20,6 +20,7 @@ namespace Viralme.Model
         public viralmeEntities()
             : base("name=viralmeEntities")
         {
+            this.Configuration.LazyLoadingEnabled = false;
         }
     
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

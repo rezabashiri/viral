@@ -139,9 +139,7 @@
                         </fieldset>
 
                         <footer>
-                            <%-- <button type="button" class="btn btn-primary">
-                                    ذخیره
-                                </button>--%>
+                      
                         </footer>
                     </div>
                     <!-- end widget content -->
@@ -395,7 +393,12 @@
 
 <script>
 
+    $(document).ready(function () {
+        $("#jsCampainGrid").jsGrid("loadData");
+    });
+    function RebindCampaignData(data) {
 
+    }
     //Campain's Grid 
 
     i = 0;
@@ -413,20 +416,21 @@
         controller:
         {
             loadData: function (filter) {
-                return Campains;
+                var d=LoadCampignDatas();
+                return  d;
             }
         },
 
         fields: [
-            { name: "campainName", type: "text", title: "نام کمپین", width: 200, align: "center" },
-            { name: "campainName", type: "text", title: "تاریخ شروع کمپین", width: 200, align: "center" },
-            { name: "campainName", type: "text", title: "مدت کمپین", width: 200, align: "center" },
-            { name: "carCount", type: "text", title: "تعداد خودرو", width: 250, align: "center" },
+            { name: "Name", type: "text", title: "نام کمپین", width: 200, align: "center" },
+            { name: "StartDate", type: "date", title: "تاریخ شروع کمپین", width: 200, align: "center" },
+            { name: "EndDate", type: "date", title: "مدت کمپین", width: 200, align: "center" },
+    
             { type: "control", editButton: false }
         ]
     });
 
-
+    
     //function insertIntoJsCampainGrid() {
 
     //    i++;

@@ -65,7 +65,7 @@ namespace Viralme.Model
         }
         public int JoinCampaign( )
         {
-            JoinCampaign(this);
+           return JoinCampaign(this);
         }
     }
 }
