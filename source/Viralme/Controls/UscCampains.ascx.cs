@@ -14,5 +14,6 @@ namespace Viralme.Controls
             dteStartDate.Date = DateTime.Now;
 
         }
+       
     }
 }

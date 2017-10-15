@@ -39,6 +39,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AccessManagementService">
+      <HintPath>..\packages\AccessManagementService.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework">
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -95,6 +98,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Controls\UscCampains.ascx" />
+    <Content Include="Controls\UscSelectCampain.ascx" />
     <Content Include="CSS\bootstrap-rtl.min.css" />
     <Content Include="CSS\bootstrap.min.css" />
     <Content Include="js\bootstrap.min.js" />
@@ -110,11 +114,20 @@
     <Compile Include="Controls\UscCampains.ascx.designer.cs">
       <DependentUpon>UscCampains.ascx</DependentUpon>
     </Compile>
+    <Compile Include="Controls\UscSelectCampain.ascx.cs">
+      <DependentUpon>UscSelectCampain.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\UscSelectCampain.ascx.designer.cs">
+      <DependentUpon>UscSelectCampain.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Helpers\ContextHelper.cs" />
+    <Compile Include="Helpers\ExtensionHelprs.cs" />
     <Compile Include="Helpers\Interface.cs" />
+    <Compile Include="Logic\Campaign.cs" />
     <Compile Include="Logic\CampainStatistics.cs" />
     <Compile Include="Logic\Driver.cs" />
-    <Compile Include="Logic\DriverDetail.cs" />
+    <Compile Include="Logic\DriverCampaign.cs" />
     <Compile Include="Logic\DrivingStatistics.cs" />
     <Compile Include="Logic\Enums.cs" />
     <Compile Include="Logic\Package.cs" />
@@ -122,7 +135,7 @@
     <Compile Include="Model\Campaign.cs">
       <DependentUpon>ViralMe.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\DriverDetail.cs">
+    <Compile Include="Model\DriverCampaign.cs">
       <DependentUpon>ViralMe.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\Package.cs">
@@ -167,6 +180,7 @@
       <DependentUpon>ViralMe.edmx</DependentUpon>
       <LastGenOutput>ViralMe.cs</LastGenOutput>
     </Content>
+    <None Include="Properties\PublishProfiles\customPublish.pubxml" />
     <None Include="Properties\PublishProfiles\pub.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

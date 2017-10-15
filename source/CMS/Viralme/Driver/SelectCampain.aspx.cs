@@ -15,8 +15,8 @@ namespace CMS.Viralme.Driver
             {
                 if (string.IsNullOrEmpty(Helpers.ContextHelpers.GetCampainId().ToString()))
                 {
-                    //ListView1.DataSource = DataSource;
-                    //ListView1.DataBind();
+                    ListView_showlistofcampain.DataSource = DataSource;
+                    ListView_showlistofcampain.DataBind();
                 }
                 else
                 {

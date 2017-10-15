@@ -9,13 +9,13 @@ namespace Viralme.Logic
     [Serializable]
     public class PackagePrice
     {
-        int ID { get; set; }
-        double MinPrice
+        public int ID { get; set; }
+        public double MinPrice
         {
             get;
             set;
         }
-        double MaxPrice
+        public double MaxPrice
         {
             get;
             set;
@@ -27,55 +27,55 @@ namespace Viralme.Logic
  
         public CampainStatistics()
         {
-            CampainArea = new List<PolyGon>();
+            CampainArea = new List<Point>();
             PackagePrices = new List<PackagePrice>();
-            DrivingTime = new List<string>();
+             
         }
-        public string Name
-        {
-            get;
-            set;
-        }
-        public DateTime StartDate
-        {
-            get;
-            set;
-        }
-        public DateTime EndDate
-        {
-            get;
-            set;
-        }
-        public List<string> DrivingTime
-        {
-            get;
-            set;
-        }
+ 
         public List<PackagePrice> PackagePrices
         {
             get;
             set;
         }
-        public List<PolyGon> CampainArea
+        public List<Point> CampainArea
         {
             get;
             set;
+        }
+        public string SerializeCampaginIntoJson()
+        {
+            return new WebUtility.Helpers.JsonHelpers().SerializeToJson<CampainStatistics>(this);
+        }
+        public CampainStatistics DeserializeCampaginFromJson(string json )
+        {
+            return new WebUtility.Helpers.JsonHelpers().DeserializeFromJson<CampainStatistics>(json);
+            
         }
         public void AddPackagePrice(PackagePrice price)
         {
             PackagePrices.Add(price);
         }
-        public void AddCampainArea(PolyGon polygon)
+        public void AddCampainArea(List<Point> points)
         {
-            CampainArea.Add(polygon);
+            CampainArea =points;
         }
-        public string SerializeIntoJson(CampainStatistics entity)
+        public string SerializePackagePriceIntoJson()
         {
-            return new WebUtility.Helpers.JsonHelpers().SerializeToJson<CampainStatistics>(entity);
+            return new WebUtility.Helpers.JsonHelpers().SerializeToJson<List<PackagePrice>>(PackagePrices);
         }
-        public CampainStatistics DeserializeFromJson(string jsonentity)
+        public List<PackagePrice> DeserializePackagePriceFromJson(string jsonePackagePrice)
         {
-            return new WebUtility.Helpers.JsonHelpers().DeserializeFromJson<CampainStatistics>(jsonentity);            
+            PackagePrices =new WebUtility.Helpers.JsonHelpers().DeserializeFromJson<List<PackagePrice>>(jsonePackagePrice);
+            return PackagePrices;
         }
+        //public string SerializeCampaignEreaIntoJson()
+        //{
+        //    return new WebUtility.Helpers.JsonHelpers().SerializeToJson<PolyGon>(CampainArea);
+        //}
+        //public PolyGon DeserializeCampaignEreaFromJson(string jsoneCampaignErea)
+        //{
+        //    CampainArea =new WebUtility.Helpers.JsonHelpers().DeserializeFromJson<PolyGon>(jsoneCampaignErea);
+        //    return CampainArea;
+        //}
     }
 }

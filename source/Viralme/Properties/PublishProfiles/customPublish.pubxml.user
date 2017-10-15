@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>E:\project\viral\publish</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/AccessManagementService.dll">
+      <publishTime>09/25/2017 12:45:40</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>10/16/2016 14:42:23</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.SqlServer.dll">
+      <publishTime>10/16/2016 14:42:24</publishTime>
+    </File>
+    <File Include="bin/Heidarpour.WebControlUI.dll">
+      <publishTime>04/18/2016 12:03:19</publishTime>
+    </File>
+    <File Include="bin/JQControls.dll">
+      <publishTime>09/25/2017 11:48:21</publishTime>
+    </File>
+    <File Include="bin/Kavenegar.dll">
+      <publishTime>09/03/2017 12:32:31</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>09/03/2017 12:32:31</publishTime>
+    </File>
+    <File Include="bin/System.Net.Http.Formatting.dll">
+      <publishTime>09/03/2017 12:32:31</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.dll">
+      <publishTime>09/03/2017 12:32:31</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.WebHost.dll">
+      <publishTime>09/03/2017 12:32:31</publishTime>
+    </File>
+    <File Include="bin/tkvUtility.dll">
+      <publishTime>07/18/2017 10:05:35</publishTime>
+    </File>
+    <File Include="bin/Viralme.dll">
+      <publishTime>10/15/2017 13:49:14</publishTime>
+    </File>
+    <File Include="bin/WebUtilityv2.dll">
+      <publishTime>09/25/2017 16:14:08</publishTime>
+    </File>
+    <File Include="Controls/UscCampains.ascx">
+      <publishTime>10/15/2017 11:26:15</publishTime>
+    </File>
+    <File Include="Controls/UscSelectCampain.ascx">
+      <publishTime>10/15/2017 13:29:32</publishTime>
+    </File>
+    <File Include="CSS/bootstrap-rtl.min.css">
+      <publishTime>08/13/2015 17:45:38</publishTime>
+    </File>
+    <File Include="CSS/bootstrap.min.css">
+      <publishTime>08/05/2017 12:57:57</publishTime>
+    </File>
+    <File Include="js/bootstrap.min.js">
+      <publishTime>01/23/2016 08:43:34</publishTime>
+    </File>
+    <File Include="Model/ViralMe.edmx.diagram">
+      <publishTime>10/15/2017 11:26:15</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>09/03/2017 13:01:49</publishTime>
+    </File>
+    <File Include="PrecompiledApp.config">
+      <publishTime>10/15/2017 14:27:48</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>10/15/2017 14:27:44</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

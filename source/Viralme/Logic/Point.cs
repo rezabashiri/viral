@@ -12,7 +12,7 @@ namespace Viralme.Logic
             get;
             set;
         }
-        public string Lang
+        public string Lng
         {
             set;
             get;
@@ -23,6 +23,10 @@ namespace Viralme.Logic
         public PolyGon()
         {
             Points = new List<Point>();
+        }
+        public PolyGon(List<Point> _point)
+        {
+            Points = _point;
         }
         public List<Point> Points;
     }

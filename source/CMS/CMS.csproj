@@ -684,6 +684,7 @@
     <Content Include="Design\js\bootstrap\bootstrap.min.js" />
     <Content Include="Design\js\demo.min.js" />
     <Content Include="Design\js\JavaScript1.js" />
+    <Content Include="Design\js\jquery.json.min.js" />
     <Content Include="Design\js\jsgrid-1.5.3\jsgrid-theme.min.css" />
     <Content Include="Design\js\jsgrid-1.5.3\jsgrid.min.css" />
     <Content Include="Design\js\jsgrid-1.5.3\jsgrid.min.js" />
@@ -976,6 +977,7 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="Viralme\Advertiser\Campains.aspx" />
+    <Content Include="Viralme\ClientCalls.aspx" />
     <Content Include="Viralme\Design\blog-single.html" />
     <Content Include="Viralme\Design\blog.html" />
     <Content Include="Viralme\Design\css\blue-style.css" />
@@ -1493,6 +1495,13 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Viralme\ClientCalls.aspx.cs">
+      <DependentUpon>ClientCalls.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Viralme\ClientCalls.aspx.designer.cs">
+      <DependentUpon>ClientCalls.aspx</DependentUpon>
     </Compile>
     <Compile Include="Viralme\Helpers\ContextHelpers.cs" />
     <Compile Include="Viralme\Helpers\ExtensionHelprs.cs" />
