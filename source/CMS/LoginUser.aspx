@@ -59,7 +59,16 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
+    <script type="text/javascript">
+        //function test() {
+        //    var def = $.Deferred();
+        //    setTimeout(function () {
+        //        def.reject();
+        //    }, 1000);
+        //    return def.promise();
+        //}
+        //test().done(function () { alert('done')}).fail(function (){alert('failed')});
+    </script>
 </head>
 
 <body class="animated fadeInDown">

@@ -18,23 +18,24 @@
     <script type="text/javascript">
         function LoadCampignDatas() {
             var ret;
-            $.ajax({
+            var call = $.ajax({
                 type: "post",
                 url: "/Viralme/ClientCalls.aspx/LoadCampignDatas",
                 dataType: "json",
-                contentType: "application/json; charset=utf-8",
+                contentType: "application/json; charset=utf-8"});
+            return call.promise();
                 
-                success: function (msg) {
+            //    success: function (msg) {
              
-                    ret = msg.d;
+            //        ret = msg.d;
                     
-                },
-                error: function (xhr, status, error) {
+            //    },
+            //    error: function (xhr, status, error) {
 
-                    alert(xhr.responseText);
-                }
-            });
-            return ret;
+            //        alert(xhr.responseText);
+            //    }
+            //});
+            //return ret;
         }
         function SaveData(name,start,duration,data) {
             seen = [];

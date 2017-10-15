@@ -416,8 +416,9 @@
         controller:
         {
             loadData: function (filter) {
-                var d=LoadCampignDatas();
-                return  d;
+                var d=$.Deferred();
+                LoadCampignDatas().done(function (respose) { d.resolve(respose.d); });
+                return  d.promise();
             }
         },
 
@@ -429,7 +430,6 @@
             { type: "control", editButton: false }
         ]
     });
-
     
     //function insertIntoJsCampainGrid() {
 
