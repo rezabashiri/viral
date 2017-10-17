@@ -10,15 +10,15 @@
 namespace CMS.Viralme.Driver {
     
     
-    public partial class SelectCampain {
+    public partial class Campains {
         
         /// <summary>
-        /// UscSelectCampain control.
+        /// ucsSelectCampains control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.UserControl UscSelectCampain;
+        protected global::Viralme.Controls.SelectCampains ucsSelectCampains;
     }
 }

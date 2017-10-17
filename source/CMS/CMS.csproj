@@ -77,6 +77,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\App_Web_uscfileupload.ascx.cc671b29.dll</HintPath>
     </Reference>
+    <Reference Include="App_Web_uscselectcampains.ascx.cc671b29, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\publish\bin\App_Web_uscselectcampains.ascx.cc671b29.dll</HintPath>
+    </Reference>
     <Reference Include="App_Web_uscsignup.ascx.cc671b29, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\App_Web_uscsignup.ascx.cc671b29.dll</HintPath>
@@ -1072,7 +1076,7 @@
     <Content Include="Viralme\Design\shortcodes.html" />
     <Content Include="Viralme\Design\single-project.html" />
     <Content Include="Viralme\Design\video-bg.html" />
-    <Content Include="Viralme\Driver\SelectCampain.aspx" />
+    <Content Include="Viralme\Driver\Campains.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -1503,8 +1507,6 @@
     <Compile Include="Viralme\ClientCalls.aspx.designer.cs">
       <DependentUpon>ClientCalls.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Viralme\Helpers\ContextHelpers.cs" />
-    <Compile Include="Viralme\Helpers\ExtensionHelprs.cs" />
     <Compile Include="LoginUser.aspx.cs">
       <DependentUpon>LoginUser.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1731,12 +1733,12 @@
     <Compile Include="Viralme\Design\MasterPages\HomeMaster.Master.designer.cs">
       <DependentUpon>HomeMaster.Master</DependentUpon>
     </Compile>
-    <Compile Include="Viralme\Driver\SelectCampain.aspx.cs">
-      <DependentUpon>SelectCampain.aspx</DependentUpon>
+    <Compile Include="Viralme\Driver\Campains.aspx.cs">
+      <DependentUpon>Campains.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Viralme\Driver\SelectCampain.aspx.designer.cs">
-      <DependentUpon>SelectCampain.aspx</DependentUpon>
+    <Compile Include="Viralme\Driver\Campains.aspx.designer.cs">
+      <DependentUpon>Campains.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebForm1.aspx.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>

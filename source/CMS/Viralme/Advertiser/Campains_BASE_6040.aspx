@@ -1,7 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Design/MasterPages/Administrator.Master" AutoEventWireup="true" CodeBehind="Campains.aspx.cs" Inherits="CMS.Viralme.Advertiser.Campains" %>
-
-<%@ Register Assembly="App_Web_usccampains.ascx.cc671b29" Namespace="Viralme.Controls" TagPrefix="uc1" %>
-
+<%@ Register Assembly ="App_Web_usccampains.ascx.cc671b29" Namespace="Viralme.Controls" TagPrefix="uc1" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 
     <link href="../../Design/js/jsgrid-1.5.3/jsgrid.min.css" rel="stylesheet" />
@@ -16,31 +14,29 @@
     <script src="../../Design/js/jquery.json.min.js"></script>
 
     <uc1:Campains runat="server" ID="uscCompain" />
-
+   
     <script type="text/javascript">
         function LoadCampignDatas() {
             var ret;
-            var call = $.ajax({
+            $.ajax({
                 type: "post",
                 url: "/Viralme/ClientCalls.aspx/LoadCampignDatas",
                 dataType: "json",
-              contentType: "application/json; charset=utf-8",
-            return call.promise();
+                contentType: "application/json; charset=utf-8",
                 
-            //    success: function (msg) {
+                success: function (msg) {
              
-            //        ret = msg.d;
+                    ret = msg.d;
                     
-            //    },
-            //    error: function (xhr, status, error) {
+                },
+                error: function (xhr, status, error) {
 
-
-            //        alert(xhr.responseText);
-            //    }
-            //});
-            //return ret;
+                    alert(xhr.responseText);
+                }
+            });
+            return ret;
         }
-        function SaveData(name, start, duration, data) {
+        function SaveData(name,start,duration,data) {
             seen = [];
             var str = JSON.stringify(data, function (key, val) {
                 if (val != null && typeof val == "object") {
@@ -51,13 +47,13 @@
                 }
                 return val;
             });
-
+       
             $.ajax({
                 type: "post",
                 url: "/Viralme/ClientCalls.aspx/SaveCampagin",
                 dataType: "json",
                 contentType: "application/json; charset=utf-8",
-                data: "{statics:'" + str + "',name:'" + name + "',startdate:'" + start + "',duraion:'" + duration + "'}",
+                data: "{statics:'" + str + "',name:'" + name + "',startdate:'" + start + "',duraion:'"+duration+"'}",
                 success: function (msg) {
                     alert('کمپین شما با موفقیت ایجاد شد');
                 },

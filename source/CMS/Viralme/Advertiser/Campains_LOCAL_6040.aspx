@@ -1,7 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Design/MasterPages/Administrator.Master" AutoEventWireup="true" CodeBehind="Campains.aspx.cs" Inherits="CMS.Viralme.Advertiser.Campains" %>
 
 <%@ Register Assembly="App_Web_usccampains.ascx.cc671b29" Namespace="Viralme.Controls" TagPrefix="uc1" %>
-
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 
     <link href="../../Design/js/jsgrid-1.5.3/jsgrid.min.css" rel="stylesheet" />
@@ -20,25 +19,23 @@
     <script type="text/javascript">
         function LoadCampignDatas() {
             var ret;
-            var call = $.ajax({
+            $.ajax({
                 type: "post",
                 url: "/Viralme/ClientCalls.aspx/LoadCampignDatas",
                 dataType: "json",
-              contentType: "application/json; charset=utf-8",
-            return call.promise();
-                
-            //    success: function (msg) {
-             
-            //        ret = msg.d;
-                    
-            //    },
-            //    error: function (xhr, status, error) {
+                contentType: "application/json; charset=utf-8",
 
+                success: function (msg) {
 
-            //        alert(xhr.responseText);
-            //    }
-            //});
-            //return ret;
+                    ret = msg.d;
+
+                },
+                error: function (xhr, status, error) {
+
+                    alert(xhr.responseText);
+                }
+            });
+            return ret;
         }
         function SaveData(name, start, duration, data) {
             seen = [];

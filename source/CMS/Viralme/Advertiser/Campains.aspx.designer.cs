@@ -13,6 +13,15 @@ namespace CMS.Viralme.Advertiser {
     public partial class Campains {
         
         /// <summary>
+        /// t control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Viralme.Controls.SelectCampains t;
+        
+        /// <summary>
         /// uscCompain control.
         /// </summary>
         /// <remarks>

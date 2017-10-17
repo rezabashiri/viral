@@ -409,7 +409,7 @@
                         <a href="#" title="رانندگان"><i class="fa fa-lg fa-fw fa-car"></i><span class="menu-item-parent">راننده ها </span></a>
                         <ul>
                             <li>
-                                <uc1:AccessCheckedHyperLink ID="AccessCheckedHyperLink8" runat="server" EntityName="partmanagmentArticle" LinkText="<i class='fa fa-car'></i>   انتخاب کمپین   " LinkHref="~/Viralme/Driver/SelectCampain.aspx"></uc1:AccessCheckedHyperLink>
+                                <uc1:AccessCheckedHyperLink ID="AccessCheckedHyperLink8" runat="server" EntityName="partmanagmentArticle" LinkText="<i class='fa fa-car'></i>   انتخاب کمپین   " LinkHref="~/Viralme/Driver/Campains.aspx"></uc1:AccessCheckedHyperLink>
                             </li>
                         </ul>
                     </li>

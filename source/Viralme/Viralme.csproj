@@ -98,7 +98,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Controls\UscCampains.ascx" />
-    <Content Include="Controls\UscSelectCampain.ascx" />
+    <Content Include="Controls\UscSelectCampains.ascx" />
     <Content Include="CSS\bootstrap-rtl.min.css" />
     <Content Include="CSS\bootstrap.min.css" />
     <Content Include="js\bootstrap.min.js" />
@@ -114,12 +114,12 @@
     <Compile Include="Controls\UscCampains.ascx.designer.cs">
       <DependentUpon>UscCampains.ascx</DependentUpon>
     </Compile>
-    <Compile Include="Controls\UscSelectCampain.ascx.cs">
-      <DependentUpon>UscSelectCampain.ascx</DependentUpon>
+    <Compile Include="Controls\UscSelectCampains.ascx.cs">
+      <DependentUpon>UscSelectCampains.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Controls\UscSelectCampain.ascx.designer.cs">
-      <DependentUpon>UscSelectCampain.ascx</DependentUpon>
+    <Compile Include="Controls\UscSelectCampains.ascx.designer.cs">
+      <DependentUpon>UscSelectCampains.ascx</DependentUpon>
     </Compile>
     <Compile Include="Helpers\ContextHelper.cs" />
     <Compile Include="Helpers\ExtensionHelprs.cs" />
@@ -192,7 +192,9 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

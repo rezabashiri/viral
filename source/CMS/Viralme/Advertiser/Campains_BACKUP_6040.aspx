@@ -1,7 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Design/MasterPages/Administrator.Master" AutoEventWireup="true" CodeBehind="Campains.aspx.cs" Inherits="CMS.Viralme.Advertiser.Campains" %>
 
 <%@ Register Assembly="App_Web_usccampains.ascx.cc671b29" Namespace="Viralme.Controls" TagPrefix="uc1" %>
-
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 
     <link href="../../Design/js/jsgrid-1.5.3/jsgrid.min.css" rel="stylesheet" />
@@ -24,7 +23,17 @@
                 type: "post",
                 url: "/Viralme/ClientCalls.aspx/LoadCampignDatas",
                 dataType: "json",
-              contentType: "application/json; charset=utf-8",
+<<<<<<< HEAD
+                contentType: "application/json; charset=utf-8",
+
+                success: function (msg) {
+
+                    ret = msg.d;
+
+                },
+                error: function (xhr, status, error) {
+=======
+                contentType: "application/json; charset=utf-8"});
             return call.promise();
                 
             //    success: function (msg) {
@@ -33,7 +42,7 @@
                     
             //    },
             //    error: function (xhr, status, error) {
-
+>>>>>>> 8f54bcd923497c295a91e988741daa472e2088f5
 
             //        alert(xhr.responseText);
             //    }
