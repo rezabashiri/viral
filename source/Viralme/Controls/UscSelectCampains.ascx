@@ -276,9 +276,6 @@
 
         <script type="text/javascript">
 
-            var a= <%# Eval("Json_Statistics") %>;
-
-
             function myMap(element) {
 
                 var mapProp = {
@@ -391,6 +388,8 @@
 
                         <%--map--%>
 
+                        <input type="hidden" id="Json_Statistics" data-json=<%# Eval("Json_Statistics") %> />
+
                         <div id="googleMap-<%# Eval("ID") %>" class="map-convas" style="width: 100%; height: 200px;"></div>
                         <asp:Literal ID="map" runat="server"></asp:Literal>
                         <script type="text/javascript">
@@ -399,7 +398,7 @@
                     </div>
 
                     <div class="col-sm-12 col-md-1 Campain-padding-top-button">
-                        <asp:Button ID="btnCampainSelect" runat="server" CssClass="btn btn-info" Text="انتخاب" OnClientClick="opentDetailModel(this);"></asp:Button>
+                        <input type="button" ID="btnCampainSelect" class="btn btn-info" value="انتخاب" onclick="openPackageModel(this);" data-id="<%# Eval("ID") %>" />
                     </div>
 
                 </div>
@@ -431,12 +430,40 @@
 
 <script>
 
-    function opentDetailModel(btn) {
+    function openPackageModel(btn) {
 
         //alert('salam');
+        var id = $(btn).data("id");
+        alert(id);
 
         $('#modalDetailCampain').modal();
     }
-  
+
+    function Deserialize() {
+
+        var Json_Statistics = doc.getElementById('Json_Statistics').value;
+
+        $.ajax({
+            type: "post",
+            url: "/Viralme/ClientCalls.aspx/DeserializeCampagin",
+            dataType: "json",
+            contentType: "application/json; charset=utf-8",
+            data: "{json:'" + Json_Statistics + "'}",
+            success: function (msg) {
+                alert('کمپین شما با موفقیت ایجاد شد');
+            },
+            error: function (xhr, status, error) {
+
+                alert(xhr.responseText);
+            }
+        });
+
+        $(document).ready(function () {
+
+            Deserialize();
+
+        });
+    }
+
 </script>
 

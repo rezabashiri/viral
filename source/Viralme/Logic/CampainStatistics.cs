@@ -46,7 +46,7 @@ namespace Viralme.Logic
         {
             return new WebUtility.Helpers.JsonHelpers().SerializeToJson<CampainStatistics>(this);
         }
-        public CampainStatistics DeserializeCampaginFromJson(string json )
+        public CampainStatistics DeserializeCampaginFromJson(string json)
         {
             return new WebUtility.Helpers.JsonHelpers().DeserializeFromJson<CampainStatistics>(json);
             

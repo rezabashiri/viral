@@ -5,6 +5,8 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using tkv.Utility;
+using Viralme.Logic;
+
 namespace CMS.Viralme
 {
     public partial class ClientCalls : System.Web.UI.Page
@@ -33,6 +35,21 @@ namespace CMS.Viralme
         {
             var camp = new global::Viralme.Model.Campaign();
             return camp.GetLoggedInUserCampaigns(string.Empty);
+        }
+
+        [System.Web.Services.WebMethod]
+        public static CampainStatistics DeserializeCampagin(string json)
+        {
+            global::Viralme.Logic.CampainStatistics ca = new global::Viralme.Logic.CampainStatistics();
+
+           return ca.DeserializeCampaginFromJson(json);
+        }
+
+        public static List<PackagePrice> DeserializePackage(string json)
+        {
+            global::Viralme.Logic.CampainStatistics ca = new global::Viralme.Logic.CampainStatistics();
+
+            return ca.DeserializePackagePriceFromJson(json);
         }
     }
 }

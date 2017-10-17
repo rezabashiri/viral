@@ -13,13 +13,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/25/2017 12:45:40</publishTime>
     </File>
     <File Include="bin/App_Web_usccampains.ascx.cc671b29.dll">
-      <publishTime>10/17/2017 15:20:36</publishTime>
+      <publishTime>10/17/2017 18:26:44</publishTime>
     </File>
     <File Include="bin/App_Web_uscselectcampain.ascx.cc671b29.dll">
       <publishTime>10/15/2017 15:32:30</publishTime>
     </File>
     <File Include="bin/App_Web_uscselectcampains.ascx.cc671b29.dll">
-      <publishTime>10/17/2017 15:20:39</publishTime>
+      <publishTime>10/17/2017 18:26:45</publishTime>
     </File>
     <File Include="bin/EntityFramework.dll">
       <publishTime>10/16/2016 14:42:23</publishTime>
@@ -52,16 +52,16 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/18/2017 10:05:35</publishTime>
     </File>
     <File Include="bin/usccampains.ascx.cc671b29.compiled">
-      <publishTime>10/17/2017 15:20:36</publishTime>
+      <publishTime>10/17/2017 18:26:44</publishTime>
     </File>
     <File Include="bin/uscselectcampain.ascx.cc671b29.compiled">
       <publishTime>10/15/2017 15:32:30</publishTime>
     </File>
     <File Include="bin/uscselectcampains.ascx.cc671b29.compiled">
-      <publishTime>10/17/2017 15:20:39</publishTime>
+      <publishTime>10/17/2017 18:26:45</publishTime>
     </File>
     <File Include="bin/Viralme.dll">
-      <publishTime>10/17/2017 14:13:37</publishTime>
+      <publishTime>10/17/2017 18:26:18</publishTime>
     </File>
     <File Include="bin/WebUtilityv2.dll">
       <publishTime>09/25/2017 16:14:08</publishTime>
@@ -88,7 +88,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/03/2017 13:01:49</publishTime>
     </File>
     <File Include="PrecompiledApp.config">
-      <publishTime>10/17/2017 15:20:16</publishTime>
+      <publishTime>10/17/2017 18:26:26</publishTime>
     </File>
     <File Include="Web.config">
       <publishTime>10/15/2017 14:27:44</publishTime>
